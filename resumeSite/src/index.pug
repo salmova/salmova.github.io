@@ -1,4 +1,4 @@
-include includes/config.pug
+include ../includes/config.pug
 doctype html
 html
     head
@@ -9,7 +9,7 @@ html
     body
         section#main
             #content
-                include includes/header.pug
+                include ../includes/header.pug
                 block content
                     .aboutAreas.two-columns-auto
                         #photo
@@ -22,7 +22,7 @@ html
                                 a.link-info-2(href='projects.html')= projectTitle
                                 a.link-info-3(href='resume.html#skills')= skillsTitle
                             p= personInfo
-        include includes/footer.pug
+        include ../includes/footer.pug
         script.
             const openMenu = () => document.querySelector('.navArea nav').style.display = 'inline-block';
             const closeMenu = () => document.querySelector('.navArea nav').style.cssText = null;
