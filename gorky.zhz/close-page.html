@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горький - Журнальный зал</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon_180x180.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/favicon_194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="img/favicon/favicon_96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="img/favicon/favicon_16x16.png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    <style>
+        body {
+            background: #FEFDFC;
+            margin: 0;
+            padding: 0;
+        }
+        *, ::before, ::after {
+            box-sizing: inherit;
+        }
+        .middle-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 320px;
+            margin: auto;
+            text-align: center;
+            min-height: 296px;
+            height: calc(100vh - 48px);
+        }
+        h1 {
+            font: 40px/48px 'Oswald', sans-serif;
+            letter-spacing: 1px;
+            color: #171615;
+            margin: 0 0 64px;
+        }
+        p {
+            font: 16px/24px 'PT Serif', sans-serif;
+            color: #333;
+            margin: 0 0 40px;
+        }
+        .middle-block div {
+            display: block;
+            height: 120px;
+        }
+        .bottom-block {
+            text-align: center;
+            position: fixed;
+            bottom: 24px;
+            width: 100%;
+        }
+        .sendsay-wrapper {
+            background: none !important;
+            height: auto !important;
+            display: content !important;
+        } 
+        .sendsay-wrapper .sendsay-popup {
+            background: none !important;
+            box-shadow: none;
+            transform: none !important;
+            -webkit-transform: none !important;
+            left: 0 !important;
+            top: 50%;
+            width: 100% !important;
+            padding: 16px 0 !important;
+        }
+        .sendsay-wrapper .sendsay-popup .sendsay-content {
+            width: 320px !important;
+            margin: 0 auto;
+        }
+        .sendsay-wrapper .sendsay-popup .sendsay-content .sendsay-input {
+            height: 56px;
+            border: none;
+            box-shadow: 0px 4px 16px #FBEBE0;
+            background: none;
+            font: 16px/24px 'PT Serif';
+            text-align: left;
+            opacity: 1;
+            color: #333;
+        }
+        .sendsay-wrapper .sendsay-popup .sendsay-content .sendsay-input::-moz-placeholder, .sendsay-wrapper .sendsay-popup .sendsay-content .sendsay-input:-moz-placeholder
+         {
+            text-align: center;
+            opacity: .5;    
+        }
+        .sendsay-wrapper .sendsay-popup .sendsay-close, .sendsay-wrapper .sendsay-popup .sendsay-text, .sendsay-wrapper .sendsay-popup .sendsay-label {
+            display: none;
+        }
+        a {
+            color: #EB5160;
+            font: 16px/24px 'PT Serif', sans-serif;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        @media screen and (max-width: 767px) {
+           .middle-block {
+                margin: 10vh auto 0;
+                flex-grow: 0;
+                justify-content: start;
+            } 
+            .middle-block div {
+                height: 0;
+            }
+            h1 {
+                margin-bottom: 32px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .sendsay-wrapper .sendsay-popup .sendsay-content .sendsay-input {
+                border: 1px solid #fbebe0;
+            }
+            .sendsay-button {
+                text-align: center;
+            }
+            .sendsay-button input {
+                background-color: #000 !important;
+                border-radius: 0 !important;
+                width: auto !important;
+                font-size: 16px !important;
+            }
+            .sendsay-wrapper .sendsay-popup {
+                top: 45% !important;
+            }
+        }
+        @media screen and (max-width: 767px) and (orientation:landscape) {
+            .bottom-block {
+                bottom: 14px;
+            }
+            h1 {
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .sendsay-wrapper .sendsay-popup .sendsay-content {
+                width: 300px !important;
+            }
+        }
+    </style>
+</head>
+<body class="page-template-default">
+    <div class='middle-block'>
+        <h1>Скоро откроемся</h1>
+        <p>Если хотите узнать об этом первым, оставьте свой e-mail, и мы вам сразу сообщим</p>
+        <div></div>
+    </div>
+    <div class='bottom-block'>
+        <a href="">Перейти на старую версию</a>
+    </div>
+  <!-- #page --> 
+    <script src="https://app.sendsay.ru/kit/sendsayForms/sendsayforms.min.js"></script>
+    <script type="text/javascript">SENDSAY.activatePopup("https://sendsay.ru/form/x_1558365163232657/1/");</script>
+</body>
+</html>
