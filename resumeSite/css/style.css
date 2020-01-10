@@ -1,0 +1,407 @@
+body {
+  color: #4D4D4D;
+  font: normal normal normal 14px/1.2em 'PT Sans','Open Sans',sans-serif;
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+  background: #EAE5E5;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-gap: 0px; }
+
+.two-columns-auto {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px; }
+
+.three-columns-equal {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px; }
+
+.reverse {
+  grid-template-columns: 1fr auto;
+  align-items: normal !important; }
+
+.title-font {
+  font: normal normal bold 43px/1.2em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif; }
+
+h2 {
+  font: normal normal bold 80px/1em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+  margin: 0; }
+
+h3 {
+  font: normal normal normal 46px/1em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+  margin: 0; }
+
+h5 {
+  font: normal normal normal 22px/1em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+  margin: 30px 0 10px; }
+
+#main {
+  grid-template-areas: '. content .';
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 15vw 1fr 15vw;
+  grid-gap: 0px; }
+  #main #content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    margin-top: 35px; }
+    #main #content .menu-mobile {
+      display: none;
+      width: 35px;
+      height: auto;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer; }
+    #main #content .person {
+      text-decoration: none;
+      color: #4D4D4D; }
+    #main #content .person, #main #content .navArea {
+      margin: 0 20px;
+      align-items: end; }
+    #main #content #spec {
+      font-size: 22px; }
+    #main #content nav {
+      text-align: center; }
+    #main #content .link-font {
+      font: normal normal bold 14px/1.2em droid-serif-w01-regular,droid-serif-w02-regular,droid-serif-w10-regular,serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #8B8B8B;
+      padding: 0 20px; }
+      #main #content .link-font:hover {
+        color: #61D0D4;
+        transition: color 0.4s ease 0s; }
+    #main #content .close-btn {
+      display: none; }
+    #main #content .border-top {
+      border-top: 1px solid #8b8b8b;
+      align-items: center;
+      padding: 0px 0 30px; }
+    #main #content .aboutAreas {
+      align-items: center;
+      grid-gap: 60px;
+      margin: 70px 0; }
+      #main #content .aboutAreas #photo img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 50%; }
+      #main #content .aboutAreas #description p {
+        margin: 40px 0 0;
+        text-indent: 1.5em;
+        text-align: justify; }
+      #main #content .aboutAreas #description .info-links a, #main #content .aboutAreas #description .resumeMarker {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #e83556;
+        transition: background-color 0.4s ease 0s;
+        text-transform: uppercase;
+        height: 128px;
+        width: 130px;
+        min-height: 40px;
+        color: #fff; }
+      #main #content .aboutAreas #description .info-links {
+        margin-top: 43px; }
+        #main #content .aboutAreas #description .info-links .link-info-1 {
+          background-color: #e83556; }
+          #main #content .aboutAreas #description .info-links .link-info-1:hover {
+            background-color: #9b2439; }
+        #main #content .aboutAreas #description .info-links .link-info-2 {
+          background-color: #61d0d4; }
+          #main #content .aboutAreas #description .info-links .link-info-2:hover {
+            background-color: #418b8d; }
+        #main #content .aboutAreas #description .info-links .link-info-3 {
+          background-color: #d1c926; }
+          #main #content .aboutAreas #description .info-links .link-info-3:hover {
+            background-color: #8b8619; }
+      #main #content .aboutAreas #description .resumeMarker {
+        height: 118px;
+        width: 112px;
+        justify-content: left;
+        text-indent: 0px !important;
+        white-space: pre-line;
+        padding-left: 8px;
+        margin: 40px 0; }
+      #main #content .aboutAreas #description .info-block p {
+        margin: 5px 0;
+        text-indent: 0;
+        font-size: 16px; }
+        #main #content .aboutAreas #description .info-block p a {
+          text-decoration: none;
+          color: #4d4d4d; }
+          #main #content .aboutAreas #description .info-block p a:hover {
+            text-decoration: underline; }
+      #main #content .aboutAreas #description .prj-img {
+        margin-top: 20px; }
+        #main #content .aboutAreas #description .prj-img img {
+          width: 250px;
+          height: auto;
+          float: left;
+          max-height: 200px;
+          object-fit: cover;
+          object-position: top;
+          box-shadow: 2px 2px 2px 1px #ccc;
+          border: 1px solid #ccc; }
+      #main #content .aboutAreas #skills {
+        padding-top: 40px; }
+        #main #content .aboutAreas #skills .skill-icon {
+          stroke-width: 0px;
+          fill-opacity: 1;
+          stroke: #eae5e5;
+          stroke-opacity: 1;
+          fill: #61d0d4;
+          width: 45px;
+          height: 45px; }
+        #main #content .aboutAreas #skills h5 {
+          margin-top: 15px; }
+        #main #content .aboutAreas #skills ul {
+          list-style: none;
+          padding: 0; }
+          #main #content .aboutAreas #skills ul li {
+            padding: 4px; }
+
+footer {
+  background: #E83556;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 15vw 1fr 1fr 1fr 1fr 15vw;
+  grid-gap: 0px;
+  grid-template-areas: '. phone message social about .';
+  padding: 50px 0; }
+  footer svg {
+    fill: #61d0d4;
+    width: 45px;
+    height: 45px; }
+  footer .two-columns-auto {
+    align-items: center; }
+  footer .footer-text p, footer .footer-text a {
+    color: #fff;
+    margin: 0;
+    text-decoration: none; }
+  footer .footer-text .footer-text-title {
+    font-weight: bold;
+    margin-bottom: 5px !important; }
+  footer #phone {
+    grid-area: phone; }
+  footer #message {
+    grid-area: message; }
+  footer #social {
+    grid-area: social; }
+    footer #social a {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      background: url(../img/sprite.png) no-repeat 0 0;
+      background-size: 66px 22px;
+      margin-right: 5px; }
+      footer #social a.fb-link {
+        background-position: -22px 0; }
+      footer #social a.vk-link {
+        background-position: 0px 0; }
+      footer #social a.inst-link {
+        background-position: -44px 0; }
+  footer #about {
+    grid-area: about; }
+
+@media screen and (max-width: 1280px) {
+  #main {
+    grid-template-columns: 10vw 1fr 10vw; }
+
+  footer {
+    grid-template-columns: 10vw 1fr 1fr 1fr 1fr 10vw; } }
+@media screen and (max-width: 1152px) {
+  #main {
+    grid-template-columns: 5vw 1fr 5vw; }
+
+  footer {
+    grid-template-columns: 5vw 1fr 1fr 1fr 1fr 5vw; } }
+@media screen and (max-width: 960px) {
+  #main {
+    grid-template-columns: 32px 1fr 32px; }
+    #main #content .aboutAreas #description .resumeMarker {
+      height: 100px;
+      width: 96px;
+      padding-left: 4px; }
+
+  footer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-gap: 20px;
+    grid-template-areas: '. phone message .' '. social about .'; } }
+@media screen and (max-width: 854px) {
+  #main #content .aboutAreas #photo img {
+    max-width: 250px; }
+  #main #content .aboutAreas #description .info-links a {
+    width: 100px;
+    height: 100px;
+    font-size: 13px; }
+
+  h2 {
+    font-size: 64px; }
+
+  h3 {
+    font-size: 38px; } }
+@media screen and (max-width: 768px) {
+  #main #content .navArea.two-columns-auto {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto; }
+  #main #content nav {
+    text-align: left; }
+  #main #content .link-font {
+    padding: 0 40px 0 0; } }
+@media screen and (max-width: 720px) {
+  #main #content .aboutAreas.two-columns-auto {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto; }
+
+  h2 {
+    margin-right: 10px;
+    font-size: 46px; }
+
+  #personHello {
+    float: left; }
+
+  h3 {
+    font-size: 46px; }
+
+  .three-columns-equal.info-links {
+    grid-template-columns: auto auto auto 1fr; }
+
+  #skills .skill-icon {
+    float: left;
+    margin-right: 15px; }
+  #skills h5 {
+    margin-bottom: 15px;
+    font-size: 28px; } }
+@media screen and (max-width: 640px) {
+  h2, h3 {
+    font-size: 36px; }
+
+  #main #content .link-font {
+    padding-right: 20px;
+    font-size: 13px; }
+  #main #content .navArea.two-columns-auto {
+    grid-gap: 10px; }
+  #main #content .person, #main #content .navArea {
+    margin: 0; }
+  #main #content .aboutAreas #description .resume-items {
+    grid-template-columns: 1fr;
+    grid-gap: 0; }
+    #main #content .aboutAreas #description .resume-items .resumeMarker {
+      margin: 15px 0 0;
+      font-size: 18px;
+      border-left: 3px solid #e83556;
+      font-weight: bold;
+      height: auto;
+      width: auto;
+      background: none;
+      border-radius: 0;
+      color: #4c4c4c; }
+    #main #content .aboutAreas #description .resume-items p {
+      text-align: left;
+      font-size: 14px; }
+  #main #content .aboutAreas #description .project-items {
+    grid-template-columns: 1fr;
+    grid-gap: 0; }
+    #main #content .aboutAreas #description .project-items .prj-img {
+      text-align: center; }
+    #main #content .aboutAreas #description .project-items p {
+      text-align: left; }
+  #main #content #skills h5 {
+    font-size: 22px; }
+
+  .title-font {
+    font-size: 38px; }
+
+  footer {
+    grid-template-columns: 16px 1fr 16px;
+    grid-template-areas: '. phone .' '. message .' '. social .' '. about .';
+    grid-template-rows: auto auto auto auto; } }
+@media screen and (max-width: 480px) {
+  #personHello {
+    float: inherit; }
+
+  .person.title-font {
+    font-size: 32px; }
+
+  #main #content {
+    margin-top: 45px; }
+    #main #content .menu-mobile {
+      display: block; }
+    #main #content nav {
+      display: none;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 0; }
+      #main #content nav .link-font {
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        margin: 20px 0; }
+      #main #content nav .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 25px;
+        cursor: pointer;
+        display: block; }
+    #main #content .aboutAreas {
+      margin: 30px 0;
+      grid-gap: 20px; }
+      #main #content .aboutAreas #photo img {
+        max-width: 200px; }
+      #main #content .aboutAreas #description .info-links {
+        margin-top: 23px; }
+        #main #content .aboutAreas #description .info-links a {
+          width: auto;
+          height: auto;
+          background: none !important;
+          border-radius: 0;
+          color: #4d4d4d;
+          transition: none;
+          min-height: inherit; }
+          #main #content .aboutAreas #description .info-links a:hover {
+            background: none; }
+          #main #content .aboutAreas #description .info-links a:before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            background-color: #e83556;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: background-color 0.4s ease 0s; }
+        #main #content .aboutAreas #description .info-links .link-info-1:hover:before {
+          background-color: #9b2439; }
+        #main #content .aboutAreas #description .info-links .link-info-2:before {
+          background-color: #61d0d4 !important; }
+        #main #content .aboutAreas #description .info-links .link-info-2:hover:before {
+          background-color: #418b8d !important; }
+        #main #content .aboutAreas #description .info-links .link-info-3:before {
+          background-color: #d1c926 !important; }
+        #main #content .aboutAreas #description .info-links .link-info-3:hover:before {
+          background-color: #8b8619 !important; }
+
+  .three-columns-equal.info-links {
+    grid-template-columns: auto;
+    justify-items: baseline; }
+
+  h2, h3 {
+    font-size: 32px; } }
+
+/*# sourceMappingURL=style.css.map */

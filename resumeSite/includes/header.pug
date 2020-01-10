@@ -1,0 +1,9 @@
+a.person.title-font(href='index.html')= person
+.navArea.two-columns-auto
+    #spec.title-font= spec
+    .menu-mobile(onclick='openMenu();')!= menuIcon
+    nav
+        a.link-font(href='index.html')= mainPage
+        a.link-font(href='resume.html')= resumeTitle
+        a.link-font(href='projects.html')= projectTitle
+        .close-btn(onclick='closeMenu();')!= closeIcon

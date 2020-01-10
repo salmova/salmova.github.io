@@ -1,0 +1,26 @@
+footer 
+    #phone 
+        .two-columns-auto
+            div!= svgPhone
+            div.footer-text
+                p.footer-text-title= callText
+                a(href='tel:+79374520073')= callNumber 
+    #message
+        .two-columns-auto
+            div!= svgEmail
+            div.footer-text
+                p.footer-text-title= emailText
+                a(href='mailto:i.v.salmova@gmail.com')= email 
+    #social
+        .two-columns-auto
+            div!= svgSNets
+            div.footer-text
+                p.footer-text-title= snetsText
+                a.vk-link(href='https://vk.com/id5546920', target='_blank')
+                a.fb-link(href='https://www.facebook.com/irina.salmova', target='_blank')
+                a.inst-link(href='https://www.instagram.com/invites/contact/?i=j6s8qiyamyw7&utm_content=2eo3j', target='_blank')
+    #about
+        .two-columns-auto
+            div!= svgCopyright
+            div.footer-text
+                p= copyrightText

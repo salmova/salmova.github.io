@@ -1,0 +1,26 @@
+extends index.pug
+block content
+    .aboutAreas.two-columns-auto.reverse
+        #description
+            h2= resumeTitle
+            div
+                div.border-top.two-columns-auto.resume-items
+                    p.resumeMarker= aboutMe
+                    div.info-block!= personInfoText
+                div.border-top.two-columns-auto.resume-items 
+                    p.resumeMarker!= experience
+                    div.info-block!= expText
+                div.border-top.two-columns-auto.resume-items
+                    p.resumeMarker= education
+                    div.info-block!= eduText
+        #skills
+            .skill-icon!= skillIcon
+            h5= skillsTitle
+            .border-top
+                ul
+                    li= progItem
+                    li= frontItem
+                    li= tempItem
+                    li= plugItem
+                    li= gitItem
+                    li= desItem
