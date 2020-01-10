@@ -1,0 +1,70 @@
+- var title = 'Взахлёб'
+- var  users = ["user1","user2","user3","user4","user5"]
+- var appStoreLink = 'https://apps.apple.com/app/id1220327765?ct=cite'
+- var gooPlayLink = 'https://play.google.com/store/apps/details?id=zahleb.me'
+- var readActionText = 'Читай продолжение'
+- var readActionSubText = 'в приложении «Взахлёб»'
+- var up = 'Наверх'
+- var landingText = 'Страшные истории'
+- var landingSubText = 'с эффектом присутствия'
+- var age = '12+'
+doctype html
+html
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        title=title
+        link(href = 'css/style.css', rel = 'stylesheet')
+        link(rel="prefetch prerender", href="img/pict1.jpg")
+        link(rel="prefetch prerender", href="img/pict2.jpg")
+        link(rel="prefetch prerender", href="img/pict3.jpg")
+        link(rel="prefetch prerender", href="img/Strag_read.jpg")        
+        <!-- Google Tag Manager -->
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WBKHQM4')
+        
+        <!-- End Google Tag Manager -->
+    
+    body
+        <!-- Google Tag Manager (noscript) -->
+        noscript.
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBKHQM4";
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        
+        <!-- End Google Tag Manager (noscript) -->
+        #header
+            .content-width
+                a.header-logo-block(href = '') 
+                    img.img-logo(src='img/logo.svg', alt='Logo') 
+                .header-links-block
+                    a.google-play#to-google-header-btn(href=gooPlayLink, target="_blank")
+                    a.apple-store#to-apple-header-btn(href=appStoreLink, target="_blank")
+        #main
+            .block1.bg-pic1
+                .content-width
+                    img.title(src='img/title.svg', alt='')
+                    p.subtitle= landingSubText
+            .block2.hidden
+                .content-width
+                    .age= age
+                    #main-content
+            .block3.hidden
+                .content-width
+                    .age= age
+                    .action-block#action-block
+                        p.text= readActionText
+                        p.subtext= readActionSubText
+                        .buttons
+                            a.apple-store-btn#to-apple-action-btn(href=appStoreLink, target="_blank")
+                            a.google-play-btn#to-google-action-btn(href=gooPlayLink, target="_blank")
+        #arrow
+            .arrow-bg
+            span.hidden= up
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+        script(src='js/script.min.js')
+        script(src='stories/story.js')
+        script(src='js/hammer.min.js')

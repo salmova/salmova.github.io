@@ -1,0 +1,532 @@
+@import "mixins.scss";
+
+$bg-img: url('../img/Strag_read.jpg') no-repeat center top;
+
+$base-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+body {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: $base-font;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.content-width {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+}
+a {
+    text-decoration: none;
+}
+p {
+    color: #fff;
+    margin: 0;
+}
+.hidden {
+    display: none;
+}
+.moveUp {
+    animation: move_up 1s;
+}
+.show {
+    animation: fade_in 1s;
+}
+/* header area with logo & buttons */
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    .content-width {
+        display: flex;
+        justify-content: space-between;   
+        background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        height: 88px;
+        padding: 20px 16px 0;
+    }
+    .header-links-block {
+        display: flex;
+        a {
+            width: 60px;
+            height: 60px;
+            display: block;
+            background-repeat: no-repeat;
+            @include retina-background-image('../img/sprite', 'png', 121px, 341px);
+            &.apple-store {
+                background-position: -61px 0;
+                margin-left: 1px;
+            }
+            &:hover {
+                &.google-play {
+                    background-position: 0 -60px;
+                }
+                &.apple-store {
+                    background-position: -61px -60px;
+                }
+            }
+        }
+    }
+}
+
+/* main area with title/story/action screens */
+#main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    .block1, .block2, .block3 {
+        background: $bg-img;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &:before {
+            background-image: linear-gradient(359.79deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    //title screen
+    .block1 { 
+        .content-width {
+             padding-top: 68vh;
+             text-align: center;
+        }
+        p {
+            display: block;
+            &.subtitle {
+                font: 17px/24px $base-font;
+                margin-top: 10px;
+            }
+        }
+    }
+    .bg-pic1 {
+        background-image: url('../img/pict1.jpg');
+    }
+    .bg-pic2 {
+        background-image: url('../img/pict2.jpg');
+    }
+    .bg-pic3 {
+        background-image: url('../img/pict3.jpg');
+    }
+    .age {
+        position: absolute;
+        top: 128px;
+        right: 0;
+        font-size: 16px;
+        line-height: 30px;
+        opacity: .5;
+        color: #fff;
+        font-weight: 500;
+    }
+    //story screen
+    .block2 {
+        .content-width {
+            height: 100%;
+            @include unselected;
+        }
+        #main-content {
+            max-width: 635px;
+            height: 50vh;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    }
+    //action screen
+    .block3 {
+        .content-width {
+            height: 100%;
+        }
+        .action-block {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: calc(45vh - 90px);    
+        }
+        .text {
+            font-size: 40px;
+            line-height: 44px;
+            text-align: center;
+            display: block;
+        }
+        .subtext {
+            font-size: 20px;
+            line-height: 24px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            a {
+                display: block;
+                width: 164px;
+                height: 50px;
+                margin: 0 10px;
+                &.google-play-btn {
+                    background: url('../img/Google.svg') no-repeat 0 0;
+                }
+                &.apple-store-btn {
+                    background: url('../img/App.svg') no-repeat 0 0;
+                }
+            }
+        }
+    }
+}
+/* arrow down/up */
+#arrow {
+    position: absolute;
+    bottom: 10vh;
+    left: calc(50% - 26px);
+    animation: bounce 3s infinite ease-out;
+    z-index: 3;
+    @include unselected;
+    
+    .arrow-bg {
+        background-repeat: no-repeat;
+        background-position: -41px -227px;
+        width: 40px;
+        height: 40px;  
+        margin: 0 auto;
+        @include unselected;
+        @include retina-background-image('../img/sprite', 'png', 121px, 341px);
+        &:hover {
+            background-position: -42px -267px;
+        }  
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.up {
+        animation: fade_in 1s;
+        .arrow-bg {
+            background-position: -2px -227px;
+            &:hover {
+                background-position: -2px -267px;
+            }
+        }
+        span {
+            display: block;
+        }
+    }
+    span {
+        color: #fff;
+        margin-top: 10px;
+        display: none;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+/* story items style */
+.message {
+    display: block;
+    width: -webkit-fill-available;
+    padding: 32px 0px 0;
+}
+.left-side {
+    text-align: left;
+    float: left;
+}
+.right-side {
+    text-align: right;
+    float: right;
+}
+.role {
+    color: red;
+    display: block;
+    width: 100%;
+    margin: 5px 0px 0px;
+    font-size: 12px;
+}
+.role.right-side {
+    color: #55df3e;
+}
+.quote {
+    display: inline-block;
+    max-width: 70%;
+    background-color: #e2e2e2;
+    padding: 16px 20px;
+    margin: 8px 8px 5px;
+    border-radius: 0 2px 2px 2px;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+    &.left-side:before {
+        content: url('../img/hvost.svg');
+        position: absolute;
+        top: -4px;
+        left: -8px;
+    }
+    &.right-side {
+        background-color: #C8F7FF;
+        border-radius: 2px 0px 2px 2px;
+        text-align: left;
+        &:before {
+            content: url('../img/hvost2.svg');
+            position: absolute;
+            top: -4px;
+            right: -8px;            
+        }
+    }
+}
+.quote.author {
+    color: #a8cde7;
+    background:none; 
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.quote.img {
+    width: 100%;
+    max-width: 100%;
+    background:none;
+    padding: 7px 0 0;
+    margin: 5px 0 0; 
+    text-align: center;
+    display: block;
+}
+.quote img {
+    max-width: 40%;
+}
+.hidden {
+    display: none;
+}
+#btn {
+    width: 100%;
+    text-align: center;
+    color: #b9baba;
+    margin-top: 70px;
+}
+#btn .quote {
+    max-width: 90%;
+    width: 90%;
+    color: #44474c;
+}
+#btn a {
+    display: block;
+}
+#btn img {
+    width: 50%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+.blink {
+    animation-name: fade_in;
+	animation-duration: 1.5s;
+	animation-iteration-count: 5;
+	animation-direction: alternate-reverse;
+}
+#tap {
+    width: 100%;
+    text-align: center;
+    display: block;
+    color: #b9baba;
+    font-size: 16px;
+    position: absolute;
+	bottom: 30vh;
+}
+#popupwindow {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background-color: #2b2b2b;
+    width: 100%;
+    min-height: 100%;
+    padding: 30px 0 20px;
+    color: #fff;
+    font-size: 16px;
+}
+#popupwindow img#logo {
+    max-width: 25vw;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20pt;
+}
+#popupwindow #storeLink img {
+    margin: 30px auto 25px;
+    width: 60vw;
+    display: block;
+}
+#comment {
+    text-align: left;
+    color: #808080;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 12vh;
+}
+.message.show {
+	display: inline-block;
+	animation-name: fade_in;
+	animation-duration: 1s;
+	width: 100%;
+}
+.popupshow {
+	display: block;
+	animation-name: popupfade_in;
+	animation-duration: 0.5s;
+}
+#mess0 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    margin-top: -32px;
+    height: 100%;
+}
+
+/* animation */
+@keyframes bounce {
+    0%, 20%, 50%, 100% {
+        @include transform(translateY(0));
+    }
+    30% {
+        @include transform(translateY(15px));
+    }
+    40% {
+        @include transform(translateY(-3px));
+    }
+    45% {
+        @include transform(translateY(2px));
+    }
+}
+@keyframes fade_in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes popupfade_in {
+    from {opacity: 0; top: 100vh;}
+    to {opacity: 1; top: 0;}
+}
+@keyframes move_up {
+    from {bottom: 0; opacity: 1}
+    to {bottom: 100%; opacity: .2}
+}
+
+/* @media screen */
+@media screen and (max-width: 1110px) {
+    .age {
+        padding-right: 16px;
+    }    
+}
+@media screen and (max-width: 670px), screen and (max-height: 568px)  {
+    #main-content {
+        padding: 0 16px;
+    }
+    #header .content-width {
+        height: 74px;
+    }
+    .img-logo {
+        height: 38px;
+    }
+    .logo {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 4.18px;
+        padding: 9px 0 0 10px;
+    }
+    
+    #header .header-links-block a {
+        background-position: 0 -129px; 
+        width: 40px;
+        height: 40px;    
+        &.google-play:hover {
+            background-position: 0 -169px;    
+        }  
+    }
+    #header .header-links-block a.apple-store {
+        background-position: -41px -129px;
+        &:hover {
+            background-position: -41px -169px;
+        }
+    }  
+    #main .block1 .content-width {
+        padding-top: 60vh;
+    }
+    #main .block1 .title {
+        height: 22px;
+    } 
+    #main .block1 p.subtitle {
+        margin-top: 0px;
+    }
+    #main .age {
+        font-size: 14px;
+        top: 94px;
+    } 
+    .role {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .quote {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 12px 14px;
+        margin-top: 4px;
+        &:before {
+            top: 0 !important;
+        }
+    }
+    #main .block3 .text {
+        font-size: 23px;
+        line-height: 27px;
+    }
+    #main .block3 .subtext {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 4px;
+    }
+    .message {
+        padding-top: 5px;
+    }
+    #mess0 {
+        margin-top: -5px;
+    }
+    #main .block3 .buttons {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main .block3 .buttons a.apple-store-btn {
+        margin-bottom: 10px;
+    }
+    #arrow {
+        bottom: 20vh;
+    }
+
+}
+@media screen and (max-height: 568px) and (orientation: landscape){
+    #main .block1 .content-width {
+        padding-top: 50vh;
+    }
+    #main .block3 .buttons {
+        margin-top: 30px;
+        flex-direction: row;
+        align-items: inherit;
+    }
+    #main .block3 .buttons a.apple-store-btn {
+        margin-bottom: 0;
+    }
+    #arrow span {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 670px) {
+    .quote {
+        max-width: 80%;
+    }
+}
