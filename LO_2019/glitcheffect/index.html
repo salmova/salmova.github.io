@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="yandex-verification" content="61dec7b5cc670361" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>Locals Only - 2019!</title>
+	
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter51718385 = new Ya.Metrika({
+                    id:51718385,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/51718385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  
+
+    <link href="css/style.css" rel="stylesheet">
+    <script src="detect.min.js"></script>
+</head>
+<body onload="bgGradRand();">
+    <section class="bg">
+        <div id="polygon1"></div>
+        <div id="polygon2"></div>
+        <div id="polygon3"></div>
+        <div id="polygon4"></div>
+    </section>
+    <section id="headliners" class="desktop-ver">
+        <div id="headlinersList">
+        </div>
+        <div id="headlinersVideo">
+            <div class="glitch-image"></div>
+            <canvas id="canvas"></canvas>
+            <img id="originImage" src="src/Rae_Sremmurd_2.jpg" />
+        </div>
+    </section>
+    <section class="content">
+        <div class="header">
+            <div id="logo"><img src="src/logo_blue.png" alt="Логотип"></div>
+            <div id="bage"><img src="src/bage_color.png" alt="Бейдж"></div>
+            <div class="uppText bagetext">Место встречи музыки и спорта</div>
+            <div class="btnDiv desktop-ver"><a href="#" class="btnByeTicket" class="uppText" onclick="setTimeout(buyTicketFunc, 1000); return false;">Купить билет</a></div>
+        </div>
+        <div class="main">
+            <div id="closeBtn" onclick="hlVideoBlockHide();" class="mobile-ver"><img src="src/close-button.png" alt="Закрыть"></div>
+            <div class="city mobile-ver">
+                <div id="piter" class="citylist">
+                    <a href="#" onclick="hlVideoBlockShow('piter');">Санкт-Петербург</a>
+                    <p class="arena">Севкабель порт → 29 – 30 июня</p>
+                    <div class="hlVideo" id="piterVideo">
+                        <img src="src/Rae_Sremmurd_2.jpg" alt="Артист">
+                    </div>
+                    <p class="artists">rae sremmurd &#8226; DENZEL CURRY &#8226; ХЛЕБ &#8226; МАЧЕТЕ &#8226; ПОШЛАЯ МОЛЛИ &#8226; OFFMI</p>
+                </div>
+                <div id="moscow" class="citylist">
+                    <a href="#" onclick="hlVideoBlockShow('moscow');">москва</a>
+                    <p class="arena">лужники → 20 июля</p>
+                    <div class="hlVideo" id="moscowVideo">
+                        <img src="src/American_Authors.jpg" alt="Артист">
+                    </div>
+                    <p class="artists">AMERICAN AUTHORS &#8226; МАЧЕТЕ &#8226; ПОШЛАЯ МОЛЛИ &#8226; OFFMI</p>
+                </div>
+                <div id="sochi" class="citylist">
+                    <a href="#" onclick="hlVideoBlockShow('sochi');">сочи</a>
+                    <p class="arena">порт имеретинский → 7 сентября</p>
+                    <div class="hlVideo" id="sochiVideo">
+                        <img src="src/Zveri.jpg" alt="Артист">
+                    </div>
+                    <p class="artists">ЗВЕРИ &#8226; МАЧЕТЕ &#8226; PLС</p>
+                </div>
+            </div>
+            <div id="city" class="desktop-ver">
+                <p>Севкабель порт → 29 – 30 июня</p>
+                <a href="#" onmouseover="headlinersBlockShow(0);" onmouseout="headlinersHidden();" onclick="headlinersBlockShow(0);">Санкт-Петербург</a>
+                <p>лужники → 20 июля</p>
+                <a href="#" onmouseover="headlinersBlockShow(1);" onmouseout="headlinersHidden();" onclick="headlinersBlockShow(1);">москва</a>
+                <p>порт имеретинский → 7 сентября</p>
+                <a href="#" onmouseover="headlinersBlockShow(2);" onmouseout="headlinersHidden();" onclick="headlinersBlockShow(2);">сочи</a>
+            </div>
+            <div class="btnDiv mobile-ver"><a href="#" class="btnByeTicket" class="uppText" onclick="setTimeout(buyTicketFunc, 1000); return false;">Купить билет</a></div>
+        </div>
+        <div class="footer">
+            <div id="termcond"><a href="src/Пользовательское соглашение СТС Эвентим РУ.pdf" onmouseover="termHover();" onmouseout="termInactive();" class="desktop-ver">Пользовательское соглашение</a><a href="src/Пользовательское соглашение СТС Эвентим РУ.pdf" onmouseover="termHover();" onmouseout="termInactive();" class="mobile-ver">Публичная оферта</a></div>
+            <div class="social">
+                <a href="https://www.facebook.com/localsonlyfest/" class="fb" target="_blank"></a><a href="https://vk.com/localsonlyfestival" class="vk" target="_blank"></a><a href="https://www.instagram.com/localsonlyfestival/" class="inst" target="_blank"></a><a href="https://www.youtube.com/channel/UClWK48d9j8s0lYn_PO9Vhfg" class="youtube" target="_blank"></a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

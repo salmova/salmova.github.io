@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parter Tracking</title>
+</head>
+<body>
+<script>
+  //Function to get URL parameters
+  var tC_getParam = function(param){
+    var URIParam = decodeURIComponent(document.location.search);
+    var regExp = new RegExp(param+"=([^&]+)");
+    if(regExp.test(URIParam)){
+      return URIParam.match(regExp)[1];
+    }
+    return "";
+  };
+  //Creation of a new order object
+  if (decodeURIComponent(tC_getParam("order_products"))) {
+    var products_string = decodeURIComponent(tC_getParam("order_products"));
+    var products_object = JSON.parse(products_string);
+  }
+  else {
+    var products_object = "";
+  }
+  //Creation of a data layer
+  var dataLayer = {
+    order_id : tC_getParam("order_id"),
+    revenue : tC_getParam("revenue"),
+    affiliate : tC_getParam("affiliate"),
+    products : products_object
+  };
+  // Google Universal Analytics Ecommerce
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-131115718-2', 'auto');
+  ga('require', 'ec');
+
+  ga('ec:setAction', 'purchase', {
+    'id': dataLayer.order_id,
+    'affiliation': 'eventim_' + dataLayer.affiliate,
+    'revenue': dataLayer.revenue
+  });
+  var productArray = dataLayer.products;
+  for(var i = 0; i < productArray.length; i++){
+    var product = productArray[i];
+    ga('ec:addProduct', {
+      'id': product.event_id,
+      'name': product.event_name,
+      'price': product.unitprice_ati,
+      'quantity': product.quantity
+    });
+  }
+  ga('set', 'title', 'Parter order confirmation');
+  ga('send', 'pageview');
+  
+  
+  
+    //Creation of Metrika dataLayer
+  dataLayer.push({
+    "ecommerce": {
+        "purchase": {
+            "actionField": {
+                "id" : dataLayer.order_id
+            },
+            "products": [
+                {
+                    "id": "11528853",
+                    "name": "Encore fest",
+                    "price": dataLayer.revenue
+                }
+            ]
+        }
+    }
+});
+
+
+  <!-- Yandex.Metrika counter -->
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter51718385 = new Ya.Metrika({
+                    id:51718385,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/51718385" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  
+  
+</script>
+</body>
+</html>

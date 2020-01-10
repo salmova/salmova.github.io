@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /src/
+Disallow: /data/
+Disallow: /img/
+Disallow: /css/
+
+User-agent: GoogleBot
+Disallow: /src/
+Disallow: /font/
+Allow: /img/
+Allow: /css/
+
+User-agent: Yandex
+Disallow: /src/
+Disallow: /font/
+Allow: /img/
+Allow: /css/
+
+Host: https://locals-only.ru/
