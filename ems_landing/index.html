@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="EMS" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Forma EMS</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/fm.revealator.jquery.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="data/qa.list.js"></script>
+    <script src="data/feed.list.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/fm.revealator.jquery.js"></script>
+    <script>
+        function generateStory(){
+            let html = '';
+            let relDelay = '';
+            for(var i = 0; i < qaList.length; i += 1) {
+                relDelay = i == 0 ? '' : 'revealator-delay' + i; 
+                if (qaList[i].name !== '-answer-') {
+                    html += `<div class="question-block wht-text revealator-zoomin revealator-once ${relDelay}">
+                    <div class="name"><span>${qaList[i].name == '' ? '-' : qaList[i].name.charAt(0).toUpperCase()}</span></div><div class="text">${qaList[i].text}<div class="right-corner"></div></div></div>`;     
+                } else {
+                    html += `<div class="answer-block revealator-zoomin revealator-once ${relDelay}">${qaList[i].text}<div class="left-corner"></div></div>`; 
+                }
+            }
+            document.getElementById("qa-block").innerHTML = html + document.getElementById("qa-block").innerHTML;
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133642253-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-133642253-1');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script>
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(52187524, "init", {
+            id:52187524,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/52187524" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '548847705518794'); 
+        fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
+        fbq('track', 'SubmitApplication');
+    </script> 
+    <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=548847705518794&ev=PageView&noscript=1" alt=""/></noscript>
+    
+    <!-- End Facebook Pixel Code -->
+</head>
+<body onload="generateStory();">
+    <header class="wht-text">
+        <div class="content">
+            <div class="flx-block">
+                <a href="#"><img class="logo" src="img/Header.Logo.png" alt=""></a>
+                <nav>
+                    <a href="#how-it-work-section">Как это работает</a>
+                    <a href="#services-section">Услуги</a>
+                    <a href="#price-section">Цена</a>
+                    <a href="#studio-section">Студии</a>
+                    <a href="#feedback-section">Отзывы</a>
+                    <a href="#qa-section">Частые вопросы</a>
+                </nav>
+                <a href="#" class="btn-sing-up wht-text"></a>
+                <div class="contact-info">
+                    <a class="phone wht-text" href="tel:+79263926564">+7 (926) 392-65-64</a>
+                    <p>Whatsapp / Telegram</p>
+                </div>
+                <div class="nav_sandwich" onclick="openWin('#nav_burger_menu');">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <div id="nav_burger_menu">
+                    <img class="logo" src="img/Header.Logo.png" alt="Логотип Forma Ems">
+                    <nav>
+                        <a href="#how-it-work-section" onclick="closeWin('#nav_burger_menu');">Как это работает</a>
+                        <a href="#services-section" onclick="closeWin('#nav_burger_menu');">Услуги</a>
+                        <a href="#price-section" onclick="closeWin('#nav_burger_menu');">Цена</a>
+                        <a href="#studio-section" onclick="closeWin('#nav_burger_menu');">Студии</a>
+                        <a href="#feedback-section" onclick="closeWin('#nav_burger_menu');">Отзывы</a>
+                        <a href="#qa-section" onclick="closeWin('#nav_burger_menu');">Частые вопросы</a>
+                    </nav>
+                    <a href="" class="btn-sing-up wht-text">Записаться на тренировку</a>
+                    <span class="close-pic" onclick="closeWin('#nav_burger_menu');"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="ems-forma">
+            <div class="content wht-text">
+                <div class="info-block">
+                    <h1>FORMA EMS</h1>
+                    <h2>Персональные EMS-тренировки в Москве по лучшей цене</h2>
+                    <div class="info-block-list flx-block">
+                        <div class="info-block-list-item"><p>1 на 1 с персональным тренером</p></div>
+                        <div class="info-block-list-item"><p>40-минутная тренировка вместо обычных 25 минут</p></div>
+                        <div class="info-block-list-item"><p>Занятия по индивидуальной программе</p></div>
+                        <div class="info-block-list-item"><p>Пробная тренировка за 500 рублей</p></div>
+                    </div>
+                    <a href="https://n198168.yclients.com/group:171266/city:all" class="btn-sing-up wht-text">Записаться</a>
+                </div>
+                <a href="#how-it-work-section" class="arrow-down"><img src="img/arrow_white.gif" alt="Прокрутка вниз" /></a> 
+            </div>   
+        </section>
+        <section id="how-it-work-section">
+            <div class="content">
+                <h2>Как это работает</h2>  
+                <div class="ems-steps flx-block">
+                    <div class="revealator-slideleft revealator-once">
+                    <div class="ems-steps-item">
+                        <img src="img/SingUp.png" alt="Запишись" />
+                        <p class="step-title">Запишитесь на тренировку</p>
+                        <p class="step-detail">Напишите в whatsapp, позвоните или оставьте заявку на сайте.</p>
+                    </div>
+                    <div class="arr-block">
+                        <img src="img/Arrow.png" alt="Стрелка" />
+                    </div>
+                    </div>
+                    <div class="revealator-slideleft revealator-delay2 revealator-once">
+                    <div class="ems-steps-item">
+                        <img src="img/Training.png" alt="Тренировка" />
+                        <p class="step-title">Приходите в назначенное время</p>
+                        <p class="step-detail">Захватите кроссовки и одежду для тренировки. Кстати, имейте ввиду, что мы всегда готовы выдать вам тренировочный костюм и оставить на хранение спортивную обувь</p>
+                    </div>
+                    <div class="arr-block">
+                        <img src="img/Arrow.png" alt="Стрелка" />
+                    </div>
+                    </div>
+                    <div class="revealator-slideleft revealator-delay4 revealator-once">
+                    <div class="ems-steps-item">
+                        <img src="img/Discuss.png" alt="Обсуждение" />
+                        <p class="step-title">Обсудите с тренером ваши цели и задачи, чтобы подобрать индивидуальную программу</p>
+                    </div>
+                    <div class="arr-block">
+                        <img src="img/Arrow.png" alt="Стрелка" />
+                    </div>
+                    </div>
+                    <div class="revealator-slideleft revealator-delay6 revealator-once">
+                    <div class="ems-steps-item">
+                        <img src="img/Recommend.png" alt="Рекомендации" />
+                        <p class="step-title">Следуйте рекомендациям по итогам каждой тренировки</p>
+                        <p class="step-detail">Рекомендации касаются не только дальнейших тренировок, но и питания, восстановления, других активностей</p>
+                    </div>
+                    </div>
+                </div>
+                <a href="#show-section">Посмотреть тренировку в действии</a>
+            </div>
+        </section>
+        <section id="services-section" class="wht-text">
+            <div class="content">
+                <h2 class="wht-text">Услуги и виды тренировок</h2>
+                <p class="services-details">EMS-тренировки подойдут вам, если вы хотите:</p>
+                <div class="services-list flx-block">
+                    <div class="services-list-item">
+                        <img src="img/SlimBody.png" alt="Похудеть" />
+                        <p>Похудеть</p>
+                    </div>
+                    <div class="services-list-item">
+                        <img src="img/ReliefBody.png" alt="Похудеть" />
+                        <p>Приобрести рельеф</p>
+                    </div>
+                    <div class="services-list-item">
+                        <img src="img/MuscleMass.png" alt="Похудеть" />
+                        <p>Набрать мышечную массу</p>
+                    </div>
+                    <div class="services-list-item">
+                        <img src="img/Knee.png" alt="Похудеть" />
+                        <p>Вылечить спину и суставы</p>
+                    </div>
+                    <div class="services-list-item">
+                        <img src="img/Recovery.png" alt="Похудеть" />
+                        <p>Восстановиться после родов</p>
+                    </div>
+                    <div class="services-list-item">
+                        <img src="img/Injury.png" alt="Похудеть" />
+                        <p>Вернуться к активной жизни после травмы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="price-section">
+            <div class="content">
+                <h2>Цены</h2>
+                <div class="price-list flx-block">
+                    <div class="price-list-item">
+                        <p class="title">Пробная</p>
+                        <ul>
+                            <li>возможность узнать технологию тренировок;</li>
+                            <li>рассказать о себе и поставить задачу;</li>
+                            <li>понять механизм достижения результата.</li>
+                        </ul>
+                        <div class="price flx-block"><div class="currency">&#x20BD;&nbsp;</div><div class="cost">500</div><div class="count">&nbsp;/ занятие</div>
+                        </div>
+                    </div>
+                    <div class="price-list-item">
+                        <p class="title">Базовый</p>
+                        <ul>
+                            <li>срок абонемента 2 месяца с возможностью заморозки;</li>
+                            <li>антицелюлитный комплекс;</li>
+                            <li>лимфодренаж.</li>
+                        </ul>
+                        <div class="price flx-block"><div class="currency">&#x20BD;&nbsp;</div><div class="cost">18.000</div><div class="count">&nbsp;/ 10 занятий</div>
+                        </div>
+                    </div>
+                    <div class="price-list-item">
+                        <p class="title">Продвинутый</p>
+                        <ul>
+                            <li>срок абонемента 3 месяца + заморозка;</li>
+                            <li>развернутая программа тренировок;</li>
+                            <li>интенсивный антицелюлитный комплекс;</li>
+                            <li>усиленный лимодренаж.</li>
+                        </ul>
+                        <div class="price flx-block"><div class="currency">&#x20BD;&nbsp;</div><div class="cost">23.000</div><div class="count">&nbsp;/ 15 занятий</div>
+                        </div>
+                    </div>
+                    <div class="price-list-item">
+                        <p class="title">Экстра</p>
+                        <ul>
+                            <li>безлимитный абонемент на 30 дней;</li>
+                            <li>максимально результативный;</li>
+                            <li>до 6 тренировок в неделю;</li>
+                            <li>режим " здоровая спина" по умолчанию;</li>
+                            <li>выгоден для достижения результата к конкретной дате.</li>
+                        </ul>
+                        <div class="price flx-block"><div class="currency">&#x20BD;&nbsp;</div><div class="cost">28.000</div><div class="count">&nbsp;/ безлимит</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="studio-section">
+            <div class="content">
+                <h2>Студии</h2>
+                <p class="studio-details">Наши студии расположены в пешей доступности от метро, имеется паркинг. В наличии всё необходимое для комфортной тренировки: душевые, полотенца, спортивные костюмы, ящики для хранения спортивной обуви.</p>
+                <div class="studios flx-block">
+                    <div class="studios-item flip-card">
+                        <div class="flip-card-inner" onclick="$(this).toggleClass('is-flipped');" id="flip-img1">
+                            <div class="flip-card-front">
+                                <img src="img/Studio1.png" alt="Первая студия" />
+                                <p class="studio-address wht-text">1-й  Тверской-Ямской переулок, 11 <br>м. Маяковская</p>
+                            </div>
+                            <div class="flip-card-back">
+                               <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A83a183398d495e0ece2760d4cebd82653594ea89c36f0fd343d40aed9331eaad&amp;width=504&amp;height=360&amp;lang=ru_RU" alt="" style="border: 0;" />
+                            </div>
+                        </div>
+                        <div class="flip-img" onclick="$('#flip-img1').toggleClass('is-flipped');"></div>
+                    </div>
+                    <div class="studios-item flip-card">
+                        <div class="flip-card-inner" onclick="$(this).toggleClass('is-flipped');" id="flip-img2">
+                            <div class="flip-card-front">
+                                <img src="img/Studio2.png" alt="Вторая студия" />
+                                <p class="studio-address wht-text">Ленинградский проспект, 37к9 <br>м. Динамо</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Adf5d8031138a5556da49858154cd5d4712dca3f7d11594b4bf33ffd32f328833&amp;width=504&amp;height=360&amp;lang=ru_RU" alt="" style="border: 0;" />
+                            </div>
+                        </div>
+                        <div class="flip-img" onclick="$('#flip-img2').toggleClass('is-flipped');"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="feedback-section">
+            <div class="content">
+                <h2>Наши клиенты о нас</h2>
+                <div id="slick-block">
+                </div>
+                <div id="fullfeed"></div>
+            </div>
+            <div class="bg-layer"></div>
+        </section>
+        <section id="qa-section">
+            <div class="content">
+                <h2>Частые вопросы</h2>
+                <div id="qa-block">
+                </div>
+            </div>
+        </section>
+        <section id="show-section">
+            <div class="content">
+                <h2 class="wht-text">Посмотреть тренировку в действии</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vo1qs_DhTW0?start=12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="content flx-block">
+            <div class="contact-item flx-block">
+                <a href="#"><img class="logo" src="img/Header.Logo.png" alt=""></a>
+                <p class="address wht-text">Адрес: Москва,<br>1 Тверской-Ямской пер.,11</p>
+                <p class="copyright wht-text">©Copyright 2019 All rights reserved.</p>
+            </div>
+            <div class="nav-item wht-text">
+                <nav>
+                    <a href="#how-it-work-section">Как это работает</a>
+                    <a href="#services-section">Услуги</a>
+                    <a href="#price-section">Цена</a>
+                    <a href="#studio-section">Студии</a>
+                    <a href="#feedback-section">Отзывы</a>
+                    <a href="#qa-section">Частые вопросы</a>
+                </nav>
+<!--                 <a class="partners wht-text" href="#">Партнерам</a> -->
+            </div>
+            <div class="social-item flx-block">
+<!--                 <a target="_blank" rel="nofollow" href="#" class="social-telegram"></a>	 -->		
+                <a target="_blank" rel="nofollow" href="https://www.facebook.com/Formaems/" class="social-facebook"></a>			
+                <a target="_blank" rel="nofollow" href="https://www.instagram.com/forma_ems_studio/" class="social-instagram"></a>			
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
