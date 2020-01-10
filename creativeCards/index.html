@@ -1,0 +1,432 @@
+<!doctype html>
+<html>
+    <title>Example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+<!--
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+-->
+<!--     <link rel="stylesheet" href="owlcarousel/animate.css"> -->
+    <style>
+        body {
+            background: #F2F1F0;
+            display: grid;
+            grid-template-areas:'. content social';
+            grid-template-rows: 1fr;
+            grid-template-columns: 8vw 1fr 8vw;
+            grid-gap: 0px;
+            height: 100vh;
+            margin: 0;
+            font: 16px/18px proxima-n-w01-reg,sans-serif;
+            box-shadow: 0px 10px 15px -15px inset #BDBBB9;
+            color: #000;
+            letter-spacing: 1.5px;
+        }
+        h2 {
+            text-transform: uppercase;
+            font: 400 22px/24px proxima-n-w01-reg,sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #000; 
+            white-space: nowrap;
+        }
+        .hoverLink:hover {
+            color: #bebc90;
+            transition: color 0.4s ease 0s;
+        }
+        .textLink {
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        header{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: auto 1fr auto;
+            margin-top: 40px;
+            line-height: 26px;
+            padding: 0 30px;
+        }
+        nav {
+            text-align: center;
+            white-space: nowrap;
+        }
+        nav a {
+            margin: 0 10px;
+        }
+        #mainContent {
+            grid-area: content;
+            display: grid;
+            grid-template-rows: repeat(auto-fill, minmax(auto, 1fr))
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            overflow-y: scroll;
+            -ms-overflow-style: none;  /* IE 10+ */
+            scrollbar-width: none; /* Firefox */
+        }
+        #mainContent::-webkit-scrollbar { /* chrome based */
+            width: 0px;  /* ширина scrollbar'a */
+        }
+        #itemsBlock {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-gap: 2.5vw;
+        }
+        #itemsBlock > div img {
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+        .flip-card {
+            width: 100%;
+            height: auto;
+            perspective: 1000px;
+        }
+        .flip-card .flip-card-inner {
+            position: relative;
+            width: calc(100% - 4px);
+            height: calc(100% - 2px);
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border: 1px solid #bcbcbc;
+            cursor: pointer;
+            display: flex;
+        }
+        .flip-card .flip-card-inner .flip-card-front, .flip-card .flip-card-inner .flip-card-back {
+/*             position: absolute; */
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 21;
+            display: block ruby;
+        }
+        .is-flipped{
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
+        .flip-card-back {
+          position: absolute;
+          top: 0;
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+          background: #fff;
+          text-align: center;
+          height: calc(100% - 18px);
+          display: flex !important;
+        }
+        .flip-card-back p {
+            margin: auto;
+            padding: 0 30px;
+        }
+        #mainBanner {
+            text-align: center;
+            max-width: 84vw;
+        }
+        #mainBanner img {
+            width: 100%;
+            height: auto;
+            max-height: 512px;
+            max-width: 788px;
+            margin: 0 auto;
+        }
+        #logo a::before {
+            content: 'creative-cards';
+        } 
+        #logo a {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        #logo a:hover {
+            color:#BDBBB9;
+        }
+        #inputBlock a {
+            float: left;
+            margin-left: 20px;
+        }
+        #inputBlock a span {
+            margin-left: 10px;
+        }
+        #inputBlock svg {
+            height: 26px;
+            width: 32px;
+            float: left;
+        }
+        #inputBlock svg text {
+            font-size: 90px;
+        }
+        #descrProject {
+            background: #fff;
+            padding: 40px 10vw;
+            text-align: center; 
+            font-size: 16px;
+            line-height: 20px;
+        }
+        footer {
+            text-align: center;
+        }
+        footer div{
+            background: #fff;
+            padding: 40px 10vw;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        #socialLink {
+            grid-area: social;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr repeat(4, 40px) 1fr;
+            grid-auto-flow: column;
+            align-items: center;
+        }
+        #socialLink a {
+            text-align: center;
+        }
+        .owl-dot {
+            width: 7px;
+            height: 7px;
+            background: #d8d8d8 !important;
+            margin: 10px;
+            border-radius: 100%;
+        }
+        .owl-dot.active {
+            background: #767676 !important;
+            width: 13px;
+            height: 13px;
+        }
+        .owl-carousel .owl-stage-outer {
+            background: #fff;
+        }
+        @media screen and (max-width: 900px) {
+            header{
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 854px) {
+            header{
+                padding: 0 5px;
+            }
+            nav a {
+                font-size: 13px;
+                margin: 0 5px;
+            }
+            #inputBlock a {
+                font-size: 13px;
+                margin-left: 15px;
+            }
+            #inputBlock svg {
+                height: 24px;
+            }
+            #inputBlock svg text {
+                font-size: 70px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            header {
+                grid-template-areas:
+                    'logo input' 
+                    'nav nav';
+                grid-template-rows: auto auto;
+                grid-template-columns: 1fr auto;
+            }
+            #logo {
+                order: 1;
+                grid-area: logo; 
+            }
+            nav {
+                order: 3;
+                text-align: left;
+                grid-area: nav;
+            }
+            nav a {
+                margin-left: 0;
+                margin-right: 10px;
+            }
+            #inputBlock {
+                order: 2;
+                grid-area: input;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            body {
+                grid-template-areas:'content' 'social';
+                grid-template-rows: 1fr auto;
+                grid-template-columns: 1fr;
+            }
+             #mainBanner {
+                text-align: center;
+                max-width: calc(100vw - 32px);
+            }
+            #mainContent {
+                overflow: inherit;
+                margin: 0 16px;
+            }
+            footer > p {
+                display: none;
+            }
+            #socialLink {
+                grid-template-columns: 0px auto auto auto auto;
+                grid-template-rows: auto;
+                padding-bottom: 15px;
+                justify-content: space-around;
+            }
+            header {
+                line-height: 30px;
+                margin-top: 20px;
+            }
+            #descrProject, footer div {
+                padding: 20px 10vw;
+            }
+            #descrProject, footer p {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            #itemsBlock {
+                grid-gap: 3.5vw;
+            }
+            #inputBlock a span {
+                display: none;
+            }
+            h2 {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            #logo a::before {
+                content: 'c-cards';
+            }
+        }
+    </style>
+    <body>
+        <section id='mainContent'>
+            <header>
+                <div id='logo'><a href="#" class='hoverLink'></a></div>
+                <nav>
+                    <a href="#" class='hoverLink textLink'>Home</a>
+                    <a href="#" class='hoverLink textLink'>Shop</a>
+                    <a href="#" class='hoverLink textLink'>About</a>
+                    <a href="#" class='hoverLink textLink'>Contact</a>
+                </nav>
+                <div id='inputBlock'>
+                    <a href="#" class='hoverLink textLink'><svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 50 50" data-type="shape" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" role="img">
+                        <g>
+                            <path d="M25 48.077c-5.924 0-11.31-2.252-15.396-5.921 2.254-5.362 7.492-8.267 15.373-8.267 7.889 0 13.139 3.044 15.408 8.418-4.084 3.659-9.471 5.77-15.385 5.77m.278-35.3c4.927 0 8.611 3.812 8.611 8.878 0 5.21-3.875 9.456-8.611 9.456s-8.611-4.246-8.611-9.456c0-5.066 3.684-8.878 8.611-8.878M25 0C11.193 0 0 11.193 0 25c0 .915.056 1.816.152 2.705.032.295.091.581.133.873.085.589.173 1.176.298 1.751.073.338.169.665.256.997.135.515.273 1.027.439 1.529.114.342.243.675.37 1.01.18.476.369.945.577 1.406.149.331.308.657.472.98.225.446.463.883.714 1.313.182.312.365.619.56.922.272.423.56.832.856 1.237.207.284.41.568.629.841.325.408.671.796 1.02 1.182.22.244.432.494.662.728.405.415.833.801 1.265 1.186.173.154.329.325.507.475l.004-.011A24.886 24.886 0 0 0 25 50a24.881 24.881 0 0 0 16.069-5.861.126.126 0 0 1 .003.01c.172-.144.324-.309.49-.458.442-.392.88-.787 1.293-1.209.228-.232.437-.479.655-.72.352-.389.701-.78 1.028-1.191.218-.272.421-.556.627-.838.297-.405.587-.816.859-1.24a26.104 26.104 0 0 0 1.748-3.216c.208-.461.398-.93.579-1.406.127-.336.256-.669.369-1.012.167-.502.305-1.014.44-1.53.087-.332.183-.659.256-.996.126-.576.214-1.164.299-1.754.042-.292.101-.577.133-.872.095-.89.152-1.791.152-2.707C50 11.193 38.807 0 25 0"></path>
+                        </g>
+                    </svg>
+                    <span>Log In</span></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="198.6 340 197.7 166" preserveAspectRatio="xMinYMax meet" data-hook="svg-icon-2"><polyline points="396.5 395.9 368.5 467.4 263.1 467.4 226.2 369.8 203.6 369.8 198.8 356.7 235.1 356.7 272 454.3 359.5 454.3 381.6 395.9"></polyline><circle cx="359.5" cy="493" r="13"></circle><circle cx="275" cy="493" r="13"></circle><text x="315" y="375" dy=".48em" text-anchor="middle" class="_1INsc _3KKRv" data-hook="items-count">0</text></svg></a></div>
+            </header>
+            <div id='mainBanner' class='owl-carousel'>
+                <img src='img/banner_1.jpg' alt='' />
+                <img src='img/banner_2.jpg' alt='' />
+                <img src='img/banner_3.jpg' alt='' />
+                <img src='img/banner_4.jpg' alt='' />
+            </div>
+            <div id='descrProject'>
+                <h2>Our collection</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click 'Edit Text' or double click me to add your own content and make changes to the font. I'm a great place for you to tell a story and let your users know a little more about you.</p>
+            </div>
+            <div id='itemsBlock'>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img1" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card1.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                               <img src="img/card1_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img2" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card2.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/card2_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img3" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card3.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/card3_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img4" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card4.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/card4_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img5" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card5.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/card5_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+                <div class="flip-card">
+                        <div class="flip-card-inner" id="flip-img6" onclick="$(this).toggleClass('is-flipped');">
+                            <div class="flip-card-front">
+                                <img src="img/card6.jpg" alt="">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="img/card6_back.jpg" alt="">
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <footer>
+                <div>
+                    <h2>creative cards</h2>
+                    <p>Russia, Ulyanovsk</p>
+                    <p>© 2019 by Creative-cards</p>
+                </div>
+<!--                 <p class="textLink">© 2019 by Creative-cards</p> -->
+            </footer>
+        </section>
+        <section id='socialLink'>
+            <div></div>
+            <a href="#"><img src="img/fb.png" alt="fb" /></a>
+            <a href="#"><img src="img/inst.png" alt="inst" /></a>
+            <a href="#"><img src="img/tw.png" alt="tw" /></a>
+            <a href="#"><img src="img/pin.png" alt="pin" /></a>
+            <div></div>
+        </section>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                nav:false,
+                margin:10,
+                items:1,
+                autoWidth: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsiveClass:true,
+                slideBy: 1,
+                center: true,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn'
+            });    
+        });
+        </script>
+    </body>
+</html>
