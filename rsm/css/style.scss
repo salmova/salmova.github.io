@@ -1426,12 +1426,19 @@ nav {
             font-size: 12px;
         }
         .owl-carousel .owl-item .user-owl-block {
+            height: 300px;
             .left-column, .right-column {
                 width: 60%;
             }
             .left-column p:nth-child(1) {
                 display: none;
             }
+            img {
+                top: -40px;
+            }
+        }
+        .reviews-section {
+            height: 390px;
         }
     }
 }

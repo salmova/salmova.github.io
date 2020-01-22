@@ -1159,9 +1159,15 @@ nav {
     height: 147px; }
   #content .owl-carousel .owl-item .user-owl-block p, #content .owl-carousel .owl-item .user-owl-block p.text-blue {
     font-size: 12px; }
-  #content .owl-carousel .owl-item .user-owl-block .left-column, #content .owl-carousel .owl-item .user-owl-block .right-column {
-    width: 60%; }
-  #content .owl-carousel .owl-item .user-owl-block .left-column p:nth-child(1) {
-    display: none; } }
+  #content .owl-carousel .owl-item .user-owl-block {
+    height: 300px; }
+    #content .owl-carousel .owl-item .user-owl-block .left-column, #content .owl-carousel .owl-item .user-owl-block .right-column {
+      width: 60%; }
+    #content .owl-carousel .owl-item .user-owl-block .left-column p:nth-child(1) {
+      display: none; }
+    #content .owl-carousel .owl-item .user-owl-block img {
+      top: -40px; }
+  #content .reviews-section {
+    height: 390px; } }
 
 /*# sourceMappingURL=style.css.map */
