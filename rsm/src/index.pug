@@ -1,0 +1,152 @@
+include includes/config.pug
+mixin review(comp, name, ageText, linkFoto, desc)
+    .user-owl-block
+        .left-column
+            p!= comp
+            p.font-bold.blue-text!= name
+            p!= ageText
+        .right-column
+            img(src='img/'+linkFoto alt='')
+            p!= desc
+mixin slideshow(imgCard, titleSlide, info)
+    .main-owl-block
+        .left-column
+            img(src='img/'+imgCard alt='')
+            button.green-btn-item.white-text.font-upper= buyCard
+        .right-column
+            h2.white-text.font-upper!= titleSlide
+            p!= info
+doctype html
+html(lang='ru')
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        title=title
+        link(href = 'css/style.css', rel = 'stylesheet')
+        link(href = 'css/owl.carousel.min.css', rel = 'stylesheet')
+        link(href = 'css/owl.theme.default.min.css', rel = 'stylesheet')           
+    body
+        section#main
+            #content
+                include includes/header.pug
+                block content
+                    .slider-section
+                        .owl-carousel#mainCarousel
+                            each val in slidesArr
+                                +slideshow(val.imgCard, val.titleSlide, val.info)
+                    .offer-section
+                        .sale-ru
+                            .sprite-icons
+                            h3.white-text.font-upper!= saleRU
+                        .sale-eu
+                            .sprite-icons
+                            h3.white-text.font-upper!= saleEU
+                        .partners
+                            .sprite-icons
+                            h3.white-text.font-upper!= partners
+                    .events-section
+                        h2= eventsTitle
+                        h5!= eventsSubtitle
+                        .events-block
+                            .events-block-item
+                                .event-block-item-title
+                                    .event-icon.sprite-icons.event-icon-activity
+                                    h4= activity
+                                img(src='img/activity-event.jpg' alt= activity)
+                                h5!= actText
+                                .date
+                                    span 28.12.2019 г.
+                                    span= sp
+                            .events-block-item
+                                .event-block-item-title
+                                    .event-icon.sprite-icons.event-icon-news
+                                    h4= news
+                                img(src='img/news-event.jpg' alt= activity)
+                                h5!= newsText
+                                .date
+                                    span 28.12.2019 г.
+                                    span= moscow
+                            .events-block-item
+                                .event-block-item-title
+                                    .event-icon.sprite-icons.event-icon-comp
+                                    h4= competition
+                                img(src='img/compet-event.jpg' alt= activity)
+                                h5!= comText
+                                .date
+                                    span 28.12.2019 г.
+                                    span= sp
+                            .events-block-item
+                                .event-block-item-title
+                                    .event-icon.sprite-icons.event-icon-stock
+                                    h4= stock
+                                img(src='img/stock-event.jpg' alt= activity)
+                                h5!= stockText
+                                .date
+                                    span 28.12.2019 г.
+                                    span= moscow
+                        .events-btn
+                            button.green-btn-item.event-part-btn.white-text.font-upper= eventParticBtn
+                            button.green-btn-item.event-post-btn.white-text.font-upper= eventPostBtn
+                    .cards-section
+                        .cards-block
+                            .cards-block-item
+                                img(src='img/card_popova.png' alt='')
+                                p!= cardEyca
+                            .cards-block-item
+                                img(src='img/card_gazprom.png' alt='')
+                                p!= cardGazprom
+                            .cards-block-item
+                                img(src='img/card_combr.png' alt='')
+                                p!= cardRsmEyca
+                        .cards-info!= cardsText 
+                        .cards-btn
+                            button.green-btn-item.white-text.font-upper= cardsBtn
+                    .partners-section
+                        h5= partnersList
+                        div
+                            img(src='img/partners.png' alt='РСМ')
+                    .cities-section
+                        h2!= cities
+                            span.red-text= citiesSale
+                        form(action='#')
+                            div
+                                select(name="select")
+                                    each val, ind in citiesArr
+                                        option(value= 'value'+ind)= val
+                        .stat-block
+                            span.stat-title= statTitle
+                            hr
+                            span.clear-left= statColPart
+                            span.font-bold!= '&nbsp;754'
+                            span.clear-left= statCol
+                            span.font-bold!= '&nbsp;179 258'
+                            button.green-btn-item.white-text.font-upper= allPartBtn
+                            #btnStatClose.btn-close(onclick='closeStat();')
+                    .reviews-section
+                        h2= reviewTitle
+                        .owl-carousel#reviewCarousel
+                            each val in reviewArr
+                                +review(val.comp, val.name, val.ageText, val.linkFoto, val.desc)
+                include includes/footer.pug
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src='js/owl.carousel.min.js')
+        script.
+            $(document).ready(function(){
+              $("#reviewCarousel").owlCarousel({
+                    loop:true,
+                    nav:true,
+                    dots: false,
+                    items: 1
+                })
+            });
+            $(document).ready(function(){
+              $("#mainCarousel").owlCarousel({
+                    loop:true,
+                    nav:true,
+                    dots: false,
+                    items: 1
+                })
+            });
+            
+            const closeStat = () => document.querySelector('.stat-block').style.display = 'none';
+            

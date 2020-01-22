@@ -1,0 +1,24 @@
+footer 
+    .info-links
+        .footer-logo-area
+            a.logo-rsm(href='#')
+                img(src='img/logo.png' alt='РСМ логотип')
+            a.logo-eyc(href='#')
+                img(src='img/logo_eyc.png' alt='EYC логотип')
+        .footer-social-area
+            a.sprite-icons.inst-link(href='#')
+            a.sprite-icons.vk-link(href='#')
+    .info-area
+        .info-footer-text!= address
+        a.info-email(href='mailto:'+ email)= email
+        .info-footer-text(style='font-size: 18px;')!= oooInfo
+        nav
+            a.link-black-upper(href='#')= navItem1
+            a.link-black-upper(href='#')= navItem2
+            a.link-black-upper(href='#')= navItem3
+            a.link-black-upper(href='#')= navItem4
+            a.link-black-upper(href='#')= navItem5
+            a.link-black-upper(href='#')= navItem6
+    .copyright= copyright
+    a.agatech-logo(href='#')
+        img(src='img/agatech.png' alt='Agatech company')

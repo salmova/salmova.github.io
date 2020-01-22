@@ -1,0 +1,300 @@
+@mixin font($name, $path, $weight, $style) {
+  font-family: $name;
+  src: url($path) format('truetype');
+  font-weight: $weight;
+  font-style: $style;
+}
+@mixin svg-bg($path, $w, $h) {
+  background: url($path);
+  background-size: $w + px $h + px;
+  width: $w + px;
+  height: $h + px;
+}
+
+@mixin transform($t) {
+  -moz-transform: $t;
+  -webkit-transform: $t;
+  -ms-transform: $t;
+  transform: $t;
+}
+
+@mixin transition($t) {
+  -moz-transition: $t;
+  -webkit-transition: $t;
+  -ms-transition: $t;
+  transition: $t;
+}
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+  -moz-opacity: $value;
+  -khtml-opacity: $value;
+  -webkit-opacity: $value;
+  -o-opacity: $value;
+  opacity: $value;
+}
+
+@mixin scale($t) {
+
+  @include transform(scale($t));
+}
+
+@mixin transform-origin($t) {
+  -moz-transform-origin: $t;
+  -webkit-transform-origin: $t;
+  -ms-transform-origin: $t;
+  transform-origin: $t;
+}
+
+@mixin perspective($p) {
+  -webkit-perspective: $p;
+  -moz-perspective: $p;
+  perspective: $p;
+}
+
+@mixin radius($r) {
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    border-radius: $r;
+}
+
+@mixin center-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%,-50%));
+}
+@mixin middle {
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+@mixin center {
+  position: absolute;
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+@mixin grid-box($r, $c, $gap) {
+    display: grid;
+    grid-template-rows: $r;
+    grid-template-columns: $c;
+    grid-gap: $gap;
+}
+
+@mixin gradient($from, $to, $horizontal: false) {
+  $def-dir: top;
+  $webkit-dir: linear, left top, left bottom;
+  $w3c-dir: to bottom;
+  $ie-dir: 0;
+
+  @if $horizontal == true {
+    $def-dir: left;
+    $webkit-dir: linear, left top, right top;
+    $w3c-dir: to right;
+    $ie-dir: 1;
+  }
+
+  background: $from; /* Old browsers */
+  background: -moz-linear-gradient($def-dir, $from 0%, $to 100%); /* FF3.6+ */
+  background: -webkit-gradient($webkit-dir, color-stop(0%,$from), color-stop(100%,$to)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($def-dir, $from 0%,$to 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($def-dir, $from 0%,$to 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient($def-dir, $from 0%,$to 100%); /* IE10+ */
+  background: linear-gradient($w3c-dir, $from 0%,$to 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$from, endColorstr=$to,GradientType=$ie-dir ); /* IE6-9 */
+
+}
+
+@mixin gradient_angle($from, $to, $angle) {
+
+  background: $from;
+  background: linear-gradient($angle, $from 0%,$to 100%); /* W3C */
+}
+
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+@mixin background-retina($class, $path, $retinapath, $width, $height) {
+  .#{$class} {
+    background-image: $path;
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-device-pixel-ratio: 1.5),
+  (min-resolution: 1.5dppx) {
+    .#{$class} {
+      background-image: $retinapath;
+      -webkit-background-size: $width + px $height + px;
+      -moz-background-size: $width + px $height + px;
+      background-size: $width + px $height + px;
+    }
+  }
+}
+
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)";
+
+@mixin retina-background-image($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  @media #{$retina} {
+    background-image: url($file + '@2x.' + $type);
+    background-size: $width $height;
+  }
+}
+
+
+
+$pi: 3.14159265359;
+$_precision: 10;
+
+@function pow($base, $exp) {
+  $value: $base;
+  @if $exp > 1 {
+    @for $i from 2 through $exp {
+      $value: $value * $base;
+    }
+  }
+  @if $exp < 1{
+    @for $i from 0 through -$exp {
+      $value: $value / $base;
+    }
+  }
+  @return $value;
+}
+
+@function fact($num) {
+  $fact: 1;
+  @if $num > 0{
+    @for $i from 1 through $num {
+      $fact: $fact * $i;
+    }
+  }
+  @return $fact;
+}
+
+@function _to_unitless_rad($angle) {
+  @if unit($angle) == "deg" {
+    $angle: $angle / 180deg * $pi;
+  }
+  @if unit($angle) == "rad" {
+    $angle: $angle / 1rad;
+  }
+  @return $angle;
+}
+
+@function sin($angle){
+  $a: _to_unitless_rad($angle);
+  $sin: $a;
+  @for $n from 1 through $_precision {
+    $sin: $sin + (pow(-1, $n) / fact(2 * $n + 1) ) * pow($a, (2 * $n + 1));
+  }
+  @return $sin;
+}
+
+@function cos($angle){
+  $a: _to_unitless_rad($angle);
+  $cos: 1;
+  @for $n from 1 through $_precision {
+    $cos: $cos + ( pow(-1,$n) / fact(2*$n) ) * pow($a,2*$n);
+  }
+  @return $cos;
+}
+
+@function tan($angle){
+  @return sin($angle) / cos($angle);
+}
+
+
+@function decimal-round ($number, $digits: 0, $mode: round) {
+  $n: 1;
+  // $number must be a number
+  @if type-of($number) != number {
+    @warn '#{$number} is not a number.';
+    @return $number;
+  }
+  // $digits must be a unitless number
+  @if type-of($digits) != number {
+    @warn '#{$digits} is not a number.';
+    @return $number;
+  } @else if not unitless($digits) {
+    @warn '#{$digits} has a unit.';
+    @return $number;
+  }
+  @for $i from 1 through $digits {
+    $n: $n * 10;
+  }
+  @if $mode == round {
+    @return round($number * $n) / $n;
+  } @else if $mode == ceil {
+    @return ceil($number * $n) / $n;
+  } @else if $mode == floor {
+    @return floor($number * $n) / $n;
+  } @else {
+    @warn '#{$mode} is undefined keyword.';
+    @return $number;
+  }
+}
+
+// Ceil a number to specified digits.
+//
+// @param  {Number} $number A number to round
+// @param  {Number} [$digits:0] Digits to output
+// @return {Number} A ceiled number
+// @example
+//     decimal-ceil(0.333)    => 1
+//     decimal-ceil(0.333, 1) => 0.4
+//     decimal-ceil(0.333, 2) => 0.34
+//     decimal-ceil(0.666)    => 1
+//     decimal-ceil(0.666, 1) => 0.7
+//     decimal-ceil(0.666, 2) => 0.67
+//
+@function decimal-ceil ($number, $digits: 0) {
+  @return decimal-round($number, $digits, ceil);
+}
+
+// Floor a number to specified digits.
+//
+// @param  {Number} $number A number to round
+// @param  {Number} [$digits:0] Digits to output
+// @return {Number} A floored number
+// @example
+//     decimal-floor(0.333)    => 0
+//     decimal-floor(0.333, 1) => 0.3
+//     decimal-floor(0.333, 2) => 0.33
+//     decimal-floor(0.666)    => 0
+//     decimal-floor(0.666, 1) => 0.6
+//     decimal-floor(0.666, 2) => 0.66
+//
+
+@function decimal-floor ($number, $digits: 0) {
+  $r:decimal-round($number, $digits, floor);
+  @if str-length(inspect($r)) == 1 {
+    @return $r + '.0';
+  }
+  @else {
+    @return $r;
+  }
+
+
+}
+
+@mixin letter-spacing($l, $s) {
+  letter-spacing: $l * $s / 1000 + px;
+}
+
+@mixin filter($type) {
+  -webkit-filter: $type;
+  filter: $type;
+}
