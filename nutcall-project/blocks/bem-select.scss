@@ -1,0 +1,76 @@
+/*  В этом файле должны быть стили для БЭМ-блока .bem-select, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+ */
+.bem-select {
+    display: inline-block;
+    vertical-align: top; 
+    width: auto;
+    
+    /* Элементы  block__el */
+    &__wrap {
+    	max-width: 700px;
+    	width: 100%;
+    	margin: 20px auto;
+    	
+    	select {
+        	margin: 20px;
+        }
+
+    }
+    &__gap {
+    	background: transparent;
+    	color: #818C9C;
+    	font-size: $font-size;
+    	padding: 10px 29px 10px 10px;
+    	cursor: pointer;
+    	position: relative;
+    }
+    
+    &__list {
+    	background: #fff;
+        border: 1px solid #008DFF;
+    	margin: 0px 0;
+    	position: absolute;
+    	right: 79px;
+    	z-index: 1;
+    	padding: 0;
+    }
+    
+    &__list.on {
+    	display: block;
+    }
+    
+    &__item span {
+    	display: block;
+    	padding: 10px 15px;
+    	cursor: pointer;
+        color: #333;
+    }
+    
+    &__item.selected,
+    &__item span:hover {
+    	color: #467797;
+    }
+    
+    &__gap:after {
+    	content: '';
+    	display: block;
+    	width: 16px;
+    	height: 16px;
+    	position: absolute;
+    	right: 9px;
+    	top: calc(50% - 8px);
+    	background: url(../img/down.svg) no-repeat 0 0;
+    
+        transition: all .27s ease-in-out;
+        transform: rotate(0deg);
+    }
+    
+    .on.bem-select__gap:after {
+        transform: rotate(180deg);
+    }
+
+
+}
+ 
+

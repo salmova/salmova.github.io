@@ -1,0 +1,15 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-icon-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-icon-block {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    :first-child {
+        margin-right: 8px;
+    }
+}

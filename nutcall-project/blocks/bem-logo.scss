@@ -1,0 +1,10 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-logo, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}

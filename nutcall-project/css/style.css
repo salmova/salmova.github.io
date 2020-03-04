@@ -1,0 +1,1349 @@
+@charset "UTF-8";
+/*!*
+ * ВНИМАНИЕ! Этот файл генерируется автоматически.
+ * Любые изменения этого файла будут потеряны при следующей компиляции.
+ */
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-link, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-link {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #008DFF;
+  transition: color .3s;
+}
+
+.bem-link_theme_white {
+  color: white;
+}
+
+.bem-link_theme_dark {
+  color: black;
+}
+
+.bem-link_font_sm {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-link_font_sm {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-logo, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Стилизация БЭМ-блока bem-base.
+* Общие стили тегов.
+* Подключение шрифтов.
+* Типографика. */
+/* Определяем viewport (для IE10) http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/ */
+@-ms-viewport {
+  width: device-width;
+}
+
+.bem-base {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  min-width: 320px;
+  min-height: 100%;
+}
+
+.bem-base__inner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bem-base__content {
+  flex-grow: 1;
+}
+
+.bem-base__footer-wrapper {
+  flex-shrink: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
+  word-break: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  color: black;
+  background-color: white;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+a,
+button,
+[role='button'],
+input,
+label,
+select,
+textarea {
+  touch-action: manipulation;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+  text-transform: none;
+}
+
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+svg {
+  fill: currentColor;
+}
+
+a svg,
+button svg {
+  pointer-events: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  float: left;
+}
+
+a {
+  color: #008DFF;
+  background-color: transparent;
+  transition: color 0.3s;
+}
+
+a:hover, a:focus {
+  color: #0063b3;
+}
+
+@media (min-width: 1200px) {
+  a[href^='tel:'] {
+    white-space: nowrap;
+    pointer-events: none;
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
+  line-height: 1.2;
+  color: currentColor;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+address,
+figure {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+p {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+address {
+  font-style: normal;
+}
+
+ul,
+ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  line-height: inherit;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+blockquote {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+code,
+kbd,
+pre {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+code {
+  padding: 0.06em 0.3em;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+kbd {
+  padding: 0.06em 0.3em;
+  color: black;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+}
+
+kbd kbd {
+  padding: 0;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  overflow-x: auto;
+  tab-size: 2;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+pre code {
+  background: transparent;
+}
+
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-button, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-button {
+  background: #008DFF;
+  color: white;
+  height: 32px;
+  border: none;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.bem-button:hover {
+  color: white;
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-circle-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-circle-block {
+  border-radius: 50%;
+  background: #F7F8FA;
+  font-size: 10px;
+  line-height: 14px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bem-circle-block_size_min {
+  width: 16px;
+  height: 16px;
+}
+
+.bem-circle-block_size_sm {
+  width: 24px;
+  height: 24px;
+}
+
+.bem-circle-block_size_mid {
+  width: 32px;
+  height: 32px;
+}
+
+.bem-circle-block_size_big {
+  width: 40px;
+  height: 40px;
+}
+
+.bem-circle-block_size_max {
+  width: 56px;
+  height: 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-circle-block_size_max {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-content, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 24px;
+  align-items: center;
+}
+
+.bem-content__persons {
+  margin-top: 24px;
+  margin-bottom: 123px;
+  width: 640px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bem-content__bem-logo {
+  margin-top: 272px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.bem-content__bem-logo :nth-child(n) {
+  margin-right: 8px;
+}
+
+.bem-content__filter-links {
+  margin-top: 16px;
+  margin-bottom: 42px;
+}
+
+.bem-content__filter-links a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bem-content__filter-links a:first-child {
+  margin-right: 20px;
+}
+
+.bem-content__persons__bem-link {
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .bem-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bem-content {
+    padding: 0 24px 24px;
+  }
+  .bem-content__persons {
+    margin-bottom: 32px;
+    margin-top: 16px;
+    width: 80%;
+  }
+  .bem-content__filter-links {
+    display: none;
+  }
+  .bem-content__bem-logo {
+    margin-top: 146px;
+  }
+  .bem-content__bem-logo :nth-child(n) {
+    margin-right: 4px;
+  }
+  .bem-content__bem-logo a img {
+    max-height: 24px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bem-content__persons :nth-child(n+6) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bem-content__persons {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bem-content {
+    padding: 0 16px 24px;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-events, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-events__event {
+  justify-content: flex-start !important;
+  margin-bottom: 12px;
+}
+
+.bem-events__event span {
+  margin-right: 4px;
+}
+
+.bem-events__date {
+  margin-bottom: 12px;
+}
+
+.bem-events_text_grey {
+  color: #A3AEB1;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-events {
+    display: none;
+  }
+}
+
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-footer, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-footer {
+  /* Элементы  block__el */
+  /* Модификаторы block(__el)_mod(_val)*/
+  /* Миксины block__block */
+}
+
+.bem-footer__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 32px;
+}
+
+.bem-footer__top {
+  height: 97px;
+  border-bottom: 1px solid #666666;
+}
+
+.bem-footer__bottom {
+  padding-top: 24px;
+  display: flex;
+}
+
+.bem-footer_margin_right {
+  margin-right: 32px;
+}
+
+.bem-footer_theme_dark {
+  background: #000;
+  color: #666666;
+}
+
+.bem-footer_theme_dark .bem-link {
+  color: white;
+}
+
+.bem-footer_theme_dark .bem-link:hover {
+  color: #b3b3b3;
+}
+
+.bem-footer_text_white {
+  color: white;
+}
+
+.bem-footer_text_gray {
+  color: #666666;
+}
+
+.bem-footer_align_right {
+  text-align: right;
+}
+
+.bem-footer__base-contact {
+  text-align: right;
+  margin-top: 33px;
+  min-width: 50%;
+}
+
+.bem-footer__base-contact h2 {
+  margin: 0;
+  position: relative;
+}
+
+.bem-footer__base-contact h2:after {
+  content: 'контакта в базе';
+  position: absolute;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  right: 0;
+  top: calc(50% + 15px);
+  color: #666666;
+}
+
+.bem-footer__bem-logo {
+  margin-top: 40px;
+  display: block;
+}
+
+.bem-footer__bem-link {
+  line-height: 24px !important;
+}
+
+/* @media-условия .bem-footer */
+@media screen and (max-width: 1200px) {
+  .bem-footer__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bem-footer__container {
+    padding: 0 24px 20px;
+  }
+  .bem-footer__bottom .bem-page__row {
+    flex-direction: column;
+  }
+  .bem-footer__container .bem-page_max-container .bem-page__column {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bem-footer_margin_right {
+    margin-right: 20px;
+  }
+  .bem-footer__bem-link {
+    font-size: 12px !important;
+  }
+  .bem-footer__base-contact h2 {
+    font-size: 26px;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-header, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-header {
+  height: 56px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+  margin-top: -56px;
+  transition: margin 0.4s ease-in-out;
+}
+
+.bem-header__search-icon {
+  display: none;
+}
+
+.bem-header__new-user img {
+  display: none;
+}
+
+.bem-header__new-user span:before {
+  content: 'Добавить контакт';
+}
+
+.bem-header__search-text {
+  width: calc(100% - 32px);
+}
+
+.bem-header__user-profile__img {
+  margin: 0 8px 0 16px;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.bem-header__user-profile__img:hover {
+  border: 2px solid #008DFF;
+  margin-left: 14px;
+  margin-right: 6px;
+}
+
+.bem-header__fixed {
+  position: fixed;
+  top: 0px;
+  background: white;
+  z-index: 2;
+  margin-top: 0;
+}
+
+.bem-header__fixed .bem-header__new-user img {
+  display: block;
+  float: left;
+  margin-right: 8px;
+}
+
+.bem-header__fixed .bem-header__new-user span:before {
+  content: 'Добавить';
+}
+
+.bem-header__fixed .bem-header__bem-logo {
+  padding-right: 65px;
+  display: flex;
+}
+
+.bem-header__fixed .bem-header__bem-logo .bem-logo__project img {
+  height: 20px;
+  width: auto;
+}
+
+.bem-header__fixed .bem-header__recharge {
+  display: none;
+}
+
+.bem-header__fixed .bem-header__bem-search-block .bem-search {
+  display: block;
+  background: #F7F8FA;
+  border: none;
+  height: 36px;
+  width: 75%;
+}
+
+.bem-header__fixed .bem-search__input {
+  background: #F7F8FA;
+}
+
+.bem-header__bem-search-block {
+  flex-grow: 1;
+}
+
+.bem-header__bem-search-block .bem-search {
+  display: none;
+}
+
+.bem-header__bem-logo {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .bem-header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bem-header {
+    padding: 0 16px;
+  }
+  .bem-header__balance {
+    order: 2;
+  }
+  .bem-header__user-profile__img {
+    margin-left: 0;
+  }
+  .bem-header__user-profile__img:hover {
+    border: none;
+    margin-left: 0;
+    margin-right: 8px;
+  }
+  .bem-header__recharge {
+    order: 3;
+    text-align: center;
+    color: #818C9C;
+    border-bottom: 1px dashed #818C9C;
+    margin: 0 auto;
+    display: none;
+  }
+  .bem-header__bem-logo {
+    order: 3;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+  }
+  .bem-header__bem-logo .bem-logo__brand {
+    display: none;
+  }
+  .bem-header__bem-logo .bem-logo__delim {
+    display: none;
+  }
+  .bem-header__bem-search-block {
+    order: 4;
+    flex-grow: inherit;
+    flex-grow: 1;
+  }
+  .bem-header__new-user {
+    order: 5;
+  }
+  .bem-header__new-user span:before {
+    content: '';
+  }
+  .bem-header__new-user img {
+    margin: 0;
+    display: block;
+  }
+  .bem-header__new-user.bem-circle-block {
+    background: #008DFF;
+    margin-left: 8px;
+  }
+  .bem-header__fixed .bem-header__bem-search-block {
+    flex-grow: inherit;
+  }
+  .bem-header__fixed .bem-header__search-icon {
+    display: block;
+  }
+  .bem-header__fixed .bem-search {
+    display: none;
+  }
+  .bem-header__fixed .bem-header__new-user img {
+    margin: 0;
+  }
+  .bem-header__fixed .bem-header__new-user span:before {
+    content: '';
+  }
+  .bem-header__fixed .bem-header__bem-logo {
+    padding: 0;
+  }
+  .bem-header__fixed .bem-header__bem-logo img {
+    margin: 0;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-icon-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-icon-block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bem-icon-block :first-child {
+  margin-right: 8px;
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-info-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-info-block {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+.bem-info-block__title {
+  height: 52px;
+  border-bottom: 1px solid #E3E5E8;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-info-block {
+    grid-template-columns: auto;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-page, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-page {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 56px;
+}
+
+.bem-page__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bem-page__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.bem-page__row_center {
+  justify-content: center;
+}
+
+.bem-page__column_center {
+  align-items: center;
+}
+
+.bem-page_max-container {
+  flex-grow: 1;
+}
+
+.bem-page_align_center {
+  text-align: center;
+}
+
+.bem-page_margin_none {
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .bem-page {
+    width: 100%;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-posts, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-posts {
+  width: 580px;
+}
+
+.bem-posts .bem-info-block__title {
+  margin-bottom: 15px;
+}
+
+.bem-posts__create {
+  background: #F7F8FA;
+  border-radius: 4px;
+  padding: 16px 16px 22px;
+}
+
+.bem-posts__create h6 {
+  margin-bottom: 12px;
+}
+
+.bem-posts__form {
+  position: relative;
+}
+
+.bem-posts__input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #E3E5E8;
+  border-radius: 4px;
+  padding: 0 9px 0 40px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.bem-posts__icon {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+}
+
+.bem-posts__btn {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  background: rgba(0, 141, 255, 0.08);
+  border-radius: 4px;
+  border: none;
+  padding: 6px 8px;
+  color: #008DFF;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.bem-posts__item {
+  border: 1px solid #F7F8FA;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.bem-posts__radio + .bem-posts__radio-label {
+  color: #008DFF;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.bem-posts__radio:checked + .bem-posts__radio-label {
+  color: #818C9C;
+  cursor: default;
+}
+
+@media screen and (max-width: 900px) {
+  .bem-posts {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bem-posts {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bem-posts__radio-label {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .bem-posts__btn {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-recently, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-recently .bem-icon-block :first-child {
+  margin-right: 12px;
+}
+
+.bem-recently__person {
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.bem-recently__person span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-record, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-record {
+  padding: 12px 16px 16px;
+  border-bottom: 1px solid #F7F8FA;
+}
+
+.bem-record__date {
+  color: #818C9C;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.bem-record__rating {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.bem-record__rating :first-child {
+  margin-right: 5px;
+}
+
+.bem-record__text {
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+.bem-record__company {
+  font-size: 12px;
+  line-height: 14px;
+  color: #818C9C;
+}
+
+.bem-record__like {
+  margin-left: 17px;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.bem-record__like :first-child {
+  margin-right: 5px;
+}
+
+.bem-record__bem-posts__create {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .bem-record__like {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .bem-record__like:first-child {
+    margin-left: 0;
+  }
+  .bem-record__caption {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bem-record__likes {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-search, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-search {
+  width: 640px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #008DFF;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bem-search__input {
+  flex-grow: 1;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #818C9C;
+  margin: 6px 16px;
+}
+
+.bem-search__select {
+  border: none;
+  height: 100%;
+  color: #818C9C;
+  font-size: 14px;
+}
+
+.bem-search__bem-button {
+  width: 79px;
+  border-radius: 0;
+  height: 100%;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-search .bem-select {
+    display: none;
+  }
+  .bem-content .bem-search {
+    width: 100%;
+    border: none;
+    background: #F7F8FA;
+    margin-bottom: 24px;
+  }
+  .bem-content .bem-search__bem-button {
+    display: none;
+  }
+  .bem-content .bem-search__input {
+    background: #F7F8FA;
+  }
+}
+
+/*  В этом файле должны быть стили для БЭМ-блока .bem-select, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+ */
+.bem-select {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  /* Элементы  block__el */
+}
+
+.bem-select__wrap {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.bem-select__wrap select {
+  margin: 20px;
+}
+
+.bem-select__gap {
+  background: transparent;
+  color: #818C9C;
+  font-size: 14px;
+  padding: 10px 29px 10px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.bem-select__list {
+  background: #fff;
+  border: 1px solid #008DFF;
+  margin: 0px 0;
+  position: absolute;
+  right: 79px;
+  z-index: 1;
+  padding: 0;
+}
+
+.bem-select__list.on {
+  display: block;
+}
+
+.bem-select__item span {
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.bem-select__item.selected,
+.bem-select__item span:hover {
+  color: #467797;
+}
+
+.bem-select__gap:after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 9px;
+  top: calc(50% - 8px);
+  background: url(../img/down.svg) no-repeat 0 0;
+  transition: all .27s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.bem-select .on.bem-select__gap:after {
+  transform: rotate(180deg);
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-sidebar, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-sidebar {
+  width: 280px;
+}
+
+.bem-sidebar .bem-info-block__title {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-sidebar {
+    order: 1;
+    width: auto;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-user-profile, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-user-profile__list {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 56px;
+  background: white;
+  z-index: 1;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  min-width: 240px;
+}
+
+.bem-user-profile__list .bem-icon-block {
+  justify-content: flex-start;
+}
+
+.bem-user-profile__list .bem-icon-block :first-child {
+  margin-right: 12px;
+}
+
+.bem-user-profile__list ul {
+  margin: 0;
+  padding: 16px;
+  border-bottom: 1px solid #E3E5E8;
+}
+
+.bem-user-profile__list ul:last-child {
+  border-bottom: none;
+}
+
+.bem-user-profile__list li:nth-child(n+2) {
+  margin-top: 12px;
+}
+
+.bem-user-profile__list > div {
+  width: 100%;
+  height: 100%;
+}
+
+.bem-user-profile .bem-user-profile_show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-user-profile {
+    order: 1;
+  }
+  .bem-user-profile__list {
+    display: block;
+    right: -260px;
+    top: 0;
+    transition: right .4s ease-in-out;
+    z-index: 3;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+  .bem-user-profile__list > div {
+    overflow-y: scroll;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-disabled, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-disabled:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  height: 100vh;
+}
+
+/*!*
+ * ВНИМАНИЕ! Этот файл генерируется автоматически.
+ * Любые изменения этого файла будут потеряны при следующей компиляции.
+ */
+/*# sourceMappingURL=style.css.map */

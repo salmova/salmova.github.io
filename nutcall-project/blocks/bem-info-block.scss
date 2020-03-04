@@ -1,0 +1,27 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-info-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-info-block {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 40px;
+    justify-content: center;
+    
+    &__title {
+        height: 52px;
+        border-bottom: 1px solid #E3E5E8;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-info-block {
+        grid-template-columns: auto;
+    }    
+}

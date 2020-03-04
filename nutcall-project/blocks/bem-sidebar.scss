@@ -1,0 +1,20 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-sidebar, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-sidebar {
+    width: $left-column;
+    
+    .bem-info-block__title {
+        margin-bottom: 12px;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-sidebar {
+        order: 1;
+        width: auto;
+    }
+}

@@ -1,0 +1,30 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-events, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-events {
+    
+    //Элементы
+    &__event {
+        justify-content: flex-start !important;
+        margin-bottom: 12px;
+        span {
+            margin-right: 4px;
+        }
+    }
+    &__date {
+        margin-bottom: 12px;
+    }
+    
+    //Модификаторы
+    &_text_grey {
+        color: #A3AEB1;
+    }    
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-events {
+        display: none;
+    }
+}

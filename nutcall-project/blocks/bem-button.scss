@@ -1,0 +1,21 @@
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-button, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-button {
+    
+    background: $link-color;
+    color: $white;
+    height: 32px;
+    border: none;
+    font-size: $font-size;
+    line-height: $font-size;
+    border-radius: $border-radius;
+    padding: 8px 12px;
+    cursor: pointer;
+    
+    &:hover {
+        color: $white;
+    }
+    
+}

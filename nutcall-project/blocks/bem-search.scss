@@ -1,0 +1,60 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-search, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-search {
+    width: 640px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid $link-color;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    //Элементы
+    &__input {
+        flex-grow: 1;
+        border: none;
+        font-size: 16px;
+        line-height: 24px; 
+        color: $text-hint;
+        margin: 6px 16px;
+    }
+    &__select {
+        border: none;
+        height: 100%;
+        color: $text-hint; 
+        font-size: $font-size;   
+    }
+    
+    //Миксины
+    &__bem-button {
+        width: 79px;
+        border-radius: 0;
+        height: 100%;
+        padding: 0;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-search .bem-select {
+            display: none;
+    }
+    .bem-content {
+        .bem-search {
+            width: 100%;
+            border: none;
+            background: #F7F8FA;
+            margin-bottom: 24px;
+        }
+        .bem-search__bem-button {
+            display: none;
+        }
+        .bem-search__input {
+            background: #F7F8FA;
+        }
+    }
+}

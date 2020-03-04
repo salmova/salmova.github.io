@@ -1,0 +1,104 @@
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-footer, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-footer {
+    
+    /* Элементы  block__el */
+    &__container {
+       width: $screen-xl;
+       margin: 0 auto;
+       padding: 0 48px 32px; 
+    }
+    &__top {
+        height: 97px;
+        border-bottom: 1px solid $gray-dark;
+    }
+    &__bottom {
+        padding-top: 24px;
+        display: flex;
+    }
+    
+    /* Модификаторы block(__el)_mod(_val)*/
+    &_margin_right {
+        margin-right: 32px;
+    }
+    &_theme_dark {
+        background: #000;
+        color: $gray-dark;
+        .bem-link {
+            color: $white;
+            &:hover {
+                color: $gray-lighten;
+            }
+        }
+    }
+    &_text_white {
+        color: $white;
+    }
+    &_text_gray {
+        color: $gray-dark;
+    }
+    &_align_right {
+        text-align: right;
+    }
+    
+    /* Миксины block__block */
+    &__base-contact {
+        text-align: right;
+        margin-top: 33px;
+        min-width: 50%;
+        h2 {
+            margin: 0;
+            position: relative;
+            &:after {
+                content: 'контакта в базе';
+                position: absolute;
+                font-size: $font-size;
+                line-height: $line-height;
+                font-weight: 500;
+                right: 0;
+                top: calc(50% + 15px);
+                color: $gray-dark;
+            }
+        }
+    }
+    &__bem-logo {
+        margin-top: 40px;
+        display: block;
+    }
+    &__bem-link {
+        line-height: 24px !important;
+    }
+}
+
+/* @media-условия .bem-footer */
+@media screen and (max-width: 1200px) {
+    .bem-footer__container {
+        width: 100%;
+    }    
+}
+@media screen and (max-width: 768px) {
+    .bem-footer__container {
+        padding: 0 24px 20px;
+    }
+    .bem-footer__bottom .bem-page__row {
+        flex-direction: column;
+    }    
+    .bem-footer__container .bem-page_max-container .bem-page__column {
+        text-align: right;
+    }
+}
+@media screen and (max-width: 320px) {
+    .bem-footer_margin_right {
+        margin-right: 20px;
+    }
+    .bem-footer__bem-link {
+        font-size: 12px !important;
+    }
+    .bem-footer__base-contact {
+        h2 {
+            font-size: 26px;
+        }
+    }
+}

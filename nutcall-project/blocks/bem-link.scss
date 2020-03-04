@@ -1,0 +1,32 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-link, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-link {
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: $link-color;
+    transition: color .3s;
+    
+    //Модификаторы
+    &_theme_white {
+        color: $white;
+    }
+    &_theme_dark {
+        color: $black;
+    }
+    &_font_sm {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-link_font_sm {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

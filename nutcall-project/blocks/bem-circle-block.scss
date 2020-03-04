@@ -1,0 +1,46 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-circle-block, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-circle-block {
+    
+    border-radius: 50%;
+    background: #F7F8FA;
+    font-size: 10px;
+    line-height: 14px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    //Модификаторы
+    &_size_min {
+        width: 16px;
+        height: 16px;
+    }
+    &_size_sm {
+        width: 24px;
+        height: 24px;
+    }
+    &_size_mid {
+        width: 32px;
+        height: 32px;
+    }
+    &_size_big {
+        width: 40px;
+        height: 40px;
+    }
+    &_size_max {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+//@media-условия .bem-circle-block
+@media screen and (max-width: 768px) {
+    .bem-circle-block_size_max {
+         width: 40px;
+         height: 40px;
+    }
+}
