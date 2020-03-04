@@ -823,7 +823,7 @@ pre code {
   .bem-header__fixed .bem-header__search-icon {
     display: block;
   }
-  .bem-header__fixed .bem-search {
+  .bem-header__fixed .bem-header__bem-search-block .bem-search {
     display: none;
   }
   .bem-header__fixed .bem-header__new-user img {
