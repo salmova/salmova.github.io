@@ -1477,7 +1477,7 @@ pre code {
     overflow-y: scroll;
   }
   .bem-user-profile__list > div {
-    height: auto;
+    height: 650px;
   }
 }
 
