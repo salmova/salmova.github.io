@@ -804,7 +804,7 @@ pre code {
   display: none;
 }
 
-.bem-header > div {
+.bem-header > div:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -816,13 +816,13 @@ pre code {
 }
 
 @media screen and (max-width: 1200px) {
-  .bem-header > div {
+  .bem-header > div:first-child {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .bem-header > div {
+  .bem-header > div:first-child {
     padding: 0 16px;
   }
   .bem-header__balance {
@@ -1485,14 +1485,29 @@ pre code {
 В этом файле должны быть стили для БЭМ-блока .bem-disabled, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
+/*
+.bem-disabled {
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.4);
+        z-index: 2;
+        height: 100vh;
+        min-height: 567px;
+        width: 100vw;
+        pointer-events: all;
+    }
+}
+*/
 .bem-disabled {
   position: fixed;
-  z-index: 2;
-}
-
-.bem-disabled:after {
-  content: '';
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -1502,6 +1517,11 @@ pre code {
   height: 100vh;
   min-height: 567px;
   width: 100vw;
+  display: none;
+}
+
+.bem-disabled_show {
+  display: block;
 }
 
 /*!*
