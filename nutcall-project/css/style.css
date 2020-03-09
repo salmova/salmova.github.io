@@ -1105,6 +1105,12 @@ pre code {
   .bem-posts {
     order: 2;
   }
+  .bem-posts__input {
+    font-size: 16px;
+  }
+  .bem-posts__input:placeholder {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 375px) {
