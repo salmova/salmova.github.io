@@ -154,6 +154,10 @@ input[type='month'] {
   -webkit-appearance: listbox;
 }
 
+input[type='text']:focus, textarea:focus {
+  outline: none !important;
+}
+
 textarea {
   overflow: auto;
   resize: vertical;
@@ -368,6 +372,7 @@ pre code {
 }
 
 .bem-button:hover {
+  opacity: .8;
   color: white;
 }
 
@@ -438,7 +443,7 @@ pre code {
 }
 
 .bem-content__bem-logo {
-  margin-top: 272px;
+  margin-top: 34vh;
   margin-bottom: 24px;
   align-items: center;
 }
@@ -537,6 +542,44 @@ pre code {
 @media screen and (max-width: 768px) {
   .bem-events {
     display: none;
+  }
+}
+
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-file, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-file {
+  position: absolute;
+  right: 127px;
+  bottom: -3px;
+}
+
+.bem-file__label {
+  width: 24px;
+  height: 24px;
+  background: url(../img/download.svg);
+  display: block;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.bem-file__label:hover {
+  opacity: 1;
+}
+
+.bem-file__input {
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .bem-file {
+    right: 110px;
   }
 }
 
@@ -663,13 +706,10 @@ pre code {
 */
 .bem-header {
   height: 56px;
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 32px;
-  box-sizing: border-box;
-  margin-top: -56px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: margin 0.4s ease-in-out;
 }
 
@@ -683,6 +723,11 @@ pre code {
 
 .bem-header__new-user span:before {
   content: 'Добавить контакт';
+  white-space: nowrap;
+}
+
+.bem-header__recharge {
+  white-space: nowrap;
 }
 
 .bem-header__search-text {
@@ -704,9 +749,10 @@ pre code {
 .bem-header__fixed {
   position: fixed;
   top: 0px;
+  left: 0;
   background: white;
   z-index: 2;
-  margin-top: 0;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
 }
 
 .bem-header__fixed .bem-header__new-user img {
@@ -733,7 +779,7 @@ pre code {
   display: none;
 }
 
-.bem-header__fixed .bem-header__bem-search-block .bem-search {
+.bem-header__fixed .bem-header__bem-search .bem-search__form {
   display: block;
   background: #F7F8FA;
   border: none;
@@ -745,11 +791,12 @@ pre code {
   background: #F7F8FA;
 }
 
-.bem-header__bem-search-block {
+.bem-header__bem-search {
   flex-grow: 1;
+  width: auto !important;
 }
 
-.bem-header__bem-search-block .bem-search {
+.bem-header__bem-search .bem-search__form {
   display: none;
 }
 
@@ -757,14 +804,25 @@ pre code {
   display: none;
 }
 
+.bem-header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1200px) {
-  .bem-header {
+  .bem-header > div {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .bem-header {
+  .bem-header > div {
     padding: 0 16px;
   }
   .bem-header__balance {
@@ -798,7 +856,7 @@ pre code {
   .bem-header__bem-logo .bem-logo__delim {
     display: none;
   }
-  .bem-header__bem-search-block {
+  .bem-header__bem-search {
     order: 4;
     flex-grow: inherit;
     flex-grow: 1;
@@ -817,13 +875,13 @@ pre code {
     background: #008DFF;
     margin-left: 8px;
   }
-  .bem-header__fixed .bem-header__bem-search-block {
+  .bem-header__fixed .bem-header__bem-search {
     flex-grow: inherit;
   }
   .bem-header__fixed .bem-header__search-icon {
     display: block;
   }
-  .bem-header__fixed .bem-header__bem-search-block .bem-search {
+  .bem-header__fixed .bem-header__bem-search .bem-search__form {
     display: none;
   }
   .bem-header__fixed .bem-header__new-user img {
@@ -890,7 +948,6 @@ pre code {
   flex-direction: column;
   min-height: 100vh;
   margin: 0 auto;
-  padding-top: 56px;
 }
 
 .bem-page__row {
@@ -925,7 +982,7 @@ pre code {
 
 @media screen and (max-width: 1200px) {
   .bem-page {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -960,10 +1017,18 @@ pre code {
   height: 32px;
   border: 1px solid #E3E5E8;
   border-radius: 4px;
-  padding: 0 9px 0 40px;
-  box-sizing: border-box;
+  padding: 5px 9px 0 40px;
+  box-sizing: padding-box;
   margin-bottom: 14px;
   font-size: 14px;
+  min-height: 32px;
+  max-height: 320px;
+  display: block;
+}
+
+.bem-posts__input:placeholder {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .bem-posts__icon {
@@ -986,6 +1051,10 @@ pre code {
   cursor: pointer;
 }
 
+.bem-posts__btn:hover {
+  background: rgba(0, 141, 255, 0.12);
+}
+
 .bem-posts__item {
   border: 1px solid #F7F8FA;
   border-radius: 4px;
@@ -1003,6 +1072,27 @@ pre code {
 .bem-posts__radio:checked + .bem-posts__radio-label {
   color: #818C9C;
   cursor: default;
+}
+
+.bem-posts__checkbox + .bem-posts__checkbox-label {
+  color: #008DFF;
+  cursor: pointer;
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.bem-posts__checkbox + .bem-posts__checkbox-label img {
+  margin-left: 10px;
+  opacity: .3;
+}
+
+.bem-posts__checkbox + .bem-posts__checkbox-label:hover {
+  color: #0063b3;
+}
+
+.bem-posts__checkbox:checked + .bem-posts__checkbox-label img {
+  opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
@@ -1081,13 +1171,18 @@ pre code {
   color: #818C9C;
 }
 
-.bem-record__like {
+.bem-record__like, .bem-record__dislike {
   margin-left: 17px;
   align-items: flex-end;
   white-space: nowrap;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.bem-record__like :first-child {
+.bem-record__like :first-child, .bem-record__dislike :first-child {
   margin-right: 5px;
 }
 
@@ -1120,6 +1215,10 @@ pre code {
 */
 .bem-search {
   width: 640px;
+  position: relative;
+}
+
+.bem-search__form {
   height: 40px;
   box-sizing: border-box;
   border: 1px solid #008DFF;
@@ -1134,7 +1233,7 @@ pre code {
   border: none;
   font-size: 16px;
   line-height: 24px;
-  color: #818C9C;
+  color: #333333;
   margin: 6px 16px;
 }
 
@@ -1145,11 +1244,62 @@ pre code {
   font-size: 14px;
 }
 
+.bem-search__history {
+  width: 100%;
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 16px #E0E2EC;
+  top: 48px;
+  padding-bottom: 8px;
+  display: none;
+}
+
+.bem-search__history-caption {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 8px;
+  border-bottom: 1px solid #E3E5E8;
+  height: 52px;
+  align-items: center;
+}
+
+.bem-search__history-caption span {
+  font-weight: 700;
+}
+
+.bem-search__history-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bem-search__history-list .bem-link {
+  height: 52px;
+  padding: 0 16px;
+}
+
+.bem-search__history-list .bem-link:hover {
+  background: #F7F8FA;
+}
+
+.bem-search_show {
+  display: block;
+}
+
 .bem-search__bem-button {
   width: 79px;
   border-radius: 0;
   height: 100%;
   padding: 0;
+}
+
+.bem-search__bem-icon-block {
+  justify-content: flex-start;
+}
+
+.bem-search__bem-icon-block .bem-record__author {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
@@ -1313,16 +1463,15 @@ pre code {
     order: 1;
   }
   .bem-user-profile__list {
-    display: block;
-    right: -260px;
+    right: -250px;
     top: 0;
-    transition: right .4s ease-in-out;
     z-index: 3;
     border-radius: 0;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
   }
   .bem-user-profile__list > div {
-    overflow-y: scroll;
+    height: auto;
   }
 }
 
@@ -1330,6 +1479,11 @@ pre code {
 В этом файле должны быть стили для БЭМ-блока .bem-disabled, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
+.bem-disabled {
+  position: fixed;
+  z-index: 2;
+}
+
 .bem-disabled:after {
   content: '';
   position: absolute;
@@ -1340,6 +1494,8 @@ pre code {
   background: rgba(0, 0, 0, 0.4);
   z-index: 2;
   height: 100vh;
+  min-height: 567px;
+  width: 100vw;
 }
 
 /*!*

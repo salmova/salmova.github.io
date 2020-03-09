@@ -24,7 +24,11 @@
         }
         span:before {
             content: 'Добавить контакт';
+            white-space: nowrap;
         }
+    }
+    &__recharge {
+        white-space: nowrap;
     }
     &__search-text {
         width: calc(100% - 32px);
@@ -47,6 +51,8 @@
         background: $white;
         z-index: 2;
         margin-top: 0;
+    //    border-bottom: 1px solid #E3E5E8;
+        box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
         .bem-header__new-user {
             img {
                 display: block;
@@ -68,7 +74,7 @@
         .bem-header__recharge {
             display: none;    
         }
-        .bem-header__bem-search-block .bem-search {
+        .bem-header__bem-search .bem-search__form {
             display: block;
             background: #F7F8FA;
             border: none;
@@ -81,9 +87,10 @@
     }
 
     //Миксины
-    &__bem-search-block {
+    &__bem-search {
         flex-grow: 1;
-        .bem-search {
+        width: auto !important;
+        .bem-search__form {
             display: none;
         }
     }
@@ -137,7 +144,7 @@
         }
 
     }
-    .bem-header__bem-search-block {
+    .bem-header__bem-search {
         order: 4;
         flex-grow: inherit;
         flex-grow: 1;
@@ -157,13 +164,13 @@
         }
     }
     .bem-header__fixed {
-        .bem-header__bem-search-block {
+        .bem-header__bem-search {
             flex-grow: inherit;
         }
         .bem-header__search-icon {
             display: block;
         }
-        .bem-search {
+        .bem-header__bem-search .bem-search__form {
             display: none;
         }
         .bem-header__new-user {

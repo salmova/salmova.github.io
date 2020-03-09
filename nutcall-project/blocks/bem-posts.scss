@@ -26,10 +26,17 @@
         height: 32px;
         border: 1px solid #E3E5E8;
         border-radius: $border-radius;
-        padding: 0 9px 0 40px;
-        box-sizing: border-box;
+        padding: 5px 9px 0 40px;
+        box-sizing: padding-box;
         margin-bottom: 14px;
         font-size: $font-size;
+        min-height: 32px;
+        max-height: 320px;
+        display:block;
+        &:placeholder {
+            font-size: $font-size;  
+            font-family: $font-family;  
+        }
     }
     &__icon {
         position: absolute;
@@ -48,6 +55,9 @@
         font-size: $font-size;
         line-height: $line-height;
         cursor: pointer;
+        &:hover {
+            background: rgba( 0, 141, 255, 0.12);
+        }
     }
     &__item {
         border: 1px solid #F7F8FA;
@@ -65,6 +75,36 @@
         &:checked + .bem-posts__radio-label {
             color: #818C9C;
             cursor: default;
+        }
+    }
+    &__checkbox {
+        & + .bem-posts__checkbox-label {
+            color: $link-color;
+            cursor: pointer;
+            display: flex;
+            width: max-content;
+            align-items: center;
+            div {
+                display: block;
+                position: relative;
+            }    
+            div: after {
+                content: 'Написать анонимно';
+                width: auto;
+                position: absolute;
+            }
+            img {
+                margin-left: 10px;
+                opacity: .3;
+            }
+            &:hover {
+                color: $link-color--hover;
+            }
+        }
+        &:checked + .bem-posts__checkbox-label {
+            img {
+                opacity: 1;
+            }
         }
     }
 }

@@ -121,6 +121,10 @@ input[type='month'] {
   -webkit-appearance: listbox; // stylelint-disable-line
 }
 
+input[type='text']:focus {
+  outline: none !important; // stylelint-disable-line
+}
+
 textarea {
   overflow: auto;   // Удаление верт. скролла в IE.
   resize: vertical; // Правильное изменение размеров

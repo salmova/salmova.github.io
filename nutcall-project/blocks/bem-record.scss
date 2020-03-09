@@ -30,10 +30,11 @@
         line-height: 14px;
         color: #818C9C;
     }
-    &__like {
+    &__like, &__dislike {
         margin-left: 17px;
         align-items: flex-end;
         white-space: nowrap;
+        cursor: pointer;
         :first-child {
             margin-right: 5px;
         }

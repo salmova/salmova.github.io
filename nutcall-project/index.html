@@ -30,60 +30,92 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 <body><noscript>У вас отключен JavaScript.</noscript>
   <div class="bem-page">
     <div class="bem-header">
-      <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href=""><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
-      <div class="bem-search-block bem-header__bem-search-block"><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt="">
-        <form class="bem-search bem-page__row" action="" method=""><input class="bem-search__input bem-header__search-text" placeholder="По имени, тегу, профессии" type="text"><input type="hidden" name="form" value="search"></form>
-      </div><a class="bem-link bem-header__new-user" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
-      <div class="bem-user-profile"><a class="bem-link bem-header__user-profile"><img class="bem-circle-block bem-circle-block_size_mid bem-header__user-profile__img" src="img/avatar-user.png" alt="Avatar"></a>
-        <div class="bem-user-profile__list">
-          <div>
-            <ul>
-              <li class="bem-header__user-profile-list">
-                <div class="bem-link bem-icon-block bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/avatar-user.png" alt=""><span>Елена Рудова</span></div>
-              </li>
-            </ul>
-            <ul>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-speakers.svg" alt=""><span>Спикеры</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-journ.svg" alt=""><span>Журналисты</span></a></li>
-            </ul>
-            <ul>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-msg.svg" alt=""><span>8 новых сообщений</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-list.svg" alt=""><span>Списки</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-setting.svg" alt=""><span>Настройки</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-progress.svg" alt=""><span>Продвижение</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-invite.svg" alt=""><span>Инвайты</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-balance.svg" alt=""><span>Баланс ・100</span></a></li>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-base.svg" alt=""><span>Прислать базу</span></a></li>
-            </ul>
-            <ul>
-              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-logout.svg" alt=""><span>Выйти</span></a></li>
-            </ul>
+      <div>
+        <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href=""><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
+        <div class="bem-search bem-header__bem-search"><a href=""><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt=""></a>
+          <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input bem-header__search-text" placeholder="По имени, тегу, профессии" type="text"><input type="hidden" name="form" value="search"></form>
+          <div class="bem-search__history">
+            <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
+            <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a></div>
+          </div>
+        </div><a class="bem-link bem-header__new-user" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
+        <div class="bem-user-profile"><a class="bem-link bem-header__user-profile"><img class="bem-circle-block bem-circle-block_size_mid bem-header__user-profile__img" src="img/avatar-user.png" alt="Avatar"></a>
+          <div class="bem-user-profile__list">
+            <div>
+              <ul>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/avatar-user.png" alt=""><span>Елена Рудова</span></a></li>
+              </ul>
+              <ul>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-speakers.svg" alt=""><span>Спикеры</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-journ.svg" alt=""><span>Журналисты</span></a></li>
+              </ul>
+              <ul>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-msg.svg" alt=""><span>8 новых сообщений</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-list.svg" alt=""><span>Списки</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-setting.svg" alt=""><span>Настройки</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-progress.svg" alt=""><span>Продвижение</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-invite.svg" alt=""><span>Инвайты</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-balance.svg" alt=""><span>Баланс ・100</span></a></li>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-base.svg" alt=""><span>Прислать базу</span></a></li>
+              </ul>
+              <ul>
+                <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-logout.svg" alt=""><span>Выйти</span></a></li>
+              </ul>
+            </div>
           </div>
         </div>
+        <div class="bem-circle-block bem-circle-block_size_sm bem-header__balance"><span>8</span></div>
       </div>
-      <div class="bem-circle-block bem-circle-block_size_sm bem-header__balance"><span>8</span></div>
     </div>
     <div class="bem-content bem-page__column bem-page_max-container">
       <div class="bem-logo bem-content__bem-logo"><a class="bem-link" href=""><img src="img/logo.svg" alt="Nutcall"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a></div>
-      <form class="bem-search bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-select" name="searchFilter">
-          <option value="Везде">Везде</option>
-          <option value="Беларусь">Беларусь</option>
-          <option value="Великобритания">Великобритания</option>
-          <option value="Россия">Россия</option>
-        </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
+      <div class="bem-search">
+        <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-select" name="searchFilter">
+            <option value="Везде">Везде</option>
+            <option value="Беларусь">Беларусь</option>
+            <option value="Великобритания">Великобритания</option>
+            <option value="Россия">Россия</option>
+          </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
+        <div class="bem-search__history">
+          <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
+          <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
+              <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
+              <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
+              <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
+              <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+            </a></div>
+        </div>
+      </div>
       <div class="bem-content__filter-links"><a class="bem-link" href="#">Спикеры</a><a class="bem-link" href="#">Журналисты</a></div>
       <div class="bem-icon-block"><img src="img/up.svg" alt="В тренде">
         <h6 class="bem-page_margin_none">В тренде</h6>
       </div>
-      <div class="bem-content__persons">
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person1.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Александр Коляда</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person2.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Сергей Смирнов</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person3.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Сергей Шнуров</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person4.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Ирина Белоцерковская</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person5.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Валерия Созонова</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person6.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Ирина Ветрова</a></div>
-        <div class="bem-page__column bem-page__column_center"><img class="bem-circle-block bem-circle-block_size_max" src="img/person7.jpg" alt="Фото"><a class="bem-link bem-link_theme_dark bem-link_font_sm bem-page_align_center bem-content__persons__bem-link" href="">Дмитрий Андреев</a></div>
-      </div>
+      <div class="bem-content__persons"><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person1.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Александр Коляда</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person2.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Сергей Смирнов</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person3.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Сергей Шнуров</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person4.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Ирина Белоцерковская</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person5.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Валерия Созонова</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person6.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Ирина Ветрова</div>
+        </a><a class="bem-link bem-link_theme_dark bem-page__column bem-page__column_center" href=""><img class="bem-circle-block bem-circle-block_size_max" src="img/person7.jpg" alt="Фото">
+          <div class="bem-link_font_sm bem-page_align_center bem-content__persons__bem-link">Дмитрий Андреев</div>
+        </a></div>
       <div class="bem-info-block">
         <div class="bem-page__column bem-posts">
           <div class="bem-info-block__title bem-page__row">
@@ -91,7 +123,9 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
           <div class="bem-posts__create">
             <h6 class="bem-page_margin_none">Создать публикацию:</h6>
-            <form class="bem-posts__form" action="" method="" id="Formpost"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><input class="bem-posts__input" type="text" placeholder="Написать пост" name="newpost" /><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__radio" type="radio" name="caption" value="anonymous" id="radioCaptionApost" hidden="hidden" /><label class="bem-posts__radio-label bem-posts__radio_unactive" for="radioCaptionApost">Анонимно</label><input class="bem-posts__radio" type="radio" name="caption" value="public" id="radioCaptionPpost" hidden="hidden" checked="checked" /><label class="bem-posts__radio-label" for="radioCaptionPpost">Публично</label><input type="hidden" name="form" value="Formpost" /></form>
+            <form class="bem-posts__form" action="" method="" id="Formpost"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Написать пост" name="newpost" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="checkCaptionApost" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="checkCaptionApost"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
+              <div class="bem-file"><label class="bem-file__label" for="fileInputpost"></label><input class="bem-file__input" type="file" id="fileInputpost" name="fileInputpost" multiple="multiple" /></div><input type="hidden" name="form" value="Formpost" />
+            </form>
           </div>
           <div class="bem-posts__item">
             <div class="bem-record">
@@ -100,13 +134,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <div class="bem-record__rating bem-icon-block"><span>3.5</span><img src="img/star.svg" alt="Рейтинг" /></div>
               </div>
               <div class="bem-record__text">Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке дальнейших направлений ...</div>
-              <div class="bem-page__row bem-record__caption">
-                <div class="bem-icon-block"><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь" />
+              <div class="bem-page__row bem-record__caption"><a class="bem-icon-block bem-link bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь" />
                   <div class="bem-page__column"><span class="bem-record__author">Евгений Смирновошвили</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-                </div>
+                </a>
                 <div class="bem-page__row bem-record__likes">
-                  <div class="bem-icon-block bem-record__like"><img src="img/dislike.svg" alt="Не нравится" /><span>45</span></div>
-                  <div class="bem-icon-block bem-record__like"><img src="img/like.svg" alt="Нравится" /><span>122</span></div>
+                  <div class="bem-icon-block bem-record__like" name="dislike"><img src="img/dislike.svg" alt="Не нравится" /><span>45</span></div>
+                  <div class="bem-icon-block bem-record__like" name="like"><img src="img/like.svg" alt="Нравится" /><span>122</span></div>
                 </div>
               </div>
             </div>
@@ -115,25 +148,23 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <div class="bem-record__date">Вчера</div>
               </div>
               <div class="bem-record__text">все спецы в приморье скорее всего. но кто-то наверняка в зоопарке тоже владеет темой</div>
-              <div class="bem-page__row bem-record__caption">
-                <div class="bem-icon-block"><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь" />
+              <div class="bem-page__row bem-record__caption"><a class="bem-icon-block bem-link bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь" />
                   <div class="bem-page__column"><span class="bem-record__author">Сотрудник «Звезда»</span><span class="bem-record__company"></span></div>
-                </div>
-              </div>
+                </a></div>
             </div>
             <div class="bem-record">
               <div class="bem-page__row">
                 <div class="bem-record__date">Вчера</div>
               </div>
               <div class="bem-record__text">text text text</div>
-              <div class="bem-page__row bem-record__caption">
-                <div class="bem-icon-block"><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь" />
+              <div class="bem-page__row bem-record__caption"><a class="bem-icon-block bem-link bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь" />
                   <div class="bem-page__column"><span class="bem-record__author">Сотрудник «Звезда»</span><span class="bem-record__company"></span></div>
-                </div>
-              </div>
+                </a></div>
             </div>
             <div class="bem-posts__create bem-record__bem-posts__create">
-              <form class="bem-posts__form" action="" method="" id="Form0"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><input class="bem-posts__input" type="text" placeholder="Оставить комментарий" name="newcomm" /><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__radio" type="radio" name="caption" value="anonymous" id="radioCaptionA0" hidden="hidden" /><label class="bem-posts__radio-label bem-posts__radio_unactive" for="radioCaptionA0">Анонимно</label><input class="bem-posts__radio" type="radio" name="caption" value="public" id="radioCaptionP0" hidden="hidden" checked="checked" /><label class="bem-posts__radio-label" for="radioCaptionP0">Публично</label><input type="hidden" name="form" value="Form0" /></form>
+              <form class="bem-posts__form" action="" method="" id="Form0"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Оставить комментарий" name="newcomm" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="checkCaptionA0" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="checkCaptionA0"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
+                <div class="bem-file"><label class="bem-file__label" for="fileInput0"></label><input class="bem-file__input" type="file" id="fileInput0" name="fileInput0" multiple="multiple" /></div><input type="hidden" name="form" value="Form0" />
+              </form>
             </div>
           </div>
           <div class="bem-posts__item">
@@ -143,18 +174,19 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <div class="bem-record__rating bem-icon-block"><span>4.5</span><img src="img/star.svg" alt="Рейтинг" /></div>
               </div>
               <div class="bem-record__text">Коллеги, помогите, пожалуйста, контактами: Буслов Пётр (кинорежиссёр) Михаил Бублик Быков Юрий Владимир Пресняков</div>
-              <div class="bem-page__row bem-record__caption">
-                <div class="bem-icon-block"><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь" />
+              <div class="bem-page__row bem-record__caption"><a class="bem-icon-block bem-link bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь" />
                   <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-                </div>
+                </a>
                 <div class="bem-page__row bem-record__likes">
-                  <div class="bem-icon-block bem-record__like"><img src="img/dislike.svg" alt="Не нравится" /><span>45</span></div>
-                  <div class="bem-icon-block bem-record__like"><img src="img/like.svg" alt="Нравится" /><span>123</span></div>
+                  <div class="bem-icon-block bem-record__like" name="dislike"><img src="img/dislike.svg" alt="Не нравится" /><span>45</span></div>
+                  <div class="bem-icon-block bem-record__like" name="like"><img src="img/like.svg" alt="Нравится" /><span>123</span></div>
                 </div>
               </div>
             </div>
             <div class="bem-posts__create bem-record__bem-posts__create">
-              <form class="bem-posts__form" action="" method="" id="Form1"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><input class="bem-posts__input" type="text" placeholder="Оставить комментарий" name="newcomm" /><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__radio" type="radio" name="caption" value="anonymous" id="radioCaptionA1" hidden="hidden" /><label class="bem-posts__radio-label bem-posts__radio_unactive" for="radioCaptionA1">Анонимно</label><input class="bem-posts__radio" type="radio" name="caption" value="public" id="radioCaptionP1" hidden="hidden" checked="checked" /><label class="bem-posts__radio-label" for="radioCaptionP1">Публично</label><input type="hidden" name="form" value="Form1" /></form>
+              <form class="bem-posts__form" action="" method="" id="Form1"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Оставить комментарий" name="newcomm" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="checkCaptionA1" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="checkCaptionA1"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
+                <div class="bem-file"><label class="bem-file__label" for="fileInput1"></label><input class="bem-file__input" type="file" id="fileInput1" name="fileInput1" multiple="multiple" /></div><input type="hidden" name="form" value="Form1" />
+              </form>
             </div>
           </div>
         </div>
