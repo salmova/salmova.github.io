@@ -620,6 +620,12 @@ pre code {
   height: 0;
 }
 
+.bem-file_comm {
+  right: 10px;
+  bottom: inherit;
+  top: 4px;
+}
+
 @media screen and (max-width: 375px) {
   .bem-file {
     right: 110px;
@@ -1061,7 +1067,7 @@ pre code {
   height: 32px;
   border: 1px solid #E3E5E8;
   border-radius: 4px;
-  padding: 5px 9px 0 40px;
+  padding: 5px 40px 0 40px;
   box-sizing: padding-box;
   margin-bottom: 14px;
   font-size: 14px;
@@ -1069,6 +1075,7 @@ pre code {
   min-height: 32px;
   max-height: 320px;
   display: block;
+  resize: none;
 }
 
 .bem-posts__input:placeholder, .bem-posts__input:-ms-input-placeholder, .bem-posts__input::-moz-placeholder, .bem-posts__input:-moz-placeholder, .bem-posts__input::-webkit-input-placeholder {
