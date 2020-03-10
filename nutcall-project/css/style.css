@@ -1235,8 +1235,8 @@ pre code {
 .bem-record__like-icon {
   width: 16px;
   height: 16px;
-  background: url(../img/sprite-like.png) no-repeat -19px 0;
-  background-size: 35px 35px;
+  background: url(../img/like.svg) no-repeat 0 0;
+  background-size: 16px 16px;
 }
 
 .bem-record__like {
@@ -1255,23 +1255,23 @@ pre code {
 }
 
 .bem-record__like:hover .bem-record__like-icon {
-  background-position: -19px -20px;
+  background: url(../img/like-fill.svg) no-repeat 0 0;
 }
 
 .bem-record__dislike .bem-record__like-icon {
-  background-position: 0 0;
+  background: url(../img/dislike.svg) no-repeat 0 0;
 }
 
 .bem-record__dislike:hover .bem-record__like-icon {
-  background-position: 0 -20px;
+  background: url(../img/dislike-fill.svg) no-repeat 0 0;
 }
 
 .bem-record_active .bem-record__like-icon {
-  background-position: -19px -20px;
+  background: url(../img/like-fill.svg) no-repeat 0 0;
 }
 
 .bem-record_active.bem-record__dislike .bem-record__like-icon {
-  background-position: 0 -20px;
+  background: url(../img/dislike-fill.svg) no-repeat 0 0;
 }
 
 .bem-record__bem-posts__create {
