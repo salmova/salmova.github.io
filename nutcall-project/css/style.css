@@ -630,6 +630,9 @@ pre code {
   .bem-file {
     right: 110px;
   }
+  .bem-file_comm {
+    right: 10px;
+  }
 }
 
 /*
