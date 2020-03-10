@@ -519,6 +519,49 @@ pre code {
 }
 
 /*
+В этом файле должны быть стили для БЭМ-блока .bem-disabled, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+/*
+.bem-disabled {
+    position: fixed;
+    z-index: 2;
+    pointer-events: none;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.4);
+        z-index: 2;
+        height: 100vh;
+        min-height: 567px;
+        width: 100vw;
+        pointer-events: all;
+    }
+}
+*/
+.bem-disabled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  height: 100vh;
+  min-height: 567px;
+  width: 100vw;
+  display: none;
+}
+
+.bem-disabled_show {
+  display: block;
+}
+
+/*
 В этом файле должны быть стили для БЭМ-блока .bem-events, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
@@ -813,6 +856,7 @@ pre code {
   padding: 0 32px;
   box-sizing: border-box;
   margin: 0 auto;
+  position: relative;
 }
 
 @media screen and (max-width: 1200px) {
