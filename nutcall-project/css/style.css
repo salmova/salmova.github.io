@@ -1232,7 +1232,14 @@ pre code {
   color: #818C9C;
 }
 
-.bem-record__like, .bem-record__dislike {
+.bem-record__like-icon {
+  width: 16px;
+  height: 16px;
+  background: url(../img/sprite-like.png) no-repeat -19px 0;
+  background-size: 35px 35px;
+}
+
+.bem-record__like {
   margin-left: 17px;
   align-items: flex-end;
   white-space: nowrap;
@@ -1243,8 +1250,28 @@ pre code {
   user-select: none;
 }
 
-.bem-record__like :first-child, .bem-record__dislike :first-child {
+.bem-record__like :first-child {
   margin-right: 5px;
+}
+
+.bem-record__like:hover .bem-record__like-icon {
+  background-position: -19px -20px;
+}
+
+.bem-record__dislike .bem-record__like-icon {
+  background-position: 0 0;
+}
+
+.bem-record__dislike:hover .bem-record__like-icon {
+  background-position: 0 -20px;
+}
+
+.bem-record_active .bem-record__like-icon {
+  background-position: -19px -20px;
+}
+
+.bem-record_active.bem-record__dislike .bem-record__like-icon {
+  background-position: 0 -20px;
 }
 
 .bem-record__bem-posts__create {
