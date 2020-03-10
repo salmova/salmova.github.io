@@ -1065,12 +1065,13 @@ pre code {
   box-sizing: padding-box;
   margin-bottom: 14px;
   font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   min-height: 32px;
   max-height: 320px;
   display: block;
 }
 
-.bem-posts__input:placeholder {
+.bem-posts__input:placeholder, .bem-posts__input:-ms-input-placeholder, .bem-posts__input::-moz-placeholder, .bem-posts__input:-moz-placeholder, .bem-posts__input::-webkit-input-placeholder {
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
