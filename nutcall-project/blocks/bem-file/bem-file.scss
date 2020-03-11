@@ -1,0 +1,47 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-file, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-file {
+    position: absolute;
+    right: 127px;
+    bottom: -3px;
+    
+    //Элементы
+    &__label {
+        width: 24px;
+        height: 24px;
+        background: url(../img/download.svg);
+        display: block;
+        cursor: pointer;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__input {
+       opacity: 0;
+       overflow: hidden;
+       position: absolute;
+       z-index: -1;
+       width: 0;
+       height: 0;
+    }
+    
+    &_comm {
+        right: 10px;
+        bottom: inherit;
+        top: 4px;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 375px) {
+    .bem-file {
+        right: 110px;
+        &_comm {
+            right: 10px;
+        }
+    }
+}

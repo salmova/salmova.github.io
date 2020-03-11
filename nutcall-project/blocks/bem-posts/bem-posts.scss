@@ -1,0 +1,132 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-posts, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-posts {
+    width: 580px;
+    .bem-info-block__title {
+        margin-bottom: 15px;
+    }
+    
+    //Элементы
+    &__create {
+        background: #F7F8FA;
+        border-radius: $border-radius;
+        padding: 16px 16px 22px;
+        h6 {
+            margin-bottom: 12px;
+        }
+    }
+    &__form {
+        position: relative;
+    }
+    &__input {
+        width: 100%;
+        height: 32px;
+        border: 1px solid #E3E5E8;
+        border-radius: $border-radius;
+        padding: 5px 40px 0 40px;
+        box-sizing: padding-box;
+        margin-bottom: 14px;
+        font-size: $font-size;
+        font-family: $font-family;  
+        min-height: 32px;
+        max-height: 320px;
+        display:block;
+        resize: none;
+        &:placeholder, &:-ms-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &::-webkit-input-placeholder {
+            font-size: $font-size;  
+            font-family: $font-family;  
+        }
+    }
+    &__icon {
+        position: absolute;
+        left: 8px;
+        top: 4px;
+    }
+    &__btn {
+        position: absolute;
+        right: 0;
+        bottom: -6px;
+        background: rgba( 0, 141, 255, 0.08);
+        border-radius: $border-radius;
+        border: none;
+        padding: 6px 8px;
+        color: $link-color;
+        font-size: $font-size;
+        line-height: $line-height;
+        cursor: pointer;
+        &:hover {
+            background: rgba( 0, 141, 255, 0.12);
+        }
+    }
+    &__item {
+        border: 1px solid #F7F8FA;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        margin-top: 8px;
+    }
+    &__radio {
+        & + .bem-posts__radio-label {
+            color: $link-color;
+            margin-right: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+        &:checked + .bem-posts__radio-label {
+            color: #818C9C;
+            cursor: default;
+        }
+    }
+    &__checkbox {
+        & + .bem-posts__checkbox-label {
+            color: $link-color;
+            cursor: pointer;
+            display: flex;
+            width: max-content;
+            align-items: center;
+            img {
+                margin-left: 10px;
+                opacity: .3;
+            }
+            &:hover {
+                color: $link-color--hover;
+            }
+        }
+        &:checked + .bem-posts__checkbox-label {
+            img {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+// @media-условия
+@media screen and (max-width: 900px) {
+    .bem-posts {
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .bem-posts {
+        order: 2;
+        &__input {
+            font-size: 16px;
+            &:placeholder {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .bem-posts__radio-label {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .bem-posts__btn {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

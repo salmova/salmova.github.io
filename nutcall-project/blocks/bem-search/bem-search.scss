@@ -1,0 +1,108 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-search, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-search {
+    width: 640px;
+    position: relative;
+    //Элементы
+    &__form {
+        height: 40px;
+        box-sizing: border-box;
+        border: 1px solid $link-color;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    &__input {
+        flex-grow: 1;
+        border: none;
+        font-size: 16px;
+        line-height: 24px; 
+        color: $gray-darker;
+        margin: 6px 16px;
+    }
+    &__select {
+        border: none;
+        height: 100%;
+        color: $text-hint; 
+        font-size: $font-size;   
+    }
+    &__history {
+        width: 100%;
+        position: absolute;
+        background: $white;
+        border-radius: 8px;
+        box-shadow: 0px 2px 16px #E0E2EC;
+        top: 48px;
+        padding-bottom: 8px;
+        display: none;
+    }
+    &__history-caption {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 16px 8px;
+        border-bottom: 1px solid #E3E5E8;
+        height: 52px;
+        align-items: center;
+        span {
+            font-weight: 700;
+        }
+    }
+    &__history-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .bem-link {
+            height: 52px;
+            padding: 0 16px;
+            &:hover {
+                background: #F7F8FA;
+            }
+        }
+    }
+    
+    &_show {
+        display: block;
+    }
+    
+    //Миксины
+    &__bem-button {
+        width: 79px;
+        border-radius: 0;
+        height: 100%;
+        padding: 0;
+    }
+    &__bem-icon-block {
+        justify-content: flex-start;
+        .bem-record__author {
+            font-weight: 700;    
+        }
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-search .bem-select {
+            display: none;
+    }
+    .bem-content__bem-search {
+        width: 100%;
+        .bem-search {
+            width: 100%;
+        }
+        .bem-search__form {
+            border: none;
+            background: #F7F8FA;
+            margin-bottom: 24px;
+        }
+        .bem-search__bem-button {
+            display: none;
+        }
+        .bem-search__input {
+            background: #F7F8FA;
+        }
+    }
+}

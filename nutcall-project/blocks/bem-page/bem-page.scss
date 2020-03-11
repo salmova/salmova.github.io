@@ -1,0 +1,47 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-page, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-page {
+    width: $screen-xl;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+//     padding-top: 56px;
+    
+    // Элементы
+    &__row {
+        display: flex;
+        justify-content: space-between;    
+    }
+    &__column {
+        display: flex;   
+        flex-direction: column;
+    }
+    
+    //Модификаторы
+    &__row_center {
+        justify-content: center;
+    }
+    &__column_center {
+        align-items: center;
+    }
+    &_max-container {
+        flex-grow: 1;
+    }
+    &_align_center {
+        text-align: center;
+    }
+    &_margin_none {
+        margin: 0;
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 1200px) {
+    .bem-page {
+        width: 100vw;
+    }
+}

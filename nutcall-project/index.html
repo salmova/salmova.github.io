@@ -32,21 +32,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     <div class="bem-header">
       <div>
         <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href=""><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
-        <div class="bem-search bem-header__bem-search"><a href=""><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt=""></a>
-          <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input bem-header__search-text" placeholder="По имени, тегу, профессии" type="text"><input type="hidden" name="form" value="search"></form>
-          <div class="bem-search__history">
-            <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
-            <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
-                <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
-                <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
-                <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
-                <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-              </a></div>
-          </div>
-        </div><a class="bem-link bem-header__new-user" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
+        <div class="bem-header__bem-search"><a href=""><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt=""></a></div><a class="bem-link bem-header__new-user" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
         <div class="bem-user-profile"><a class="bem-link bem-header__user-profile"><img class="bem-circle-block bem-circle-block_size_mid bem-header__user-profile__img" src="img/avatar-user.png" alt="Avatar"></a>
           <div class="bem-user-profile__list">
             <div>
@@ -78,24 +64,26 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </div>
     <div class="bem-content bem-page__column bem-page_max-container">
       <div class="bem-logo bem-content__bem-logo"><a class="bem-link" href=""><img src="img/logo.svg" alt="Nutcall"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a></div>
-      <div class="bem-search">
-        <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-select" name="searchFilter">
-            <option value="Везде">Везде</option>
-            <option value="Беларусь">Беларусь</option>
-            <option value="Великобритания">Великобритания</option>
-            <option value="Россия">Россия</option>
-          </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
-        <div class="bem-search__history">
-          <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
-          <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
-              <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
-              <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
-              <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-            </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
-              <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
-            </a></div>
+      <div class="bem-content__bem-search">
+        <div class="bem-search">
+          <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-select" name="searchFilter">
+              <option value="Везде">Везде</option>
+              <option value="Беларусь">Беларусь</option>
+              <option value="Великобритания">Великобритания</option>
+              <option value="Россия">Россия</option>
+            </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
+          <div class="bem-search__history">
+            <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
+            <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a></div>
+          </div>
         </div>
       </div>
       <div class="bem-content__filter-links"><a class="bem-link" href="#">Спикеры</a><a class="bem-link" href="#">Журналисты</a></div>
@@ -125,7 +113,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           <div class="bem-posts__create">
             <h6 class="bem-page_margin_none">Создать публикацию</h6>
             <form class="bem-posts__form" action="" method="" id="formpost"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Написать пост" name="newpost" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="check-caption-apost" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="check-caption-apost"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
-              <div class="bem-file"><label class="bem-file__label" for="file-input-post"></label><input class="bem-file__input" type="file" id="file-inputpost" name="file-input-post" multiple="multiple" /></div><input type="hidden" name="form" value="formpost" />
+              <div class="bem-file"><label class="bem-file__label" for="file-input-post"></label><input class="bem-file__input" type="file" id="file-input-post" name="file-input-post" multiple="multiple" /></div><input type="hidden" name="form" value="formpost" />
             </form>
           </div>
           <div class="bem-posts__item">
@@ -168,7 +156,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             </div>
             <div class="bem-posts__create bem-record__bem-posts__create">
               <form class="bem-posts__form" action="" method="" id="form0"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Оставить комментарий" name="newcomm" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="check-caption-a0" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="check-caption-a0"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
-                <div class="bem-file bem-file_comm"><label class="bem-file__label" for="file-input-0"></label><input class="bem-file__input" type="file" id="file-input0" name="file-input-0" multiple="multiple" /></div><input type="hidden" name="form" value="form0" />
+                <div class="bem-file bem-file_comm"><label class="bem-file__label" for="file-input-0"></label><input class="bem-file__input" type="file" id="file-input-0" name="file-input-0" multiple="multiple" /></div><input type="hidden" name="form" value="form0" />
               </form>
             </div>
           </div>
@@ -194,7 +182,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             </div>
             <div class="bem-posts__create bem-record__bem-posts__create">
               <form class="bem-posts__form" action="" method="" id="form1"><img class="bem-posts__icon bem-circle-block bem-circle-block_size_sm" src="img/avatar-user.png" alt="Фото" /><textarea class="bem-posts__input" placeholder="Оставить комментарий" name="newcomm" rows="1" data-min-rows="1" data-max-rows="10"></textarea><input class="bem-posts__btn" type="submit" value="Опубликовать" /><input class="bem-posts__checkbox" type="checkbox" name="caption" value="anonymous" id="check-caption-a1" hidden="hidden" /><label class="bem-posts__checkbox-label bem-posts__checkbox_unactive" for="check-caption-a1"><span>Написать анонимно</span><img src="img/check.svg" alt="" /></label>
-                <div class="bem-file bem-file_comm"><label class="bem-file__label" for="file-input-1"></label><input class="bem-file__input" type="file" id="file-input1" name="file-input-1" multiple="multiple" /></div><input type="hidden" name="form" value="form1" />
+                <div class="bem-file bem-file_comm"><label class="bem-file__label" for="file-input-1"></label><input class="bem-file__input" type="file" id="file-input-1" name="file-input-1" multiple="multiple" /></div><input type="hidden" name="form" value="form1" />
               </form>
             </div>
           </div>
@@ -244,7 +232,17 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="js/bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src='js/utils/documentReady.js'></script>
+  <script src='blocks/bem-content/bem-content.js'></script>
+  <script src='blocks/bem-disabled/bem-disabled.js'></script>
+  <script src='blocks/bem-header/bem-header.js'></script>
+  <script src='blocks/bem-posts/bem-posts.js'></script>
+  <script src='blocks/bem-record/bem-record.js'></script>
+  <script src='blocks/bem-search/bem-search.js'></script>
+  <script src='blocks/bem-select/bem-select.js'></script>
+  <script src='blocks/bem-user-profile/bem-user-profile.js'></script>
+  <script src='js/script.js'></script>
 
 </body>
 
