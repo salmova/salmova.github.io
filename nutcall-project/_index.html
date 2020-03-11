@@ -127,12 +127,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <div class="bem-page__column"><span class="bem-record__author">Евгений Смирновошвили</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
                 </a>
                 <div class="bem-page__row bem-record__likes">
-                  <div class="bem-icon-block bem-record__like bem-record__dislike" name="dislike"><svg class="bem-record__like-icon dislike">
-                      <use xlink:href="img/sprite.svg#dislike"></use>
-                    </svg><span>45</span></div>
-                  <div class="bem-icon-block bem-record__like" name="like"><svg class="bem-record__like-icon like">
-                      <use xlink:href="img/sprite.svg#like"></use>
-                    </svg><span>122</span></div>
+                  <div class="bem-icon-block bem-record__like bem-record__dislike" name="dislike">
+                    <div class="bem-record__like-icon"></div><span>45</span>
+                  </div>
+                  <div class="bem-icon-block bem-record__like" name="like">
+                    <div class="bem-record__like-icon"></div><span>122</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,12 +171,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
                 </a>
                 <div class="bem-page__row bem-record__likes">
-                  <div class="bem-icon-block bem-record__like bem-record__dislike" name="dislike"><svg class="bem-record__like-icon dislike">
-                      <use xlink:href="img/sprite.svg#dislike"></use>
-                    </svg><span>45</span></div>
-                  <div class="bem-icon-block bem-record__like" name="like"><svg class="bem-record__like-icon like">
-                      <use xlink:href="img/sprite.svg#like"></use>
-                    </svg><span>123</span></div>
+                  <div class="bem-icon-block bem-record__like bem-record__dislike" name="dislike">
+                    <div class="bem-record__like-icon"></div><span>45</span>
+                  </div>
+                  <div class="bem-icon-block bem-record__like" name="like">
+                    <div class="bem-record__like-icon"></div><span>123</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -232,7 +232,17 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="js/bundle.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src='js/utils/documentReady.js'></script>
+  <script src='blocks/bem-content/bem-content.js'></script>
+  <script src='blocks/bem-disabled/bem-disabled.js'></script>
+  <script src='blocks/bem-header/bem-header.js'></script>
+  <script src='blocks/bem-posts/bem-posts.js'></script>
+  <script src='blocks/bem-record/bem-record.js'></script>
+  <script src='blocks/bem-search/bem-search.js'></script>
+  <script src='blocks/bem-select/bem-select.js'></script>
+  <script src='blocks/bem-user-profile/bem-user-profile.js'></script>
+  <script src='js/script.js'></script>
 
 </body>
 

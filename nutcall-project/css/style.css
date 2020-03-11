@@ -1265,8 +1265,7 @@ pre code {
 .bem-record__like-icon {
   width: 16px;
   height: 16px;
-  background: url(../img/like.svg) no-repeat 0 0;
-  background-size: 16px 16px;
+  fill: #fff;
 }
 
 .bem-record__like {
@@ -1285,15 +1284,11 @@ pre code {
 }
 
 .bem-record__like:hover .bem-record__like-icon {
-  background: url(../img/like-fill.svg) no-repeat 0 0;
-}
-
-.bem-record__dislike .bem-record__like-icon {
-  background: url(../img/dislike.svg) no-repeat 0 0;
+  fill: #1FCF5F;
 }
 
 .bem-record__dislike:hover .bem-record__like-icon {
-  background: url(../img/dislike-fill.svg) no-repeat 0 0;
+  fill: #FF6366;
 }
 
 .bem-record_active .bem-record__like-icon {
