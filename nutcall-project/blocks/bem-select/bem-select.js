@@ -6,7 +6,7 @@ ready(function(){
 			selectOption = $this.find('option'),
 			selectOptionLength = selectOption.length,
 			selectedOption = selectOption.filter(':selected'),
-			dur = 500;
+			dur = 200;
 
 		$this.hide();
 		// Wrap all in select box

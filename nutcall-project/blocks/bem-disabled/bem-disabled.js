@@ -1,20 +1,6 @@
 /*
-const ready = require('../../js/utils/documentReady.js');
-
-ready( function() { 
-    
-  var disabledBlock = jQuery('.bem-disabled');
-  var userProfileList = jQuery('.bem-user-profile__list');
-  
-  disabledBlock.on('click', function() {
-        userProfileList.animate({'right':'-240px'},1000);
-        setTimeout(function (){
-            userProfileList.removeClass('bem-user-profile_show');
-            disabledBlock.removeClass('bem-disabled_show');
-        },1000); 
-        jQuery('body').attr('style', '');
-  });
-} );
+    Блок DisabledBlock - появляется на экранах меньше 768px при открытом меню профиля пользователя
+    click: При клике на блок открытое меню плавно "уезжает" вправо
 */
 (function ($) {
 
@@ -37,11 +23,11 @@ ready( function() {
         var self = this;
 
         self.$label.on('click', function () {
-            $('.bem-user-profile__list').animate({'right':'-240px'},1000);
+            $('.bem-user-profile__list').animate({'right':'-240px'},300);
             setTimeout(function (){
                jQuery('.bem-user-profile__list').removeClass('bem-user-profile_show');
                 self.$label.removeClass('bem-disabled_show');
-            },1000); 
+            },300); 
             jQuery('body').attr('style', '');
         });
 

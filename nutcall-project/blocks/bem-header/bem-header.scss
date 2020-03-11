@@ -11,7 +11,7 @@
     left: 0;
     transition: margin 0.4s ease-in-out;
     
-    //Элементы
+    /* bem-header: Элементы */
     &__search-icon {
         display: none;
     }
@@ -66,13 +66,16 @@
                 height: 20px;
                 width: auto;
             }
+            .bem-logo__delim {
+                margin: 0 4px;
+            }
         }
         .bem-header__recharge {
             display: none;    
         }
     }
 
-    //Миксины
+    /* bem-header: Миксины */
     &__bem-search {
         flex-grow: 1;
         .bem-search {
@@ -114,7 +117,7 @@
 }
 
 
-// @media-условия
+/* bem-header: @media условия */
 @media screen and (max-width: 1200px) {
     .bem-header > div:first-child {
         width: 100%;

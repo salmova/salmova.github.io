@@ -43,6 +43,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  /* bem-logo: Элементы */
+}
+
+.bem-logo__delim {
+  margin: 0 8px;
+}
+
+/* bem-logo: @media условия */
+@media screen and (max-width: 768px) {
+  .bem-logo__delim {
+    margin: 0 4px;
+  }
 }
 
 /* Стилизация БЭМ-блока bem-base.
@@ -432,6 +444,8 @@ pre code {
   margin: 0 auto;
   padding: 0 32px 24px;
   align-items: center;
+  /* bem-content: Элементы */
+  /* bem-content: Миксины */
 }
 
 .bem-content__persons {
@@ -446,10 +460,6 @@ pre code {
   margin-top: 34vh;
   margin-bottom: 24px;
   align-items: center;
-}
-
-.bem-content__bem-logo :nth-child(n) {
-  margin-right: 8px;
 }
 
 .bem-content__filter-links {
@@ -474,6 +484,7 @@ pre code {
   height: 40px;
 }
 
+/* bem-content: @media условия */
 @media screen and (max-width: 1200px) {
   .bem-content {
     width: 100%;
@@ -494,9 +505,6 @@ pre code {
   }
   .bem-content__bem-logo {
     margin-top: 146px;
-  }
-  .bem-content__bem-logo :nth-child(n) {
-    margin-right: 4px;
   }
   .bem-content__bem-logo a img {
     max-height: 24px;
@@ -770,6 +778,8 @@ pre code {
   top: 0;
   left: 0;
   transition: margin 0.4s ease-in-out;
+  /* bem-header: Элементы */
+  /* bem-header: Миксины */
 }
 
 .bem-header__search-icon {
@@ -834,6 +844,10 @@ pre code {
   width: auto;
 }
 
+.bem-header__fixed .bem-header__bem-logo .bem-logo__delim {
+  margin: 0 4px;
+}
+
 .bem-header__fixed .bem-header__recharge {
   display: none;
 }
@@ -883,6 +897,7 @@ pre code {
   position: relative;
 }
 
+/* bem-header: @media условия */
 @media screen and (max-width: 1200px) {
   .bem-header > div:first-child {
     width: 100%;
@@ -1435,7 +1450,7 @@ pre code {
   display: inline-block;
   vertical-align: top;
   width: auto;
-  /* Элементы  block__el */
+  /* bem-select: Элементы */
 }
 
 .bem-select__wrap {
@@ -1460,7 +1475,7 @@ pre code {
 .bem-select__list {
   background: #fff;
   border: 1px solid #008DFF;
-  margin: 0px 0;
+  margin: -1px 0 0;
   position: absolute;
   right: 79px;
   z-index: 1;
@@ -1523,6 +1538,11 @@ pre code {
 В этом файле должны быть стили для БЭМ-блока .bem-user-profile, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
+.bem-user-profile {
+  /* bem-user-profile: Элементы */
+  /* bem-user-profile: Модификаторы */
+}
+
 .bem-user-profile__list {
   display: none;
   position: absolute;
@@ -1566,6 +1586,7 @@ pre code {
   display: block;
 }
 
+/* bem-user-profile: @media условия */
 @media screen and (max-width: 768px) {
   .bem-user-profile {
     order: 1;

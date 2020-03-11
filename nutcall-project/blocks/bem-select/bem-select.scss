@@ -6,7 +6,7 @@
     vertical-align: top; 
     width: auto;
     
-    /* Элементы  block__el */
+    /* bem-select: Элементы */
     &__wrap {
     	max-width: 700px;
     	width: 100%;
@@ -29,7 +29,7 @@
     &__list {
     	background: #fff;
         border: 1px solid #008DFF;
-    	margin: 0px 0;
+    	margin: -1px 0 0;
     	position: absolute;
     	right: 79px;
     	z-index: 1;

@@ -3,14 +3,13 @@
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
 
-//Блок
 .bem-content {
     width: $screen-xl;
     margin: 0 auto;
     padding: 0 32px 24px;
     align-items: center;
     
-    //Элементы
+    /* bem-content: Элементы */
     &__persons {
         margin-top: 24px;
         margin-bottom: 123px;
@@ -19,14 +18,11 @@
         justify-content: space-between;
     }
 
-    //Миксины
+    /* bem-content: Миксины */
     &__bem-logo {
         margin-top: 34vh;
         margin-bottom: 24px;
         align-items: center;
-        :nth-child(n) {
-            margin-right: 8px;
-        }
     }
     &__filter-links {
         margin-top: 16px;
@@ -47,7 +43,7 @@
     }
 }
 
-// @media-условия
+/* bem-content: @media условия */
 @media screen and (max-width: 1200px) {
     .bem-content {
         width: 100%;
@@ -67,9 +63,6 @@
     }
     .bem-content__bem-logo {
         margin-top: 146px;
-        :nth-child(n) {
-            margin-right: 4px;
-        }
         a img {
             max-height: 24px;
             width: auto;

@@ -5,7 +5,7 @@
 
 .bem-user-profile {
     
-    //Элементы
+    /* bem-user-profile: Элементы */
     &__list {
         display: none;
         position: absolute;
@@ -39,13 +39,13 @@
         }
     }
     
-    //Модификаторы
+    /* bem-user-profile: Модификаторы */
     .bem-user-profile_show {
         display: block;
     }
 }
 
-// @media-условия
+/* bem-user-profile: @media условия */
 @media screen and (max-width: 768px) {
     .bem-user-profile {
         order: 1;

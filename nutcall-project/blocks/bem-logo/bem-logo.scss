@@ -7,4 +7,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+    
+    /* bem-logo: Элементы */
+    &__delim {
+        margin: 0 8px;
+    }
+}
+
+/* bem-logo: @media условия */
+@media screen and (max-width: 768px) {
+    .bem-logo {
+        &__delim {
+            margin: 0 4px;
+        }
+    }
 }
