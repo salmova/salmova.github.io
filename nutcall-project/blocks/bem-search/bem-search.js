@@ -1,3 +1,12 @@
+/*
+    Block: SearchBlock
+    Init:
+        Очищение поля ввода SearchBlock.$labelInput
+    Events:
+        SearchBlock.$labelClean.click - очистка истории поиска
+        SearchBlock.$labelInput.input - отображение истории поиска при изменении поля ввода
+        SearchBlock.$labelBtn.click - скрытие истории поиска при нажатии на кнопку "Искать" 
+*/
 (function ($) {
 
     /**

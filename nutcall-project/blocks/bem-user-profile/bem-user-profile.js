@@ -1,3 +1,8 @@
+/*
+    Block: UserProfileBlock
+    Events:
+        UserProfileBlock.click - отображение меню профиля пользователя (для устройствах шириной < 768px меняется механизм появления меню)
+*/
 (function ($) {
 
     /**
