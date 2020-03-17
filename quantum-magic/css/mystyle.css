@@ -1,5 +1,26 @@
 
-
+@media (min-width: 1920px) {
+    #page {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .top-section {
+        min-height: 970px;
+        background-position: 0 0;
+        background-size: contain;
+    }
+    .adv-sections {
+        min-height: inherit;
+    }
+}
+@media (max-width: 1920px) {
+    #page {
+        max-width: 100vw;
+    }
+    .top-section {
+        min-height: 50vw;
+    }
+}
 @media (max-width: 1500px) {
     html body {
         width: 100vw;
@@ -124,7 +145,10 @@
         margin: 0 0.6vw;
     }
     canvas, img, video {
-        width: 17vw;
+        width: 13vw;
+    }
+    .top-section .top-logo {
+        margin-left: 9vw;
     }
     .top-section .right-column .text-block {
         font-size: 2.4vw;
@@ -280,6 +304,7 @@
     }
     .order-feedback .ui.form input[type="text"], .order-feedback .ui.form .field.error input[type="text"] {
         font-size: 1.5vw;
+        border-bottom-width: 1px;
     }
     .order-feedback .ui.form .field {
         margin-bottom: 3vw;
@@ -318,9 +343,11 @@
     .easy-section.whatis-section .text-block .sppb-addon-content span {
         font-size: 13vw;
         line-height: 12vw;
+        margin-right: 1.5vw;
     }
     .easy-section.whatis-section .text-block .sppb-addon-content {
         font-size: 3vw;
+        max-width: 30vw;
     }
     .easy-section .sppb-row > div:last-child {
         max-width: 47vw;
@@ -394,6 +421,7 @@
     }
     .trans-register .ui.form input[type="text"], .trans-register .ui.form input[type="password"] {
         font-size: 1.5vw;
+        border-bottom-width: 1px;
     }
     .trans-register .ui.form button[type="submit"] {
         font-size: 1.5vw;
@@ -410,6 +438,10 @@
     .footer-menu li a {
         margin-bottom: 1.8vw;
         font-weight: 400;
+    }
+    .footer-section {
+        padding-top: 2.5vw;
+        padding-bottom: 1.5vw;
     }
     .footer-section, .footer-section .payment-icons h3, .footer-section h3 {
         font-size: 1.2vw;
@@ -428,6 +460,7 @@
     .copy-section {
         font-size: 0.9vw;
         font-weight: 400;
+        padding: 1.1vw 0;
     }
     .copy-section img {
         width: 6vw;
@@ -483,6 +516,12 @@
     }
     .adv-sections .adv-tabs .sppb-tab ul li.active::after { 
         right: -6.7vw;
+    }
+    .dir-table table::before, .dir-table table::after { 
+        width: 2px;
+    }
+    .dir-table table tr:last-child td {
+        border-top-width: 2px;
     }
 
 }
