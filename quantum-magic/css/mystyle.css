@@ -866,7 +866,7 @@
         font-size: 3vw;
     }
     .ui.grid > .row {
-        width: 90% !important;
+        width: 85% !important;
         margin: 0 auto;
     }
     .bfooter-section .text-block {
@@ -885,6 +885,9 @@
     }
     .easy-section .right-column .sppb-column-addons > div:nth-child(1)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(2)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(4)::after {
         top: 5vw;
+    }
+    .semanticui-body small {
+        font-size: 3vw;
     }
 }
 
