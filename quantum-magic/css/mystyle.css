@@ -7,6 +7,9 @@
         font-size: 16px;
         overflow-x: hidden;
     }
+    .page-content {
+        overflow-x: hidden;    
+    }
     .container, .sppb-container-inner {
         max-width: 90vw;
     }
@@ -870,10 +873,28 @@
         max-width: 90vw;
         margin: 0 auto;
     }
+    .easy-section.where-section.whatis-section .sppb-column-addons {
+        align-items: flex-start;
+    }
+    .order-feedback {
+        margin-top: 8vw;
+    }
+    .ui.grid > .relaxed.row > .column, .ui.relaxed.grid > .column:not(.row), .ui.relaxed.grid > .row > .column {
+        padding-left: 0;
+        padding-right: 2vw;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(1)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(2)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(4)::after {
+        top: 5vw;
+    }
 }
 
-@media ( max-width: 991px) {
-
+@media ( max-width: 414px) {
+    .easy-section .sppb-row > div:last-child {
+        width: 85%;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(3)::after {     
+        right: 55px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
