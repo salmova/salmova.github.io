@@ -1,0 +1,912 @@
+
+
+@media (max-width: 1500px) {
+    html body {
+        width: 100vw;
+        min-width: auto;
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+    .container, .sppb-container-inner {
+        max-width: 90vw;
+    }
+    body.view-page #main > .container {
+        width: 100vw;
+        min-width: inherit;
+    }
+    .sp-page-builder .page-content #top-section {
+        background-position: 0 0;
+        background-size: auto 100%;
+        background-color: #f5f5f5;
+    }
+    .top-section {
+        padding-top: 45px;
+        padding-bottom: 118px;
+        height: 100vh;
+        min-height: calc(100vw * 0.51);
+    }
+    canvas, img, video {
+        max-width: 90%;
+    }
+    .top-menu ul a {
+        font-size: 21px;
+    }
+    .top-icons a {
+        width: 36px;
+        height: 36px;
+    }
+    .top-section > div {
+        max-width: 90vw;
+    }
+    .top-section .right-column .text-block {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 90px;
+        max-width: 511px;
+    }
+    .top-section .right-column h1 {
+        font-size: 46px;
+        margin-top: 20vh;
+        margin-bottom: 36px;
+    }
+    .top-section .right-column h1 span {
+        font-size: 68px;
+    }
+    .btn {
+        font-size: 22px;
+    }
+    .top-section .bottom-links .btn a {
+        width: 243px;
+        display: flex;
+        height: 72px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .whatis-section {
+        padding-top: 121px;
+        padding-bottom: 112px;
+    }
+    .whatis-section #column-id-1569325850866 {
+
+    }
+    .whatis-section .text-block h2 {
+        font-size: 64px;
+    }
+    .whatis-section .right-tabs h2 {
+        font-size: 28px;
+        max-width: 378px;
+        margin-bottom: 64px;
+    }
+    .whatis-section .right-tabs h2 span {
+        font-size: 22px;
+        margin-top: 12px;
+    }
+    .whatis-section .right-tabs .tabs-tab ul::after {
+        height: calc(100% + 112px);
+    }
+    .whatis-section .right-tabs .tabs-tab ul li a {
+        width: 54px;
+        height: 54px;
+        font-size: 48px;
+        margin-bottom: 36px;
+    }
+    .whatis-section .right-tabs .tabs-tab .sppb-tab-tabs-content {
+        font-size: 26px;
+    }
+    .whatis-section .right-tabs .tabs-tab .sppb-tab-pane.active {
+        padding-right: 30px;
+    }
+    .scroll-forward {
+        width: 241px;
+        height: 72px;
+        font-size: 22px;
+    }
+    .sp-page-builder .page-content #useful-section {
+        background-position: 50% 0;
+    }
+    .useful-section .sppb-column-addons {
+        padding-top: 192px;
+        max-width: 1230px;
+        width: 1230px;
+    }
+    .useful-section {
+        padding-top: 135px;
+        padding-bottom: 90px;
+    }
+    .useful-section h2 {
+        font-size: 65px;
+        margin-bottom: 30px;
+    }
+    .useful-section .useful-box img {
+        width: 284px;
+        max-width: inherit;
+    }
+    .useful-section h3 {
+        font-weight: 400;
+    }
+    .useful-section .sppb-column-addons > div {
+        min-width: 25%;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(2) {
+        left: 231px;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(4) {
+        right: 230px;
+    }
+    .between-section {
+        font-size: 26px;
+        font-weight: 300;
+        padding-top: 74px;
+        padding-bottom: 50px;
+    }
+    .adv-sections {
+        padding-top: 117px;
+        padding-bottom: 72px;
+    }
+    .adv-sections h2 {
+        font-size: 65px;
+        font-weight: 600;
+    }
+    .adv-sections .adv-tabs .sppb-tab ul {
+        max-width: 255px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane p {
+        font-size: 21px;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane p::first-letter {
+        font-size: 65px;
+    }
+    .adv-sections .order-btn {
+        font-size: 18px;
+    }
+    .whatis-section .text-block .sppb-addon-content em {
+        font-size: 28px;
+    }
+    .where-section.whatis-section .text-block h2 {
+        font-size: 58px;
+    }
+    .dir-table table img {
+        width: 90px;
+    }
+    .dir-table table {
+        font-size: 18px;
+    }
+    .order-contact h2 {
+        font-size: 58px;
+        margin-bottom: 54px;
+    }
+    .order-contact {
+        padding-top: 122px;
+        padding-bottom: 66px;
+    }
+    .order-contact .text-block {
+        font-size: 28px;
+    }
+    .order-contact .text-block p {
+        margin-bottom: 34px;
+    }
+    .order-feedback .ui.form input[type="text"], .order-feedback .ui.form .field.error input[type="text"] {
+        font-size: 21px;
+    }
+    .order-feedback .ui.green.button {
+        font-size: 21px;
+        height: 72px;
+        width: 300px;
+    }
+    .land-acc {
+        padding-top: 144px;
+        padding-bottom: 90px;
+        font-size: 20px;
+    }
+    .land-acc h2 {
+        font-size: 58px;
+        margin-bottom: 50px;
+    }
+    .land-acc .sppb-panel-title {
+        font-size: 25px;
+    }
+    .land-acc .sppb-panel-heading {
+        padding-bottom: 45px;
+    }
+    .land-acc .sppb-panel-body {
+        padding-bottom: 50px;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content span {
+        font-size: 180px;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content {
+        font-size: 48px;
+    }
+    .easy-section .right-column img {
+        width: 90px;
+    }
+    .easy-section .right-column h4 {
+        font-size: 18px;
+    }
+    .easy-section .right-column .sppb-addon-text {
+        font-size: 14px;
+        
+    }
+    .easy-section .order-btn {
+        font-size: 21px;
+    }
+    .bfooter-section h2 {
+        font-size: 48px;
+    }
+    .bfooter-section h2 span {
+        font-size: 68px;
+    }
+    .bfooter-section .text-block h3 {
+        font-size: 36px;
+    }
+    .bfooter-section .text-block {
+        font-size: 21px;
+    }
+    .bfooter-section .trans-register h2 {
+        font-size: 25px;
+    }
+    .trans-register .ui.form input[type="text"], .trans-register .ui.form input[type="password"] {
+        font-size: 21px;
+    }
+    .trans-register .ui.form button[type="submit"] {
+        font-size: 21px;
+        padding: 25px 0;
+        max-width: 324px;
+    }
+    .trans-register .info {
+        font-size: 16px;
+    }
+    .footer-section {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .footer-section .payment-icons h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .footer-section .payment-icons img {
+        width: 70px;
+    }
+    .footer-section h3 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .footer-section .social-icons img {
+        width: 35px;
+    }
+    .copy-section {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+}
+
+@media (max-width: 1280px) {
+    .top-section .right-column h1 span {
+        font-size: 64px;
+    }
+    .top-section .right-column h1 {
+        font-size: 42px;
+    }
+    .top-section .right-column .text-block {
+        font-size: 32px;
+    }
+    .top-section .bottom-links .btn a {
+        width: 225px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+    .whatis-section .text-block h2 {
+        font-size: 60px;
+    }
+    .whatis-section .right-tabs h2 {
+        font-size: 26px;
+        max-width: 375px;
+    }
+    .whatis-section .right-tabs .tabs-tab .sppb-tab-tabs-content {
+        font-size: 24px;
+    }
+    .whatis-section #column-id-1569325850866 {
+        background-size: 60vw;
+        background-position: calc(-172px + 5vw) calc(105px + 5vw); 
+    }
+    .scroll-forward {
+        font-size: 20px;
+    }
+    .useful-section h2 {
+        font-size: 60px;
+    }
+    .useful-section .sppb-column-addons {
+        max-width: inherit;
+        width: 1000px;
+    }
+    .useful-section .useful-box img {
+        width: 230px;
+    }
+    .useful-section h3 {
+        font-size: 24px;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(2) {
+        left: 188px;
+    }
+    .useful-section .sppb-column-addons {
+        padding-top: 162px;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(4) {
+        right: 188px;
+    }
+    .between-section {
+        font-size: 24px;
+    }
+    .adv-sections h2 {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+        min-height: 2em;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane p::first-letter {
+        font-size: 60px;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane p {
+        font-size: 2vw;
+    }
+    .adv-sections .adv-tabs .sppb-tab ul {
+        font-size: 2vw;
+        max-width: 27%;
+        margin-right: 7vw;
+    }
+    .whatis-section .text-block .sppb-addon-content em {
+        font-size: 26px;
+    }
+    .where-section.whatis-section .text-block h2 {
+        font-size: 54px;
+    }
+    .dir-table table img {
+        width: 80px;
+    }
+    .dir-table table {
+        font-size: 16px;
+    }
+    .order-contact h2 {
+        font-size: 54px;
+    }
+    .order-contact .text-block {
+        font-size: 24px;
+    }
+    .order-feedback .ui.green.button {
+        font-size: 20px;
+        width: 280px;
+    }
+    .land-acc h2 {
+        font-size: 54px;
+    }
+    .land-acc .sppb-panel-title {
+        font-size: 24px;
+    }
+    .land-acc {
+        font-size: 18px;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content span {
+        font-size: 160px;
+        line-height: 158px;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content {
+        font-size: 44px;
+    }
+    .easy-section .right-column img {
+        width: 80px;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(1)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(2)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(4)::after {
+        right: -85px;
+    }
+    .easy-section .order-btn {
+        font-size: 20px;
+    }
+    .bfooter-section h2 span {
+        font-size: 64px;
+    }
+    .bfooter-section h2 {
+        font-size: 44px;
+    }
+    .bfooter-section .text-block h3 {
+        font-size: 32px;
+    }
+    .bfooter-section .text-block {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+    .trans-register .ui.form button[type="submit"] {
+        font-size: 20px;
+        max-width: 300px;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(3)::after {
+        right: 28px;
+        bottom: 10px;
+    }
+    .adv-sections .order-btn {
+        font-size: 2vw;
+        padding: 2vw 3vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .between-section > div {
+        max-width: 90vw;
+    }
+    .whatis-section .text-block h2 {
+        font-size: 54px;
+    }
+    .top-section > div {
+        max-width: 95vw;
+    }
+    .container, .sppb-container-inner {
+        max-width: 95vw;
+    }
+    .where-section.whatis-section .text-block h2 {
+        font-size: 44px;
+    }
+    .easy-section .order-btn {
+        max-width: 195px;
+    }
+    .top-menu ul a {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .adv-sections {
+        padding: 50px;
+        min-height: inherit;
+    }
+    .sp-page-builder .page-content #sexuality-section {
+        background-size: 60%;
+        background-position: 100% 100%;
+    }
+    .adv-sections .adv-tabs {
+        max-width: 80%;
+    }
+    .adv-sections .adv-tabs .sppb-tab ul li {
+        margin-bottom: 4vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .top-section {
+        height: 50.5vw;
+        min-height: inherit;
+        padding-top: 2vw;
+        padding-bottom: 3vw;
+        background-size: contain;
+    }
+    .top-section > div {
+        padding: 0;
+    }
+    .container, .sppb-container-inner {
+        padding: 0;
+    }
+    .top-menu ul a {
+        font-size: 2vw;
+        padding: 0 1.2vw;
+    }
+    .top-icons a {
+        width: 3vw;
+        height: 3vw;
+        font-size: 2vw;
+        margin: 0 1vw;
+    }
+    canvas, img, video {
+        width: 25vw;
+    }
+    .top-section .right-column .text-block {
+        font-size: 3vw;
+        margin-bottom: 4vw;
+        max-width: 50vw;
+    }
+    .top-section .right-column h1 {
+        font-size: 4vw;
+        margin-top: 5vw;
+        margin-bottom: 2vw;
+    }
+    .top-section .right-column h1 span {
+        font-size: 6vw;
+    }
+    .btn {
+        font-size: 2vw;
+    }
+    .top-section .bottom-links .btn a {
+        width: 22vw;
+        height: 7vw;
+    }
+    .between-section {
+        font-size: 2vw;
+        padding-top: 7vw;
+        padding-bottom: 5vw;
+    }
+    .sp-page-builder .page-content #social-section {
+        background-size: 50%;
+    }
+    .sp-page-builder .page-content #energy-section {
+        background-size: 55%;
+        background-position: 100% 100%;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane p::first-letter {
+        font-size: 5vw;
+    }
+    .sp-page-builder .page-content #family-section, .sp-page-builder .page-content #extra-section {
+        background-size: 60%;
+        background-position: 100% 100%;
+    }
+    .whatis-section .text-block h2 {
+        font-size: 5vw;
+    }
+    .whatis-section {
+        padding-top: 7vw;
+        padding-bottom: 7vw;
+    }
+    .whatis-section .right-tabs h2 {
+        font-size: 2vw;
+        max-width: 37vw;
+        margin-bottom: 6vw;
+    }
+    .whatis-section .right-tabs h2 span {
+        font-size: 2vw;
+    }
+    .whatis-section .right-tabs .tabs-tab .sppb-tab-tabs-content {
+        font-size: 2.2vw;
+    }
+    .whatis-section .right-tabs .tabs-tab ul li a {
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
+        margin-bottom: 3vw;
+    }
+    .scroll-forward {
+        width: 24vw;
+        height: 7vw;
+        font-size: 2vw;
+    }
+    .whatis-section #column-id-1569325850866 {
+        background-position: calc(-172px + 15vw) calc(105px + 5vw);
+    }
+    .whatis-section .right-tabs .tabs-tab ul::after {
+        height: calc(100% + 7vw);
+    }
+    .useful-section h2 {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .useful-section {
+        padding-top: 10vw;
+        padding-bottom: 8vw;
+    }
+    .useful-section .sppb-column-addons {
+        width: 100%;
+        padding-top: 15vw;
+    }
+    .useful-section .useful-box img {
+        width: 21vw;
+    }
+    .useful-section .sppb-column-addons > div {
+        min-width: inherit;
+    }
+    .useful-section h3 {
+        font-size: 2.2vw;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(2) {
+        left: 18.4vw;
+    }
+    .useful-section .sppb-column-addons > div:nth-child(4) {
+        right: 18.8vw;
+    }
+    .whatis-section .text-block .sppb-addon-content em {
+        font-size: 2.3vw;
+    }
+    .where-section.whatis-section .text-block h2 {
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+    .dir-table table {
+        font-size: 1.5vw;
+    }
+    .dir-table table img {
+        width: 7vw;
+    }
+    .dir-table table::before, .dir-table table::after {
+        height: 85%;
+    }
+    .where-section.whatis-section .sppb-column-addons {
+        align-items: flex-start;
+    }
+    .order-contact h2 {
+        font-size: 5vw;
+        margin-bottom: 5vw;
+    }
+    .order-contact {
+        padding-top: 10vw;
+        padding-bottom: 7vw;
+    }
+    .order-contact .text-block {
+        font-size: 2.2vw;
+    }
+    .order-contact .text-block p {
+        margin-bottom: 3vw;
+    }
+    .order-feedback .ui.form input[type="text"], .order-feedback .ui.form .field.error input[type="text"] {
+        font-size: 2vw;
+    }
+    .order-feedback .ui.green.button {
+        font-size: 2vw;
+        width: 24vw;
+        height: 7vw;
+    }
+    .land-acc h2 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+    .land-acc {
+        font-size: 2vw;
+        padding-top: 10vw;
+        padding-bottom: 8vw;
+    }
+    .land-acc .sppb-panel-title {
+        font-size: 2.4vw;
+    }
+    .land-acc .sppb-panel-heading {
+        padding-bottom: 4vw;
+        padding: 3vw 3vw 4vw 5vw;
+    }
+    .land-acc .sppb-panel-body {
+        padding: 0 6vw 5vw 5vw;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content span {
+        font-size: 16vw;
+        line-height: 15vw;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content {
+        font-size: 4vw;
+    }
+    .easy-section .sppb-row > div:last-child {
+        max-width: 85%;
+    }
+    .easy-section .right-column img {
+        width: 8vw;
+    }
+    .easy-section .right-column h4 {
+        font-size: 1.8vw;
+    }
+    .easy-section .right-column .sppb-addon-text {
+        font-size: 1.6vw;
+    }
+    .easy-section .right-column .sppb-column-addons > div {
+        max-width: 15vw;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(1)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(2)::after, .easy-section .right-column .sppb-column-addons > div:nth-child(4)::after {
+        content: '';
+        background: url("../images/strelka.png") no-repeat right top;
+        height: 15px;
+        width: 6vw;
+        right: -6vw;
+        background-size: 90%;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(3)::after {
+        content: '';
+        background: url("../images/grand-arrow.png") no-repeat right top;
+        background-size: 90%;
+        width: 47vw;
+        height: 6.2vw;
+        bottom: -15px;
+    }
+    .easy-section .right-column .sppb-column-addons > div:last-child {
+        bottom: 6vw;
+    }
+    .easy-section .order-btn {
+        font-size: 2vw;
+        max-width: 18vw;
+        padding: 1.5vw 0;
+    }
+    .bfooter-section {
+        padding-top: 10vw;
+        padding-bottom: 8vw;
+    }
+    .bfooter-section h2 {
+        font-size: 4vw;
+    }
+    .bfooter-section h2 span {
+        font-size: 6vw;
+    }
+    .bfooter-section .text-block h3 {
+        font-size: 3vw;
+    }
+    .bfooter-section .text-block {
+        font-size: 2vw;
+    }
+    .bfooter-section .trans-register h2 {
+        font-size: 2.5vw;
+    }
+    .trans-register h2 {
+        margin-bottom: 4vw;
+    }
+    .trans-register .ui.form input[type="text"], .trans-register .ui.form input[type="password"] {
+        font-size: 2vw;
+    }
+    .trans-register .ui.form button[type="submit"] {
+        font-size: 2vw;
+        max-width: 30vw;
+        padding: 2.2vw 0;
+    }
+    .trans-register .info {
+        font-size: 1.7vw;
+    }
+    .footer-menu li a {
+        margin-bottom: 2vw;
+    }
+    .footer-section, .footer-section .payment-icons h3, .footer-section h3 {
+        font-size: 2vw;
+    }
+    .footer-section .payment-icons img {
+        width: 5vw;
+        margin-right: 1vw;
+    }
+    .footer-section .social-icons img {
+        width: 3vw;
+        margin-right: 1vw;
+    }
+    .copy-section {
+        font-size: 1.5vw;
+    }
+    .whatis-section .text-block .sppb-addon-content {
+        font-size: 2vw;
+    }
+    .adv-sections {
+        padding: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .where-section.whatis-section .sppb-column-addons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .whatis-section .text-block {
+        align-items: flex-end;
+    }
+    .where-section.whatis-section .text-block h2 {
+        margin-bottom: 5vw;
+        margin-top: 3vw;
+    }
+    .easy-section .sppb-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .easy-section.whatis-section .text-block .sppb-addon-content {
+        max-width: 30vw;
+    }
+    .easy-section .sppb-row > div:last-child {
+        width: 75%;
+    }
+    .whatis-section #column-id-1569325850866 {
+        background-image: none;
+    }
+    .bfooter-section .sppb-row {
+        flex-direction: column;
+    }
+    .trans-register {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .whatis-section .right-tabs .tabs-tab {
+        margin-left: -26vw;
+    }
+    .adv-sections .adv-tabs .sppb-tab ul li.active::after {
+        right: -63px;
+    }
+    .adv-sections .adv-tabs .sppb-tab ul {
+        padding-right: 18px;
+    }
+    .whatis-section .right-tabs .tabs-tab .sppb-tab-tabs-content {
+        font-size: 2.8vw;
+    }
+    .between-section {
+        font-size: 3vw;
+    }
+    .land-acc {
+        font-size: 3vw;
+    }
+    .land-acc .sppb-panel-title {
+        font-size: 3vw;
+    }
+    .easy-section .right-column img {
+        width: 10vw;
+    }
+    .easy-section .right-column h4 {
+        font-size: 2.5vw;
+    }
+    .easy-section .right-column .sppb-addon-text {
+        font-size: 2vw;
+    }
+    .easy-section .right-column .sppb-column-addons > div {
+        max-width: 23vw;
+    }
+    .easy-section .right-column .sppb-column-addons > div:nth-child(3)::after {
+        width: 64vw;
+        height: 9vw;
+    }
+    .bfooter-section .text-block, .bfooter-section .trans-register h2 {
+        font-size: 3vw;
+    }
+    .trans-register .info {
+        font-size: 2.5vw;
+    }
+    .trans-register .ui.form button[type="submit"] {
+        font-size: 3vw;
+        max-width: 38vw;
+    }
+    .easy-section .order-btn {
+        font-size: 3vw;
+        max-width: 23vw;
+    }
+    .whatis-section .text-block .sppb-addon-content {
+        max-width: 35vw;
+    }
+    .whatis-section .text-block .sppb-addon-content em {
+        font-size: 3vw;
+    }
+    .dir-table table img {
+        font-size: 9vw;
+    }
+    .dir-table table {
+        font-size: 2.5vw;
+    }
+    .order-contact .text-block {
+        font-size: 3vw;
+    }
+    .ui.grid > .row {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    .bfooter-section .text-block {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+@media ( max-width: 991px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 575.98px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    
+}
+
+@media (max-width: 360px) {
+
+}
+
+
+
