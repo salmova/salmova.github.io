@@ -523,7 +523,9 @@
     .dir-table table tr:last-child td {
         border-top-width: 2px;
     }
-
+    .top-section {
+        padding-top: 2vw;
+    }
 }
 @media (max-width: 768px) {
     .whatis-section #column-id-1569325850866 {
