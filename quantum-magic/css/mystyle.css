@@ -315,6 +315,20 @@
     .order-feedback {
         margin-top: 6vw;
     }
+    .order-feedback .column {
+        max-width: 33%;
+    }
+    .order-feedback .column:nth-child(3) {
+        max-width: max-content;
+    }
+    .ui.grid > .relaxed.row > .column, .ui.relaxed.grid > .column:not(.row), .ui.relaxed.grid > .row > .column {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    .ui.relaxed.grid {
+        margin-left: 0;
+        margin-right: 0;
+    }
 /*
     .order-feedback .column {
         max-width: max-content;
@@ -573,6 +587,9 @@
     }
     .trans-register {
         max-width: 52vw;
+    }
+    .whatis-section .right-tabs .tabs-tab ul::after {
+        width: 2px;
     }
 }
 @media (max-width: 768px) {
