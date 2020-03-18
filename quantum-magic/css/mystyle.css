@@ -95,7 +95,7 @@
     .adv-sections .adv-tabs .sppb-tab ul {
         max-width: 15vw;
         margin-right: 4.1vw;
-        padding-right: calc(2vw - 1px);
+        padding-right: 2vw;
     }
     .adv-sections .adv-tabs .sppb-tab ul li {
         margin-bottom: 3vw;
@@ -186,9 +186,12 @@
     }
     .adv-sections .adv-tabs .sppb-tab-pane p::first-letter {
         font-size: 3.8vw;
+        line-height: 1.5vw;
     }
     .adv-sections .adv-tabs .sppb-tab ul::after {
-        width: 2px;
+        width: 0.15vw;
+        min-width: 1px;
+        max-width: 3px;
     }
     .whatis-section .text-block h2 {
         font-size: 3.8vw;
@@ -231,6 +234,7 @@
     }
     .whatis-section .right-tabs .tabs-tab ul::after {
         height: calc(100% + 6vw);
+        
     }
     .useful-section h2 {
         font-size: 3.8vw;
@@ -536,16 +540,17 @@
 }
 @media (max-width: 1000px){
     .adv-sections .adv-tabs .sppb-tab ul {
-         padding-right: calc(2vw + 1px); 
-         -webkit-padding-end: calc(2vw - 1px);
+/*          padding-right: calc(2vw + 1px);  */
+    }
+}
+@supports (top: 0__qem) {
+    .adv-sections .adv-tabs .sppb-tab ul {
+        padding-end: calc(2vw - 1px) !important;
     }
 }
 @media (max-width: 870px){
     .whatis-section #column-id-1569325850866 {
         background-size: 67%;
-    }
-    .adv-sections .adv-tabs .sppb-tab ul::after {
-        width: 2px;
     }
     .dir-table table::before, .dir-table table::after { 
         width: 2px;
@@ -582,6 +587,9 @@
     .bfooter-section .text-block {
         max-width: 90vw;
     }
+    .dir-table table td .bt-content {
+        max-width: 19vw;
+    }
 }
 @media ( max-width: 670px) {
     .whatis-section #column-id-1569325850866 {
@@ -598,7 +606,7 @@
         width: 1px;
     }
     .whatis-section .right-tabs .tabs-tab ul li a {
-        margin-bottom: 1vw;
+        margin-bottom: 0.5vw;
     }
     .adv-sections .adv-tabs .sppb-tab ul li.active a .price {
         border-top-width: 1px;
@@ -606,8 +614,25 @@
     .trans-register {
         max-width: 66vw;
     }
+    .whatis-section .right-tabs .tabs-tab ul li.active a {
+        border-width: 1px;
+        margin-left: 2px;
+    }
+    .adv-sections .adv-tabs .sppb-tab-pane.active {
+        padding-top: 1vw;
+    }
 }
-@media (max-width: 570px) {
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (max-width: 1500px)
+{
+    .adv-sections .adv-tabs .sppb-tab ul {
+        padding-right: 1.9vw !important;
+        -moz-padding-end: 2vw !important;
+    }
+}
+@media (max-width: 500px) {
+     .adv-sections .adv-tabs .sppb-tab ul {
+        padding-right: 2.2vw;
+    }
 }
 @media ( max-width: 420px) {
     .whatis-section #column-id-1569325850866 {
