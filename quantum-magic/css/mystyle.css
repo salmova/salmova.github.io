@@ -348,6 +348,9 @@
     .land-acc .sppb-addon-content {
         max-width: 50vw;
     }
+    .land-acc .sppb-addon-content p {
+        margin-bottom: 2vw;
+    }
     .land-acc .sppb-panel-title {
         font-size: 1.5vw;
     }
