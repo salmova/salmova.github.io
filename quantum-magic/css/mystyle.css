@@ -623,6 +623,9 @@
     .dir-table table td .bt-content {
         max-width: 19vw;
     }
+    .top-section .right-column .text-block {
+        max-width: 39vw;
+    }
 }
 @media ( max-width: 670px) {
     .whatis-section #column-id-1569325850866 {
