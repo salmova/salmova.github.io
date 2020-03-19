@@ -160,7 +160,7 @@
         font-size: 2.4vw;
         font-weight: 600;
         margin-bottom: 4vw;
-        max-width: 40vw;
+        max-width: 39.5vw;
     }
     .top-section .right-column h1 {
         font-size: 3.2vw;
@@ -622,9 +622,6 @@
     }
     .dir-table table td .bt-content {
         max-width: 19vw;
-    }
-    .top-section .right-column .text-block {
-        max-width: 39vw;
     }
 }
 @media ( max-width: 670px) {
