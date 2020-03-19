@@ -12,6 +12,9 @@
     .adv-sections {
         min-height: inherit;
     }
+    .top-section .right-column .text-block {
+        max-width: 570px;
+    }
 }
 @media (max-width: 1920px) {
     #page {
@@ -19,6 +22,9 @@
     }
     .top-section {
         min-height: 50vw;
+    }
+    .top-section .right-column .text-block {
+        max-width: 570px;
     }
 }
 @media (max-width: 1500px) {
