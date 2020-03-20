@@ -534,7 +534,7 @@ pre code {
 
 @media screen and (max-width: 320px) {
   .bem-content {
-    padding: 0 16px 24px;
+    padding: 56px 16px 24px;
   }
 }
 
