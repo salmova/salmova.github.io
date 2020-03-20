@@ -6,7 +6,7 @@
 .bem-content {
     width: $screen-xl;
     margin: 0 auto;
-    padding: 0 32px 24px;
+    padding: 56px 32px 24px;
     align-items: center;
     
     /* bem-content: Элементы */
@@ -51,7 +51,7 @@
 }
 @media screen and (max-width: 768px) {
     .bem-content {
-        padding: 0 24px 24px;
+        padding: 56px 24px 24px;
     }   
     .bem-content__persons {
         margin-bottom: 32px;

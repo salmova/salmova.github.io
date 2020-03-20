@@ -3,7 +3,6 @@
  * ВНИМАНИЕ! Этот файл генерируется автоматически.
  * Любые изменения этого файла будут потеряны при следующей компиляции.
  */
- 
 /*
 В этом файле должны быть стили для БЭМ-блока .bem-link, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
@@ -443,7 +442,7 @@ pre code {
 .bem-content {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 32px 24px;
+  padding: 56px 32px 24px;
   align-items: center;
   /* bem-content: Элементы */
   /* bem-content: Миксины */
@@ -494,7 +493,7 @@ pre code {
 
 @media screen and (max-width: 768px) {
   .bem-content {
-    padding: 0 24px 24px;
+    padding: 56px 24px 24px;
   }
   .bem-content__persons {
     margin-bottom: 32px;
@@ -1007,6 +1006,8 @@ pre code {
   grid-template-columns: auto auto;
   grid-gap: 40px;
   justify-content: center;
+  /* bem-info-block: Элементы */
+  /* bem-info-block: Модификаторы */
 }
 
 .bem-info-block__title {
@@ -1016,9 +1017,114 @@ pre code {
   box-sizing: border-box;
 }
 
+.bem-info-block__content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.bem-info-block__detail {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.bem-info-block__detail p {
+  margin: 0 0 12px;
+}
+
+.bem-info-block__link {
+  color: black;
+  padding: 10px 0px;
+  margin: 0;
+}
+
+.bem-info-block__whitebox {
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #BDBDBD;
+  background: #FFF;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bem-info-block_about-page {
+  grid-gap: 28px;
+  grid-template-columns: auto 1fr;
+  padding-bottom: 40px;
+  color: black;
+}
+
+.bem-info-block_about-page .bem-sidebar .bem-info-block__title {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.bem-info-block_about-page .bem-info-block__title {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 40px 0px 16px;
+  height: auto;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.bem-info-block_about-page .bem-sidebar_left {
+  border-right: 1px solid #E3E5E8;
+}
+
+.bem-info-block_about-page .bem-info-block_indent_hr {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.bem-info-block__link_active {
+  background: rgba(0, 141, 255, 0.08);
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 @media screen and (max-width: 768px) {
   .bem-info-block {
     grid-template-columns: auto;
+  }
+  .bem-info-block_about-page {
+    grid-gap: 0px;
+  }
+  .bem-info-block_about-page .bem-sidebar_left {
+    width: 100% !important;
+    border: none;
+  }
+  .bem-info-block_about-page .bem-info-block_indent_hr {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .bem-info-block_about-page .bem-info-block__title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .bem-info-block_about-page .bem-info-block__link {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-top: 1px solid #E3E5E8;
+    background: url(../img/menu-about-right.svg) no-repeat calc(100% - 30px) 50%;
+  }
+  .bem-info-block_about-page .bem-info-block__link:first-child {
+    border-top: none;
+  }
+  .bem-info-block_about-page .bem-info-block__link_active {
+    background: #F7F8FA url(../img/menu-about-down.svg) no-repeat calc(100% - 30px) 50%;
+    border-bottom: 1px solid #E3E5E8;
+    border-top: 1px solid #E3E5E8 !important;
+  }
+  .bem-info-block_hidden .bem-info-block__title {
+    padding-top: 24px;
+    padding-bottom: 16px;
   }
 }
 
@@ -1062,6 +1168,10 @@ pre code {
 
 .bem-page_margin_none {
   margin: 0;
+}
+
+.bem-page_main-page {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1523,8 +1633,12 @@ pre code {
 В этом файле должны быть стили для БЭМ-блока .bem-sidebar, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
-.bem-sidebar {
+.bem-sidebar.bem-sidebar_right {
   width: 280px;
+}
+
+.bem-sidebar.bem-sidebar_left {
+  width: 220px;
 }
 
 .bem-sidebar .bem-info-block__title {
@@ -1532,12 +1646,65 @@ pre code {
 }
 
 @media screen and (max-width: 768px) {
-  .bem-sidebar {
+  .bem-sidebar.bem-sidebar_right, .bem-sidebar.bem-sidebar_left {
     order: 1;
     width: auto;
   }
 }
 
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-table, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  /* bem-table: Элементы */
+}
+
+.bem-table__param-label {
+  text-align: left !important;
+  font-size: 13px;
+}
+
+.bem-table__field-value {
+  width: 17%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 33px;
+}
+
+.bem-table td, .bem-table th {
+  padding: 6px;
+  border-left: 1px solid #B7CBDC;
+  border-right: 1px solid #B7CBDC;
+  vertical-align: middle;
+}
+
+.bem-table__names-tr th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 100%;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.bem-table tbody tr:nth-child(2n) td {
+  background-color: #F3F3F3;
+}
+
+.bem-table tr td:last-child, .bem-table tr th:last-child {
+  border-right: 0;
+}
+
+.bem-table tr td:first-child, .bem-table tr th:first-child {
+  border-left: 0;
+}
+
+/* @media-условия */
 /*
 В этом файле должны быть стили для БЭМ-блока .bem-user-profile, его элементов,
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...

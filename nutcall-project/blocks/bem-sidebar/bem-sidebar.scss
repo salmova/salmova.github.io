@@ -3,9 +3,13 @@
 модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
 
-.bem-sidebar {
-    width: $left-column;
-    
+.bem-sidebar {   
+    &.bem-sidebar_right {
+        width: $right-column;
+    }
+    &.bem-sidebar_left {
+        width: $left-column;
+    }
     .bem-info-block__title {
         margin-bottom: 12px;
     }
