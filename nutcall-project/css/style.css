@@ -448,6 +448,7 @@ pre code {
   margin: 0 auto;
   padding: 56px 32px 24px;
   align-items: center;
+  overflow-x: hidden;
   /* bem-content: Элементы */
   /* bem-content: Миксины */
 }
