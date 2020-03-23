@@ -29,11 +29,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 
 <body><noscript>У вас отключен JavaScript.</noscript></body>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="dislike"><path d="M11.333 1h1.78a1.54 1.54 0 011.554 1.333V7a1.54 1.54 0 01-1.554 1.333h-1.78M6.667 9.667v2.666a2 2 0 002 2l2.666-6V1h-7.52A1.333 1.333 0 002.48 2.133l-.92 6a1.333 1.333 0 001.333 1.534h3.774z" stroke="#FF6366" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="like"><path d="M4.667 14h-2a1.334 1.334 0 01-1.334-1.333V8a1.333 1.333 0 011.334-1.333h2m4.666-1.334V2.667a2 2 0 00-2-2l-2.666 6V14h7.52a1.334 1.334 0 001.333-1.133l.92-6a1.333 1.333 0 00-1.333-1.534H9.333z" stroke="#1FCF5F" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
-
 <div class="bem-page">
   <div class="bem-header bem-page_main-page">
     <div>
-      <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href="index.html"><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
+      <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href=""><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
       <div class="bem-header__bem-search"><a href=""><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt=""></a></div><a class="bem-link bem-header__new-user" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
       <div class="bem-user-profile"><a class="bem-link bem-header__user-profile"><img class="bem-circle-block bem-circle-block_size_mid bem-header__user-profile__img" src="img/avatar-user.png" alt="Avatar"></a>
         <div class="bem-user-profile__list">
@@ -220,9 +219,9 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </div>
     <div class="bem-footer__bottom">
       <div class="bem-page__row">
-        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="#">Мой профиль</a><a class="bem-link bem-footer__bem-link" href="#">Пополнение счёта</a><a class="bem-link bem-footer__bem-link" href="#">Подняться в поиске</a></div>
-        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="#">Удалить свой номер</a><a class="bem-link bem-footer__bem-link" href="#">Добавить контакт</a><a class="bem-link bem-footer__bem-link" href="#">Тарифы</a></div>
-        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="#">Обратная связь</a><a class="bem-link bem-footer__bem-link" href="#">Terms of use</a><a class="bem-link bem-footer__bem-link" href="#">FAQ</a></div>
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="">Мой профиль</a><a class="bem-link bem-footer__bem-link" href="">Пополнение счёта</a><a class="bem-link bem-footer__bem-link" href="">Подняться в поиске</a></div>
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="">Удалить свой номер</a><a class="bem-link bem-footer__bem-link" href="">Добавить контакт</a><a class="bem-link bem-footer__bem-link" href="">Тарифы</a></div>
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="feedback.html">Обратная связь</a><a class="bem-link bem-footer__bem-link" href="terms.html">Terms of use</a><a class="bem-link bem-footer__bem-link" href="faq.html">FAQ</a></div>
       </div>
       <div class="bem-page__row bem-page_max-container">
         <div class="bem-page__column"><span>Приложения:</span><a class="bem-link bem-footer__bem-link" href="#">iOS</a><a class="bem-link bem-footer__bem-link" href="#">Android</a></div>
@@ -234,9 +233,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </div>
   </div>
 </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src='js/svg4everybody.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='js/svg4everybody.min.js'></script>
   <script src='js/utils/documentReady.js'></script>
+  <script src='blocks/bem-accord/bem-accord.js'></script>
   <script src='blocks/bem-content/bem-content.js'></script>
   <script src='blocks/bem-disabled/bem-disabled.js'></script>
   <script src='blocks/bem-header/bem-header.js'></script>
@@ -246,7 +246,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   <script src='blocks/bem-select/bem-select.js'></script>
   <script src='blocks/bem-user-profile/bem-user-profile.js'></script>
   <script src='blocks/bem-info-block/bem-info-block.js'></script>
-  <script src='blocks/sprite-svg/sprite-svg.js'></script>
   <script src='js/script.js'></script>
+
+
 
 </html>

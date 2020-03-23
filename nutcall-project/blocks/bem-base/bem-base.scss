@@ -142,7 +142,9 @@ svg {
     overflow: hidden; // Скрыть выступающее за границы в IE
   }
 }
-
+body > svg {
+    height: 0;
+}
 img {
   max-width: 100%;
   height: auto;

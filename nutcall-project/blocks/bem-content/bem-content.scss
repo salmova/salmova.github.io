@@ -8,6 +8,7 @@
     margin: 0 auto;
     padding: 56px 32px 24px;
     align-items: center;
+    overflow-x: hidden;
     
     /* bem-content: Элементы */
     &__persons {
@@ -86,6 +87,6 @@
 }
 @media screen and (max-width: 320px) {
     .bem-content {
-        padding: 0 16px 24px;
+        padding: 56px 16px 24px;
     }   
 }

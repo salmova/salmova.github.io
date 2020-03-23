@@ -1,0 +1,81 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-accord, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-accord {
+    
+    /* bem-accord: Элементы */
+    p {
+         margin: 0 0 12px;
+    }
+    &__item {
+        padding: 0px;
+        margin: 0;
+        & > p {
+            margin-bottom: 0px !important;
+            cursor: pointer;
+        }
+    }
+    &__link {
+        color: black;
+        padding: 10px 0px;
+        margin: 0;
+        display: block;
+    }
+    /* bem-accord: Модификаторы */
+    &_active {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        .bem-accord__link {
+            background: rgba(0, 141, 255, 0.08);
+        }
+    }
+    &_hidden {
+        & > div {
+            display: none;
+        }
+    }
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-accord__item { 
+        &:first-child {
+            .bem-accord__link {
+                border-top: none;
+            }
+        }
+        & > p {
+            background-color: #F7F8FA;
+        }
+        &:last-child {
+            & > p {
+                border-bottom: 1px solid #E3E5E8;    
+            }
+        }
+    }
+    .bem-accord_active {
+        .bem-accord__link {
+            background: #F7F8FA url(../img/menu-about-down.svg) no-repeat calc(100% - 30px) 22px;;
+            border-top: 1px solid #E3E5E8 !important;
+            border-bottom: 1px solid #E3E5E8;
+            margin: 0;
+        }
+    }
+    .bem-accord__link {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-weight: bold;
+        font-size: $font-size-h5;
+        line-height: 20px;
+        border-top: 1px solid #E3E5E8;
+        background: url(../img/menu-about-right.svg) no-repeat calc(100% - 30px) 50%;
+    }
+    .bem-accord__detail {
+        .bem-info-block__title {
+            padding-top: 24px;
+            padding-bottom: 16px;
+        }
+    }
+}

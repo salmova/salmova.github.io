@@ -1,6 +1,6 @@
 /*
-    Блок InfoBlock - появляется на экранах меньше 768px при открытом меню профиля пользователя
-    click: При клике на блок открытое меню плавно "уезжает" вправо
+    Блок InfoBlock - оформление информационного блока
+    resize: при изменении ширины экрана информационный блок перемещается в блок меню
 */
 (function ($) {
 
@@ -25,7 +25,7 @@
         var self = this;
         var dir = 'left';
         if (jQuery(window).width() <= '768') {
-            self.$labelHidden.append($('.bem-info-block__content > div'));
+            self.$labelHidden.append($('.bem-info-block__content > .bem-info-block__container'));
             dir = 'right';
         }
         

@@ -57,6 +57,80 @@
   }
 }
 
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-accord, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-accord {
+  /* bem-accord: Элементы */
+  /* bem-accord: Модификаторы */
+}
+
+.bem-accord p {
+  margin: 0 0 12px;
+}
+
+.bem-accord__item {
+  padding: 0px;
+  margin: 0;
+}
+
+.bem-accord__item > p {
+  margin-bottom: 0px !important;
+  cursor: pointer;
+}
+
+.bem-accord__link {
+  color: black;
+  padding: 10px 0px;
+  margin: 0;
+  display: block;
+}
+
+.bem-accord_active {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.bem-accord_active .bem-accord__link {
+  background: rgba(0, 141, 255, 0.08);
+}
+
+.bem-accord_hidden > div {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .bem-accord__item:first-child .bem-accord__link {
+    border-top: none;
+  }
+  .bem-accord__item > p {
+    background-color: #F7F8FA;
+  }
+  .bem-accord__item:last-child > p {
+    border-bottom: 1px solid #E3E5E8;
+  }
+  .bem-accord_active .bem-accord__link {
+    background: #F7F8FA url(../img/menu-about-down.svg) no-repeat calc(100% - 30px) 22px;
+    border-top: 1px solid #E3E5E8 !important;
+    border-bottom: 1px solid #E3E5E8;
+    margin: 0;
+  }
+  .bem-accord__link {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    border-top: 1px solid #E3E5E8;
+    background: url(../img/menu-about-right.svg) no-repeat calc(100% - 30px) 50%;
+  }
+  .bem-accord__detail .bem-info-block__title {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+}
+
 /* Стилизация БЭМ-блока bem-base.
 * Общие стили тегов.
 * Подключение шрифтов.
@@ -826,7 +900,8 @@ pre code {
   left: 0;
   background: white;
   z-index: 2;
-  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid #E3E5E8;
+  box-sizing: content-box;
 }
 
 .bem-header__fixed .bem-header__new-user img {
@@ -855,6 +930,11 @@ pre code {
 
 .bem-header__fixed .bem-header__recharge {
   display: none;
+}
+
+.bem-header_shadow {
+  border-bottom: none;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
 }
 
 .bem-header__bem-search {
@@ -1037,12 +1117,6 @@ pre code {
   margin: 0 0 12px;
 }
 
-.bem-info-block__link {
-  color: black;
-  padding: 10px 0px;
-  margin: 0;
-}
-
 .bem-info-block__whitebox {
   border: 1px solid #E6E6E6;
   border-radius: 3px;
@@ -1083,12 +1157,6 @@ pre code {
   padding-right: 8px;
 }
 
-.bem-info-block__link_active {
-  background: rgba(0, 141, 255, 0.08);
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
 @media screen and (max-width: 768px) {
   .bem-info-block {
     grid-template-columns: auto;
@@ -1097,7 +1165,7 @@ pre code {
     grid-gap: 0px;
   }
   .bem-info-block_about-page .bem-sidebar_left {
-    width: 100% !important;
+    width: calc(100vw - 48px) !important;
     border: none;
   }
   .bem-info-block_about-page .bem-info-block_indent_hr {
@@ -1109,23 +1177,6 @@ pre code {
   .bem-info-block_about-page .bem-info-block__title {
     padding-left: 0;
     padding-right: 0;
-  }
-  .bem-info-block_about-page .bem-info-block__link {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    border-top: 1px solid #E3E5E8;
-    background: url(../img/menu-about-right.svg) no-repeat calc(100% - 30px) 50%;
-  }
-  .bem-info-block_about-page .bem-info-block__link:first-child {
-    border-top: none;
-  }
-  .bem-info-block_about-page .bem-info-block__link_active {
-    background: #F7F8FA url(../img/menu-about-down.svg) no-repeat calc(100% - 30px) 50%;
-    border-bottom: 1px solid #E3E5E8;
-    border-top: 1px solid #E3E5E8 !important;
   }
   .bem-info-block_hidden .bem-info-block__title {
     padding-top: 24px;
