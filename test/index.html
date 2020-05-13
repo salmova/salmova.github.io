@@ -8,6 +8,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+/*
     jQuery.ajax('https://api-dev2x86.nutcall.com/v0.1/registration', {
         type: 'POST',
         headers: {
@@ -28,31 +29,31 @@
             console.log(data);
         }
     })
-/*
-    const request = new XMLHttpRequest();
-    const url = "https://api-dev2x86.nutcall.com/v0.1/registration";
-    const params = "password=123&email=test@test.ru";
-     
-    //	Здесь нужно указать в каком формате мы будем принимать данные вот и все	отличие 
-    request.responseType =	"json";
-    request.open("POST", url, true);
-    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    request.setRequestHeader('X-Client-Id', 'nutcall_layout_dev');
-    request.setRequestHeader('X-Client-Secret', 'c883d4519638087b52273a4e08a6014b'); 
-    request.addEventListener("readystatechange", () => {
-     
-        if (request.readyState === 4 && request.status === 200) {
-            let obj = request.response;
-           
-    	console.log(obj);       
-    	// Здесь мы можем обращаться к свойству объекта и получать	его значение
-    	console.log(obj.password);
-    	console.log(obj.email);   
-    	}
-    });
-     
-    request.send(params);
 */
+    jQuery.post({
+        url: 'https://api-dev2x86.nutcall.com/v0.1/registration',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-Client-Id': 'nutcall_layout_dev',
+            'X-Client-Secret': 'c883d4519638087b52273a4e08a6014b'
+        },
+        data: {
+            password: '123',
+            email: 'test@mail.ru',
+            'primary_info_type': 'basic',
+            firstname: 'name',
+            lastname: 'name2'
+        },
+        error: function(err, textStatus, errTh) {
+            // выполняется, когда данные не получены
+            console.log('Err: ' + textStatus);
+        },
+        success: function(data, textStatus, x) {
+            // запрос успешно выполнился
+            console.log(data);
+            console.log(textStatus)
+        }
+    });
 
 </script>
 </html>
