@@ -47,6 +47,7 @@
         error: function(err, textStatus, errTh) {
             // выполняется, когда данные не получены
             console.log('Err: ' + textStatus);
+            console.log(err);
         },
         success: function(data, textStatus, x) {
             // запрос успешно выполнился
