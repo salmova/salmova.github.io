@@ -1,15 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+        <meta charset="utf-8" />
+</head>
 <body>
     <h1>Test</h1>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-    jQuery.ajax('https://api-dev2x86.nutcall.com/v0.1/registration', {
-        method: 'POST',
+    jQuery.ajax('https://api.nutcall.com/v0.1/registration', {
+        type: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'X-Client-Id': 'test',
-            'X-Client-Secret': '4ac6382d9bd5f8f91b00aeab46b99d9c'
+            'X-Client-Id': 'nutcall_layout_dev',
+            'X-Client-Secret': 'c883d4519638087b52273a4e08a6014b'
         },
         data: {
             password: '123',
