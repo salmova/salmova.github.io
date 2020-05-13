@@ -1,0 +1,28 @@
+<html>
+<body>
+    <h1>Test</h1>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    jQuery.ajax('https://api-dev2x86.nutcall.com/v0.1/registration', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-Client-Id': 'test',
+            'X-Client-Secret': '4ac6382d9bd5f8f91b00aeab46b99d9c'
+        },
+        data: {
+            password: '123',
+            email: 'test@mail.ru'
+        },
+        error: function(err, textStatus, errTh) {
+            // выполняется, когда данные не получены
+            console.log(textStatus);
+        },
+        success: function(data, textStatus) {
+            // запрос успешно выполнился
+            console.log(data);
+        }
+    })
+</script>
+</html>
