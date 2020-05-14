@@ -2,6 +2,7 @@
 <html lang='ru'>
 <head>
         <meta charset="utf-8" />
+
 </head>
 <body>
     <h1>Test</h1>
@@ -29,14 +30,19 @@
             console.log(data);
         }
     })
-*/
-    jQuery.post({
-        URL: 'https://api-dev2x86.nutcall.com/v0.1/registration',
+*/function logResults(json){
+  console.log(json);
+}
+    jQuery.ajax({
+        type: 'POST',
+        url: 'https://api-dev2x86.nutcall.com/v0.1/registration',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'X-Client-Id': 'nutcall_layout_dev',
-            'X-Client-Secret': 'c883d4519638087b52273a4e08a6014b'
+            'X-Client-Secret': 'c883d4519638087b52273a4e08a6014b',
         },
+//        dataType: 'jsonp',
+        timeout: 2000,
         data: {
             password: '123',
             email: 'test@mail.ru',
@@ -44,16 +50,13 @@
             firstname: 'name',
             lastname: 'name2'
         },
-        error: function(err, textStatus, errTh) {
-            // выполняется, когда данные не получены
-            console.log('Err: ' + textStatus);
-            console.log(err);
-        },
-        success: function(data, textStatus, x) {
-            // запрос успешно выполнился
-            console.log(data);
-            console.log(textStatus)
-        }
+        success: function(data) {
+            if(data.error) {
+              console.log("ERROR: "+data.error);
+            } else {
+              console.log("Success, got user " + data.screen_name);
+            }
+          }
     });
 
 </script>
