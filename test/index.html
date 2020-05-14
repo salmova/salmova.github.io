@@ -35,13 +35,13 @@
 }
     jQuery.ajax({
         type: 'POST',
-        url: 'https://api-dev2x86.nutcall.com/v0.1/registration',
+        url: 'https://api-dev2x86.nutcall.com/v0.1/registration&callback=?',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'X-Client-Id': 'nutcall_layout_dev',
             'X-Client-Secret': 'c883d4519638087b52273a4e08a6014b',
         },
-//        dataType: 'jsonp',
+        dataType: 'jsonp',
         timeout: 2000,
         data: {
             password: '123',
@@ -58,6 +58,5 @@
             }
           }
     });
-
 </script>
 </html>
