@@ -47,7 +47,7 @@
         top: 0px;
         left: 0;
         background: $white;
-        z-index: 2;
+        z-index: 3;
         border-bottom: 1px solid #E3E5E8;
         box-sizing: content-box;
         .bem-header__new-user {
@@ -79,6 +79,10 @@
         border-bottom: none;
         box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.18);
     }
+    /* bem-header: Модификаторы */
+    &__fixed_border_unset {
+        border-bottom: none;
+    }
     /* bem-header: Миксины */
     &__bem-search {
         flex-grow: 1;
@@ -96,7 +100,7 @@
             background: #F7F8FA;
             width: calc(100% - 32px);
         }
-        .bem-select {
+        .bem-user-select {
             display: none;
         }
         .bem-search__bem-button {
@@ -182,6 +186,8 @@
         &.bem-circle-block {
             background: #008DFF;
             margin-left: 8px;
+            padding: 0;
+            min-width: auto;
         }
     }
     .bem-header__fixed {

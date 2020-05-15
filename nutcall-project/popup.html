@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="bem-base" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <title>Модальные окна</title>
+  <meta name="description" content="">
+  <style>
+    @media screen and (max-width: 768px) {
+      .bem-content.bem-page__row {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+</script>
+</head>
+
+<body><noscript>У вас отключен JavaScript.</noscript></body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="dislike">
+    <path d="M11.333 1h1.78a1.54 1.54 0 011.554 1.333V7a1.54 1.54 0 01-1.554 1.333h-1.78M6.667 9.667v2.666a2 2 0 002 2l2.666-6V1h-7.52A1.333 1.333 0 002.48 2.133l-.92 6a1.333 1.333 0 001.333 1.534h3.774z" stroke="#FF6366" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="like">
+    <path d="M4.667 14h-2a1.334 1.334 0 01-1.334-1.333V8a1.333 1.333 0 011.334-1.333h2m4.666-1.334V2.667a2 2 0 00-2-2l-2.666 6V14h7.52a1.334 1.334 0 001.333-1.133l.92-6a1.333 1.333 0 00-1.333-1.534H9.333z" stroke="#1FCF5F" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+</svg>
+<div class="bem-page">
+  <div class="bem-header bem-header__fixed">
+    <div>
+      <div class="bem-logo bem-header__bem-logo"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__project" href="index.html"><img src="img/logo.svg" alt="Nutcall"></a></div><a class="bem-link bem-header__recharge" href="#">Пополнить счёт</a>
+      <div class="bem-header__bem-search"><a href=""><img class="bem-header__search-icon bem-circle-block bem-circle-block_size_sm" src="img/search-button.svg" alt=""></a>
+        <div class="bem-search">
+          <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-user-select" name="searchFilter">
+              <option value="Везде">Везде</option>
+              <option value="Беларусь">Беларусь</option>
+              <option value="Великобритания">Великобритания</option>
+              <option value="Россия">Россия</option>
+            </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
+          <div class="bem-search__history">
+            <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
+            <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Сергей Шнуров</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person1.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Александр Коляда</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person2.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Евгения Смирнова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a><a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person5.jpg" alt="Пользователь">
+                <div class="bem-page__column"><span class="bem-record__author">Валерия Созонова</span><span class="bem-record__company">Журналист, ВГТРК</span></div>
+              </a></div>
+          </div>
+        </div>
+      </div><a class="bem-link bem-header__new-user bem-button bem-button_theme_blue bem-button_compact" href="#"><img src="img/invite-users.svg" alt=""><span></span></a>
+      <div class="bem-user-profile"><a class="bem-link bem-header__user-profile"><img class="bem-circle-block bem-circle-block_size_mid bem-header__user-profile__img" src="img/avatar-user.png" alt="Avatar"></a>
+        <div class="bem-user-profile__list">
+          <div>
+            <ul>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/avatar-user.png" alt=""><span>Елена Рудова</span></a></li>
+            </ul>
+            <ul>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-speakers.svg" alt=""><span>Спикеры</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-journ.svg" alt=""><span>Журналисты</span></a></li>
+            </ul>
+            <ul>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-msg.svg" alt=""><span>8 новых сообщений</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-list.svg" alt=""><span>Списки</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-setting.svg" alt=""><span>Настройки</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-progress.svg" alt=""><span>Продвижение</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-invite.svg" alt=""><span>Инвайты</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-balance.svg" alt=""><span>Баланс ・100</span></a></li>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-base.svg" alt=""><span>Прислать базу</span></a></li>
+            </ul>
+            <ul>
+              <li class="bem-header__user-profile-list"><a class="bem-link bem-icon-block bem-link_theme_dark" href="#"><img class="bem-circle-block bem-circle-block_size_mid" src="img/icon-logout.svg" alt=""><span>Выйти</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bem-circle-block bem-circle-block_size_sm bem-header__balance"><span>8</span></div>
+    </div>
+    <div class="bem-disabled"></div>
+  </div>
+  <div class="bem-content bem-page__column bem-page_margin_top bem-page_margin_bottom bem-page__row_center bem-page_align_center">
+    <div class="bem-page__column bem-page__column_center">
+      <div class="bem-page__title bem-page_margin_bottom">Modal</div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal with Title &amp; Footer" onclick="var modal1 = showModalWindow('modal-1', 'modal1', 'Стандартное модальное окно'); if (modal1.newObj) modal1.setFooter('footer-modal-1'); return false;">
+      <div class="bem-modal__el hidden" id="modal-1">
+        <div>
+          <p>var modal1 = new ModalWindow();</p>
+          <p>modal1.setTitle('Стандартное модальное окно').setFooter('footer-modal-1').setContent('modal-1'); </p>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-modal-1"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список    </span>
+        </a></div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal without Title &amp; Footer" onclick="showModalWindow('modal-2', 'modal2'); return false;">
+      <div class="bem-modal__el hidden" id="modal-2">
+        <div>
+          <p>var modal2 = new ModalWindow();</p>
+          <p>modal2.setContent('modal-2');</p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal with Title &amp; Footer Full Height" onclick="var modal3 = showModalWindow('modal-3', 'modal3', 'Стандартное модальное окно во всю высоту экрана', 460, true); if (modal3.newObj) modal3.setFooter('footer-modal-3'); return false;">
+      <div class="bem-modal__el hidden" id="modal-3">
+        <div>
+          <p>var modal3 = new ModalWindow();</p>
+          <p>modal3.setTitle('Стандартное модальное окно во всю высоту экрана').setFooter('footer-modal-3').setFullHeight().setContent('modal-3'); </p>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-modal-3"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список         </span>
+        </a></div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal with Title without Footer &amp; Width setting" onclick="showModalWindow('modal-4', 'modal4', 'Стандартное модальное окно с заданной шириной', 700); return false;">
+      <div class="bem-modal__el hidden" id="modal-4">
+        <div>
+          <p>var modal4 = new ModalWindow();</p>
+          <p>modal4.setTitle('Стандартное модальное окно с заданной шириной').setWidth(700).setContent('modal-4'); </p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal with Title without Footer don't close when you click on the screen" onclick="var modal5 = new ModalWindow('modal5'); if (modal5.newObj) { modal5.setContent('modal-5').setTitle('Стандартное модальное окно не закрывающееся при клике на любую область экрана').setAutoClose();} modal5.show(); return false;">
+      <div class="bem-modal__el hidden" id="modal-5">
+        <div>
+          <p>var modal5 = new ModalWindow();</p>
+          <p>modal5.setTitle('Стандартное модальное окно закрывающееся при клике на любую область экрана').setContent('modal-5').setAutoClose().setCloseHandler();</p>
+          <div>content content content content content content content content content content content content content contentcontent contentcontent contentcontent content content content content content content content content content content content content content content content content content content content content content content content content content content contentcontent contentcontent contentcontent content content content</div>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-modal__btn" type="submit" value="Modal with Title &amp; Footer &amp; Preloader" onclick="busyExample('modal6', 'modal-6');">
+      <div class="bem-modal__el hidden" id="modal-6">
+        <div>
+          <p>var modal6 = new ModalWindow();</p>
+          <p>modal6.setTitle('Стандартное модальное окно с preloader').setFooter('footer-modal-6').setBusy();</p>
+          <p>modal6.show();</p>
+          <p>modal6.setContent('modal-6');</p>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-modal-6"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список </span>
+        </a></div>
+    </div>
+    <div class="bem-page__column bem-page__column_center">
+      <div class="bem-page__title bem-page_margin_bottom">Popover</div><button class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-1" onclick="var popover1 = new Popover('popover1', this); if (popover1.newObj) popover1.setTitle('Стандартное окно').setFooter('footer-popover-1').setContent('popover-1'); popover1.show(); return false;">Popover with Title & Footer</button>
+      <div class="bem-popover__el hidden" id="popover-1">
+        <div>
+          <p>var popover1 = new Popover();</p>
+          <p>popover1.setTitle('Стандартное окно').setFooter('footer-popover-1').setContent('popover-1');</p>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-popover-1"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список </span>
+        </a></div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-2" type="submit" value="Popover without Title with Footer" onclick="var popover2 = showPopover(this, 'popover-2','popover2'); if (popover2.newObj) popover2.setFooter('footer-popover-2'); return false;">
+      <div class="bem-popover__el hidden" id="popover-2">
+        <div>
+          <p>var popover2 = new Popover();</p>
+          <p>popover2.setFooter('footer-popover-2').setContent('popover-2');</p>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-popover-2"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список </span>
+        </a></div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-3" type="submit" value="Right Popover with Title without Footer" onclick="var popover3 = new Popover('popover3', this); if (popover3.newObj) popover3.setContent('popover-3').setTitle('Стандартное окно - справа').setPosition('right'); popover3.show(); return false;">
+      <div class="bem-popover__el hidden" id="popover-3">
+        <div>
+          <p>var popover3 = new Popover(); </p>
+          <p>popover3.setTitle('Стандартное окно - справа').setPosition('right').setContent('popover-3');</p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-4" type="submit" value="Top Popover with Title without Footer" onclick="var popover4 = new Popover('popover4', this); if (popover4.newObj) popover4.setContent('popover-4').setTitle('Стандартное окно - сверху').setPosition('top'); popover4.show(); return false;">
+      <div class="bem-popover__el hidden" id="popover-4">
+        <div>
+          <p>var popover4 = new Popover(); </p>
+          <p>popover4.setTitle('Стандартное окно - сверху').setPosition('top').setContent('popover-4');</p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-5" type="submit" value="Bottom Popover with Title without Footer" onclick="var popover5 = new Popover('popover5', this); if (popover5.newObj) popover5.setContent('popover-5').setTitle('Стандартное окно - внизу').setPosition('bottom'); popover5.show(); return false;">
+      <div class="bem-popover__el hidden" id="popover-5">
+        <div>
+          <p>var popover5 = new Popover(); </p>
+          <p>popover5.setTitle('Стандартное окно - внизу').setPosition('bottom').setContent('popover-5'); </p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-6" type="submit" value="Popover with Title without Footer don't close when you click on ​the screen" onclick="var popover6 = new Popover('popover6', this); if (popover6.newObj) popover6.setContent('popover-6').setTitle('Окно, которое не закрывается при клике на любую область экрана').setAutoClose(); popover6.show(); return false;">
+      <div class="bem-popover__el hidden" id="popover-6">
+        <div>
+          <p>var popover6 = new Popover(); </p>
+          <p>popover6.setTitle('Стандартное окно закрывающееся при клике на любую область экрана').setContent('popover-6').setAutoClose().setCloseHandler()</p>
+        </div>
+      </div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-7" type="submit" value="Popover with Title &amp; Footer without Arrow" onclick="var popover7 = new Popover('popover7', this); if (popover7.newObj) popover7.setTitle('Стандартное окно  без стрелки').setFooter('footer-popover-7').setContent('popover-7').setNoArrow(); popover7.show(); return false;">
+      <div class="bem-popover__el hidden" id="popover-7">
+        <div>
+          <p>var popover7 = new Popover(); </p>
+          <p>popover7.setTitle('Стандартное окно без стрелки').setFooter('footer-popover-7').setContent('popover-7').setNoArrow(); </p>
+          <div>content content content content content content content content content content content content content contentcontent contentcontent contentcontent content content content content content content content content content content content content content content content content content content content content content content content content content content contentcontent contentcontent contentcontent content content content </div>
+        </div>
+      </div>
+      <div class="bem-popover__el hidden" id="footer-popover-7"><a class="bem-link bem-page__row bem-page__row_start bem-page__column_center" href="">
+          <div class="bem-circle-block_theme_blue bem-circle-block bem-circle-block_size_big"><img src="img/plus.svg" alt=""></div><span style="margin-left: 12px">Создать новый список</span>
+        </a></div><input class="bem-button bem-page_margin_bottom bem-popover__btn" id="p-8" type="submit" value="Popover with Title &amp; Preloader without Footer" data-modal="8" onclick="busyExample(&quot;popover8&quot;, &quot;popover-8&quot;, &quot;popover&quot;);">
+      <div class="bem-popover__el hidden" id="popover-8">
+        <div>
+          <p>var popover8 = new Popover();</p>
+          <p>popover8.setTitle('Стандартное окно c preloader').setBusy()</p>
+          <p>popover8.show(el)</p>
+          <p>popover8.setContent(content); </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bem-footer bem-footer_theme_dark">
+  <div class="bem-footer__container bem-page__column">
+    <div class="bem-footer__top bem-page__row">
+      <div class="bem-logo bem-footer__bem-logo"><a class="bem-link" href="index.html"><img src="img/logo-white.svg" alt=""></a></div>
+      <div class="bem-footer__base-contact">
+        <h2 class="bem-footer_text_white">161 134</h2>
+      </div>
+    </div>
+    <div class="bem-footer__bottom">
+      <div class="bem-page__row">
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="">Мой профиль</a><a class="bem-link bem-footer__bem-link" href="">Пополнение счёта</a><a class="bem-link bem-footer__bem-link" href="">Подняться в поиске</a></div>
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="">Удалить свой номер</a><a class="bem-link bem-footer__bem-link" href="">Добавить контакт</a><a class="bem-link bem-footer__bem-link" href="">Тарифы</a></div>
+        <div class="bem-page__column bem-footer_margin_right"><a class="bem-link bem-footer__bem-link" href="feedback.html">Обратная связь</a><a class="bem-link bem-footer__bem-link" href="terms.html">Terms of use</a><a class="bem-link bem-footer__bem-link" href="faq.html">FAQ</a></div>
+      </div>
+      <div class="bem-page__row bem-page_max-container">
+        <div class="bem-page__column"><span>Приложения:</span><a class="bem-link bem-footer__bem-link" href="#">iOS</a><a class="bem-link bem-footer__bem-link" href="#">Android</a></div>
+        <div class="bem-page__column bem-footer_align_right">
+          <div class="bem-icon-block"><img class="bem-circle-block bem-circle-block_size_min" src="img/flag.png" alt="Москва, Россия"><a class="bem-link bem-footer__bem-link" href="#">Москва, Россия</a></div>
+          <div><span>Язык: </span><a class="bem-link bem-footer__bem-link" href="#">Русский</a></div><a class="bem-link bem-footer__bem-link" href="mailto:support@nutcall.com">support@nutcall.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="js/utils/documentReady.js"></script><script src="blocks/bem-accord/bem-accord.js"></script><script src="blocks/bem-auth/bem-auth.js"></script><script src="blocks/bem-base/bem-base.js"></script><script src="blocks/bem-button/bem-button.js"></script><script src="blocks/bem-content/bem-content.js"></script><script src="blocks/bem-disabled/bem-disabled.js"></script><script src="blocks/bem-form/bem-form.js"></script><script src="blocks/bem-header/bem-header.js"></script><script src="blocks/bem-info-block/bem-info-block.js"></script><script src="blocks/bem-page/bem-page.js"></script><script src="blocks/bem-posts/bem-posts.js"></script><script src="blocks/bem-modal/bem-modal.js"></script><script src="blocks/bem-popover/bem-popover.js"></script><script src="blocks/bem-record/bem-record.js"></script><script src="blocks/bem-search/bem-search.js"></script><script src="blocks/bem-user-profile/bem-user-profile.js"></script><script src="blocks/bem-user-select/bem-user-select.js"></script><script src="js/script.js"></script>

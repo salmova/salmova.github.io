@@ -7,3 +7,5 @@ const ready = function (fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
+
+//module.exports = ready;

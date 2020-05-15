@@ -1,0 +1,254 @@
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-form, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-form {
+    width: 100%;
+    // bem-form: Элементы
+    label {
+        font-size: 12px;
+        color: $black;
+        margin-bottom: 4px;
+        user-select: none;
+    }
+    fieldset {
+        border: none;
+        margin: 0 0 24px;
+        padding: 0;
+    }
+    legend {
+        padding: 16px 0;
+        border-bottom: 1px solid #E3E5E8;
+        margin-bottom: 24px;
+        width: 100%;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+    ::placeholder {
+        color: #818C9C;
+    }
+    :disabled {
+        cursor: default; 
+        background-color: #DFDFDF;
+        color: #898989;
+        opacity: 0.6;
+    }
+    &__input {
+        height: $el;
+        border: 1px solid #E3E5E8;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: $white;
+        font-size: $font-size-h5;
+        padding: 8px 12px;
+        color: #333333;
+        width: 100%;
+        &:focus {
+            border-color: #529DE5;
+        }
+        
+    }
+    &__phone {
+        display: flex;
+        position: relative;
+    }
+    &__phone-code {
+       width: 75px; 
+       margin-right: 8px;
+       padding-left: 26px;
+       padding-right: 8px;
+       box-sizing: border-box;
+       float: left;
+       background: #fff url(../img/ru.svg) no-repeat 8px center;
+       background-size: 12px;
+    }
+    &__phone-number {
+        max-width: 260px;
+        min-width: 150px;
+    }
+    &__phone-local {
+        position: absolute;
+        left: 8px;
+        top: calc(50% - 19px);
+    }
+    &__checkbox {
+        display: none;
+        &:checked + .bem-form__label-check-radio:before {
+           background: #008DFF url(../img/checkbox.svg) no-repeat 50% 50%; 
+        }
+        &:disabled + .bem-form__label-check-radio, &.bem-form_disabled + .bem-form__label-check-radio{
+            background: none;
+            cursor: default;
+            opacity: 0.6;
+            color: #898989;
+            &:before {
+                background-color: #DFDFDF;
+            }
+        } 
+    }
+    &__checkbox, &__radio, &__toggle {
+        & + .bem-form__label-check-radio {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: #F7F8FA;
+                border-radius: 2px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }    
+    }
+    &__radio {
+        display: none;
+        &:checked + .bem-form__label-check-radio:before {
+           background: #008DFF url(../img/radio.svg) no-repeat 50% 50%; 
+        }
+        &:disabled + .bem-form__label-check-radio, &.bem-form_disabled + .bem-form__label-check-radio{
+            background: none;
+            cursor: default;
+            color: #898989;
+            opacity: 0.6;
+            &:before {
+                background-color: #DFDFDF;
+            }
+        }
+    }
+    &__radio + .bem-form__label-check-radio:before {
+        border-radius: 50%;
+    }
+    &__toggle {
+        display: none;
+        &:checked + .bem-form__label-check-radio:before {
+           background: #008DFF url(../img/radio.svg) no-repeat calc(100% - 5px) 50%; 
+           background-size: 14px;
+        }
+        &:disabled + .bem-form__label-check-radio, &.bem-form_disabled + .bem-form__label-check-radio{
+            background: none;
+            cursor: default;
+            pointer-events: none;
+            opacity: 0.6;
+            color: #898989;
+            &:before {
+                background-color: #DFDFDF;
+            }
+        } 
+    }
+    &__toggle + .bem-form__label-check-radio:before {
+        border-radius: 70px;
+        width: 40px;
+        height: 24px;
+        background: #E3E5E8 url(../img/radio.svg) no-repeat 5px 50%;
+        background-size: 14px;
+        transition: background 0.5s ease-in-out;
+    }
+    textarea {
+        max-height: 320px;
+        display: block;
+        resize: none;
+    }
+    &__error {
+        border: 1px solid #FF6366 !important;
+    }
+        
+    // bem-form: Модификаторы
+    &__input_big {
+        height: $el-big;
+        padding: 13px 12px;
+    }
+    &__input_compact {
+        padding: 5px 12px;
+        height: $el-comp;
+        font-size: $font-size-h6;
+    }
+    &__checkbox.bem-form__input_compact + .bem-form__label-check-radio, &__radio.bem-form__input_compact + .bem-form__label-check-radio{
+        font-size: $font-size-sm;
+        &:before {
+            height: 16px;
+            width: 16px;
+            background-size: 70%;    
+        }
+    }
+    &__toggle.bem-form__input_compact + .bem-form__label-check-radio {
+        font-size: $font-size-sm;
+        &:before {
+            height: 20px;
+            width: 34px;
+            background-size: 12px;
+        }
+    }
+    &__radio.bem-form__input_compact + .bem-form__label-check-radio:before {
+        background-size: 6px;
+    }
+    &__input_small {
+        padding: 3px 12px;
+        height: $el-sm;
+        font-size: $font-size-sm;
+    }
+    &__checkbox.bem-form__input_small + .bem-form__label-check-radio, &__radio.bem-form__input_small + .bem-form__label-check-radio{
+        font-size: $font-size-sm;
+        &:before {
+            height: 14px;
+            width: 14px;
+            background-size: 70%;    
+        }
+    }
+    &__radio.bem-form__input_small + .bem-form__label-check-radio:before {
+        background-size: 6px;
+    }
+     &__toggle.bem-form__input_small + .bem-form__label-check-radio {
+        font-size: $font-size-sm;
+        &:before {
+            height: 18px;
+            width: 30px;
+            background-size: 10px;
+        }
+    }
+    &_bg_gray {
+        background: #F7F8FA;
+    }
+    &_border {
+        border: 1px solid #E3E5E8;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 24px 20px;        
+    }
+    &_border_no {
+        border: none;
+    }
+    &_disabled {
+        cursor: default;
+        pointer-events: none; 
+        background-color: #DFDFDF !important;
+        color: #898989 !important;
+        opacity: 0.6;
+        &:active {
+            box-shadow: none;
+        }
+    }
+    &__textarea_big {
+       padding: 15px 10px;
+    }
+    &__textarea_compact {
+       padding: 6px 10px;   
+       font-size: 14px;
+    }
+    &__textarea_small {
+       padding: 4px 10px;
+       font-size: 12px;  
+       line-height: 14px; 
+    }
+    &_height_auto {
+        height: auto;
+    }
+    &__input_date {
+        width: 280px;
+        padding-right: 40px;
+        font-size: $font-size;
+        background: url(../img/calendar.svg) no-repeat calc(100% - 12px) center;
+    }
+}

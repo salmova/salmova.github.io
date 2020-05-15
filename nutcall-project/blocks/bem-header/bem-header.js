@@ -1,6 +1,7 @@
 /*
-    Блок HeaderBlock - верхний блок 
+    Блок HeaderBlock - блок-заголовок 
     scroll: при скролле страницы блок фиксируется, добавляется тень (есть дополнительная проверка на главную страницу)
+    resize: при изменении ширины экрана меняется внешний вид кнопки new-user
 */
 (function ($) {
 
@@ -35,6 +36,15 @@
             self.$labelNewUserButton.removeClass('bem-button');
         }
         
+        jQuery(window).resize( function() {
+            if (jQuery(window).width() <= '768') {
+                self.$labelNewUserButton.addClass('bem-circle-block bem-circle-block_size_mid');
+                self.$labelNewUserButton.removeClass('bem-button');
+            } else {
+                self.$labelNewUserButton.removeClass('bem-circle-block bem-circle-block_size_mid');
+                self.$labelNewUserButton.addClass('bem-button');
+            }   
+        });
         jQuery(window).scroll( function() {
             var dir = (jQuery(window).scrollTop() - scrollTop) >= 0 ? 'down' : 'up';
             if (dir == 'down') {
@@ -44,7 +54,7 @@
                       $('.bem-page_main-page .bem-header__bem-search').append($('.bem-page_main-page .bem-content__bem-search .bem-search'));
                       jQuery('.bem-search__history').removeClass('bem-search_show');
                       if (jQuery(window).width() > '768') {
-                           self.$labelNewUserButton.addClass('bem-button');
+                           self.$labelNewUserButton.addClass('bem-button bem-button_theme_blue bem-button_compact');
                       }
                 } else {
                     self.$labelBlockFix.addClass('bem-header_shadow');
@@ -56,7 +66,7 @@
                       self.$labelMainPageBlock.removeClass('bem-header_shadow');
                       $('.bem-page_main-page .bem-content__bem-search').append($('.bem-page_main-page .bem-header__bem-search .bem-search'));
                       jQuery('.bem-search__history').removeClass('bem-search_show');
-                      self.$labelNewUserButton.removeClass('bem-button');
+                      self.$labelNewUserButton.removeClass('bem-button bem-button_theme_blue bem-button_compact');
                 }      
             }
             

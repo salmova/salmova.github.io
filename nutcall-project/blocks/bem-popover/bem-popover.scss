@@ -1,0 +1,122 @@
+/*
+     В этом файле должны быть стили для БЭМ-блока .bem-popover, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+.bem-popover {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    opacity: 1;
+    max-width: 90vw;
+    &:before {
+        content: '';
+        background: url(../img/popover-arrow.svg) no-repeat -8px center;
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        right: -9px;
+        z-index: 2;
+    }
+    // bem-popover: Элементы
+    &__container {
+        min-width: 460px;
+        max-height: 90vh;
+        background: #fff;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #999999;
+    }
+    &__close {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url(../img/close.svg) no-repeat 0 0;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+    }  
+    &__title {
+        padding: 14px 42px 14px 14px;
+        text-align: left;
+        border-bottom: 1px solid #E3E5E8;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+        font-weight: bold;
+    }      
+    &__content {
+        padding: 14px 14px 0 14px;
+        text-align: left;
+        overflow-y: auto;
+        min-height: 100px;
+        flex-grow: 1;
+        &>div {
+            margin-bottom: 14px;
+        }
+    }
+    &__footer {
+        padding: 14px 14px;
+        text-align: left;
+        border-top: 1px solid #E3E5E8;
+    }
+    // bem-popover: Модификаторы
+    &_height_full {
+        height: 90vh;
+    }
+    &_position_bottom:before {
+        background-position: center top;
+        width: 100%;
+        height: 9px;
+        right: inherit;
+        top: -8px;
+    }
+    &_position_top:before {
+        background-position: center bottom;
+        width: 100%;
+        height: 12px;
+        right: inherit;
+        bottom: -11px;
+    }
+    &_position_right:before {
+        background-position: 0 center;
+        width: 9px;
+        height: 100%;
+        left: -8px;
+    }
+    &_position_left:before {
+        background-position: -8px center;
+        width: 10px;
+        height: 100%;
+        right: -9px;
+    }
+    &_theme_dark {
+        &:before {
+            background-image: url(../img/popover-arrow-dark.svg);
+        }
+    }
+    &_title_show {
+        .bem-popover__close {
+            background-image: url(../img/close-white.svg);
+        }
+    }
+    &_arrow_none:before {
+        background: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .bem-popover__container {
+        max-width: 90vw;
+        min-width: inherit;
+    }
+}

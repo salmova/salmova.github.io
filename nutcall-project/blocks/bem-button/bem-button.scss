@@ -3,20 +3,182 @@
      модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 */
 .bem-button {
-    
-    background: $link-color;
+    background: $btn-blue;
     color: $white;
-    height: 32px;
+    height: $el;
     border: none;
     font-size: $font-size;
-    line-height: $font-size;
+    line-height: 1;
     border-radius: $border-radius;
     padding: 8px 12px;
     cursor: pointer;
-    
-    &:hover {
-        opacity: .8;
-        color: $white;
+    width: max-content;
+    min-width: $el * 1.1;
+    outline: none;
+    &:disabled {
+        cursor: default; 
+        background: #DFDFDF;
+        color: #898989;
+        opacity: 0.6;
+        &:hover {
+            color: #898989;        
+        }
+        &:active {
+            box-shadow: none;
+        }
     }
     
+    &:hover {
+        opacity: .7;
+    }
+    &:visited {
+        text-decoration: none;
+    }
+    &:active {
+        box-shadow: 0px 0px 8px rgba(160, 160, 160, 0.7) inset;
+    }
+    &_theme_green:active, &_theme_red:active, &_theme_pink:active, &_theme_orange:active, &_theme_yellow:active, &_theme_cyan:active {
+        box-shadow: 0px 0px 8px rgba(100, 100, 100, 0.7) inset;
+    }
+    &_theme_light-blue:active, &_theme_white:active, &_theme_candy:active, &_theme_ghost:active {
+        box-shadow: 0px 0px 8px rgba(160, 160, 160, 0.2) inset;
+    }
+    &_theme_bright-blue:active, &_theme_pale-blue:active, &_theme_purple:active {
+        box-shadow: 0px 0px 8px rgba(60, 60, 60, 0.6) inset;
+    }
+    &_theme_gray {
+        background: $btn-gray;
+        color: #818C9C;
+        &:hover {
+            color: #818C9C;
+        }
+    }
+    &_theme_green {
+        background: $btn-green;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &_theme_red {
+        background: $btn-red;
+        color: $white; 
+        &:hover {
+            color: $white;
+        } 
+    }
+    &_theme_blue {
+        background: $btn-blue;
+        color: $white; 
+        &:hover {
+            color: $white;
+        } 
+    }
+    &_theme_light-blue {
+        background: $btn-light-blue;
+        color: #008DFF;
+        &:hover {
+            background: rgba(0, 141, 255, 0.12);
+            opacity: 1;
+        }
+    }
+    &_theme_bright-blue {
+        background: $btn-bright-blue;
+        color: $white;
+        &:hover {
+            color: $white;
+        }  
+    }
+    &_theme_pale-blue {
+        background: $btn-pale-blue;
+        color: $white;
+        &:hover {
+            color: $white;
+        }  
+    }
+    &_theme_white {
+        background: $btn-white;
+        color: $black;
+        border: 1px solid $link-color;
+        &:hover {
+            color: $link-color;
+        }
+    }
+    &_theme_pink {
+        background: $btn-pink;
+        color: $white;
+    }
+    &_theme_orange {
+        background: $btn-orange;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &_theme_yellow {
+        background: $btn-yellow;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &_theme_purple {
+        background: $btn-purple;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &_theme_cyan {
+        background: $btn-cyan;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &_theme_candy {
+        background: $btn-candy;
+        color: #335778;
+        border: 1px solid #EBEBEB;
+        border-bottom-color: #CACACA;
+        border-left-color: #DADADA;
+        border-right-color: #DADADA;
+        &:hover {
+            color: #3D688F;
+        } 
+    }
+    &_theme_ghost {
+        background: #FFF;
+        color: #818C9C;
+        &:hover {
+            background: #F7F8FA;
+        }
+    }
+    &_big {
+        height: $el-big;
+        padding: 10px 12px;
+        font-size: 16px;
+        min-width: $el-big * 1.1;
+    }
+    &_compact {
+        height: $el-comp;
+        padding: 8px 12px;
+        min-width: $el-comp * 1.1;
+    }
+    &_small {
+        height: $el-sm;
+        padding: 6px 10px;
+        font-size: 12px;
+        min-width: $el-sm * 1.1;
+    }
+    &_fix_200 {
+        width: auto;
+        min-width: 200px;
+        max-width: 420px;
+    }
+    &_copy {
+        background-image: url(../img/copy-text.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }

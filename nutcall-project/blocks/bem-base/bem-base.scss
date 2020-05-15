@@ -89,6 +89,7 @@ select,
 textarea {
   touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
   margin: 0;                  // Убираем margin в Firefox и Safari
+  font-family: $font-family;
 }
 
 button,
@@ -339,4 +340,11 @@ pre {
   code {
     background: transparent;
   }
+}
+
+.hidden {
+    display: none !important;
+}
+.overflow-hidden {
+    overflow: hidden;
 }

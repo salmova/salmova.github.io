@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="bem-base" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <title>Макет элементов формы</title>
+  <style>
+    p {
+      margin: 14px 0 4px !important;
+    }
+
+    legend+p {
+      margin-top: 0 !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      .bem-content {
+        flex-direction: column;
+      }
+
+      .bem-form {
+        width: 100%;
+      }
+
+      .bem-form {
+        margin: 0 !important;
+      }
+
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+
+  </script>
+
+</head>
+
+<body><noscript>У вас отключен JavaScript.</noscript></body>
+<div class="bem-page">
+  <div class="bem-content" style="display: flex; align-items: flex-start; padding-bottom: 0">
+    <form class="bem-form">
+      <div class="bem-page__column">
+        <fieldset>
+          <legend><b>Input type='text/password'</b></legend>
+          <p style="font-size: 12px; margin-bottom: 4px">Normal Input:<br><b>.bem-form__input</b></p><input class="bem-form__input" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Big Input:<br><b>.bem-form__input</b> <b style='color: green'>.bem-form__input_big</b></p><input class="bem-form__input bem-form__input_big" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Compact Input:<br><b>.bem-form__input</b> <b style='color: green'>.bem-form__input_compact</b></p><input class="bem-form__input bem-form__input_compact" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Small Input:<br><b>.bem-form__input</b> <b style='color: green'>.bem-form__input_small</b></p><input class="bem-form__input bem-form__input_small" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Normal Input Disabled:<br><b>.bem-form__input</b> <b style='color: blue'>.bem-form_disabled or :disabled</b></p><input class="bem-form__input" type="text" placeholder="Введите текст" disabled>
+          <p style="font-size: 12px; margin-bottom: 4px">Normal Input with Gray Background:<br><b>.bem-form__input</b> <b style='color: brown'>.bem-form_bg_gray</b></p><input class="bem-form__input bem-form_bg_gray" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Compact Input with Gray Background without Border:<br><b>.bem-form__input</b> <b style='color: green'>.bem-form__input_comp</b> <b style='color: brown'>.bem-form_bg_gray</b> <b style='color: red'>.bem-form_border-no</b></p><input class="bem-form__input bem-form__input_comp bem-form_bg_gray bem-form_border_no" type="text" placeholder="Введите текст">
+          <p style="font-size: 12px; margin-bottom: 4px">Phone Number Group: <b>.bem-form__phone</b><br>2 input elements <b>.bem-form__input</b> with additional classes<br><b style='color: violet'>.bem-form__phone-code</b> <b style='color: violet'>.bem-form__phone-number</b></p>
+          <div class="bem-form__phone"><input class="bem-form__input bem-form__phone-code" id="input-code" type="text" value="+7" placeholder="+7"><input class="bem-form__input bem-form__phone-number" id="input-phone" type="text" placeholder="999-999-99-99"></div>
+          <p style="font-size: 12px; margin-bottom: 4px">Date Normal Input:<br><b>.bem-form__input</b> <b style='color: violet'>.bem-form__input_date</b></p><input class="bem-form__input bem-form__input_date" id="date" type="date" value="2020-01-12">
+        </fieldset>
+        <fieldset>
+          <legend><b>Select</b> </legend>
+          <p style="font-size: 12px; margin-bottom: 4px;">Normal User Select:<br><b>.bem-user-select</b></p><select class="bem-user-select" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Normal User Select Disabled:<br><b>.bem-user-select</b> <b style='color: blue'>.bem-form_disabled</b></p><select class="bem-user-select bem-form_disabled" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Normal Select:<br><b>.bem-select</b></p><select class="bem-select" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Big Select:<br><b>.bem-select</b> <b style='color: green;'>.bem-select_big</b></p><select class="bem-select bem-select_big" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Compact Select:<br><b>.bem-select</b> <b style='color: green;'>.bem-select_compact</b></p><select class="bem-select bem-select_compact" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Small Select:<br><b>.bem-select</b> <b style='color: green;'>.bem-select_small</b></p><select class="bem-select bem-select_small" name="searchFilter">
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Normal Select Disabled:<br><b>.bem-select</b> <b style='color: blue'>.bem-form_disabled or :disabled</b></p><select class="bem-select" name="searchFilter" disabled>
+            <option value="Германия">Германия</option>
+            <option value="Россия">Россия</option>
+            <option value="Франция">Франция</option>
+            <option value="Великобритания">Великобритания</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend><b>Textarea</b></legend>
+          <p style="font-size: 12px; margin-bottom: 4px;">Normal Textarea:<br><b>.bem-form__input</b></p><textarea class="bem-form__input" placeholder="Введите текст" rows="1" data-min-rows="1"></textarea>
+          <p style="font-size: 12px; margin-bottom: 4px;">Normal Textarea (3 rows):<br><b>.bem-form__input</b> <b style='color: green;'>.bem-form_height_auto</b></p><textarea class="bem-form__input bem-form_height_auto" placeholder="Введите текст" rows="3" data-min-rows="3"></textarea>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Big Textarea:<br><b>.bem-form__input</b> <b style='color: green;'>.bem-form__input_big</b></p><textarea class="bem-form__input bem-form__input_big" placeholder="Введите текст" rows="1" data-min-rows="1"></textarea>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Compact Textarea:<br><b>.bem-form_input</b> <b style='color: green;'>.bem-form__input_compact</b></p><textarea class="bem-form__input bem-form__input_compact" placeholder="Введите текст" rows="1" data-min-rows="1"></textarea>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Small Textarea:<br><b>.bem-form__input</b> <b style='color: green;'>.bem-form__input_small</b></p><textarea class="bem-form__input bem-form__input_small" placeholder="Введите текст" rows="1" data-min-rows="1"></textarea>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Small Textarea Disabled:<br><b>.bem-form__input</b> <b style='color: green;'>.bem-form__input_small</b> <b style='color: blue;'>.bem-form_disabled or :disabled</b></p><textarea class="bem-form__input bem-form__input_small" placeholder="Введите текст" rows="1" data-min-rows="1" disabled></textarea>
+        </fieldset>
+      </div>
+    </form>
+    <form class="bem-form" style="margin-left: 50px; min-width: 40%;">
+      <div class="bem-page__column">
+        <fieldset>
+          <legend><b>Buttons</b></legend>
+          <p style="font-size: 12px; margin-bottom: 4px;">Normal Button:<br><b>.bem-button</b></p><input class="bem-button" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Big Button:<br><b>.bem-button</b> <b style='color: green'>.bem-button_big</b></p><input class="bem-button bem-button_big" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Compact Button:<br><b>.bem-button</b> <b style='color: green'>.bem-button_compact</b></p><input class="bem-button bem-button_compact" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Small Button:<br><b>.bem-button</b> <b style='color: green'>.bem-button_small</b></p><input class="bem-button bem-button_small" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Disabled:<br><b>.bem-button</b> <b style='color: blue'>.bem-form_disabled or :disabled</b> </p><input class="bem-button" type="submit" value="Кнопка" disabled>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Gray Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_gray</b> </p><input class="bem-button bem-button_theme_gray" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Green Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_green</b> </p><input class="bem-button bem-button_theme_green" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Red Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_red</b> </p><input class="bem-button bem-button_theme_red" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Blue Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_blue</b> </p><input class="bem-button bem-button_theme_blue" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Blue Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_light-blue</b> </p><input class="bem-button bem-button_theme_light-blue" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Bright Blue Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_bright-blue</b> </p><input class="bem-button bem-button_theme_bright-blue" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Pale Blue Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_pale-blue</b> </p><input class="bem-button bem-button_theme_pale-blue" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button White Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_white</b> </p><input class="bem-button bem-button_theme_white" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Pink Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_pink</b> </p><input class="bem-button bem-button_theme_pink" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Orange Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_orange</b> </p><input class="bem-button bem-button_theme_orange" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Yellow Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_yellow</b> </p><input class="bem-button bem-button_theme_yellow" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Purple Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_purple</b> </p><input class="bem-button bem-button_theme_purple" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Cyan Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_cyan</b> </p><input class="bem-button bem-button_theme_cyan" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Candy Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_candy</b> </p><input class="bem-button bem-button_theme_candy" type="submit" value="Кнопка">
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 14px;">Normal Button Ghost Theme:<br><b>.bem-button</b> <b style='color: brown'>.bem-button_theme_ghost</b> </p><input class="bem-button bem-button_theme_ghost" type="submit" value="Кнопка">
+        </fieldset>
+      </div>
+    </form>
+  </div>
+  <div class="bem-content" style="display: flex; align-items: flex-start; padding-top: 0; padding-bottom: 0">
+    <form class="bem-form">
+      <div class="bem-page__column">
+        <fieldset>
+          <legend><b>Input type='checkbox'</b> </legend>
+          <p style="font-size: 12px; margin-bottom: 4px">Normal Checkbox Group with labels:<br>input with class <b>.bem-form__checkbox</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__checkbox" id="input-checkbox1" type="checkbox" name="checkbox" value="ch1" checked><label class="bem-form__label-check-radio" for="input-checkbox1">Checkbox 1</label><input class="bem-form__checkbox" id="input-checkbox2" type="checkbox" name="checkbox" value="ch2"><label class="bem-form__label-check-radio" for="input-checkbox2">Checkbox 2</label><input class="bem-form__checkbox" id="input-checkbox3" type="checkbox" name="checkbox" value="ch3"><label class="bem-form__label-check-radio" for="input-checkbox3">Checkbox 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px">Compact Checkbox Group with labels:<br>input with class <b>.bem-form__checkbox</b> <b style='color: green'>.bem-form__input_compact</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__checkbox bem-form__input_compact" id="input-checkbox11" type="checkbox" name="checkbox" value="ch1" checked><label class="bem-form__label-check-radio" for="input-checkbox11">Checkbox 1</label><input class="bem-form__checkbox bem-form__input_compact" id="input-checkbox21" type="checkbox" name="checkbox" value="ch2"><label class="bem-form__label-check-radio" for="input-checkbox21">Checkbox 2</label><input class="bem-form__checkbox bem-form__input_compact" id="input-checkbox31" type="checkbox" name="checkbox" value="ch3"><label class="bem-form__label-check-radio" for="input-checkbox31">Checkbox 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px">Small Checkbox Group with labels:<br>input with class <b>.bem-form__checkbox</b> <b style='color: green'>.bem-form__input_small</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__checkbox bem-form__input_small" id="input-checkbox12" type="checkbox" name="checkbox" value="ch1" checked><label class="bem-form__label-check-radio" for="input-checkbox12">Checkbox 1</label><input class="bem-form__checkbox bem-form__input_small" id="input-checkbox22" type="checkbox" name="checkbox" value="ch2"><label class="bem-form__label-check-radio" for="input-checkbox22">Checkbox 2</label><input class="bem-form__checkbox bem-form__input_small" id="input-checkbox32" type="checkbox" name="checkbox" value="ch3"><label class="bem-form__label-check-radio" for="input-checkbox32">Checkbox 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Disabled Checkbox with labels:<br>input with class <b>.bem-form__checkbox</b><br>label with classes <b>.bem-form__label-check-radio</b> <b style='color: blue'>.bem-form_disabled or :disabled</b> </p><input class="bem-form__checkbox" id="input-checkbox4" type="checkbox" name="checkbox" value="ch4" checked disabled><label class="bem-form__label-check-radio" for="input-checkbox4">Checkbox 4 </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Checkbox with empty label:<br>input with class <b>.bem-form__checkbox</b><br>label with classes <b>.bem-form__label-check-radio</b> </p><input class="bem-form__checkbox" id="input-checkbox" type="checkbox" name="checkbox" value="ch"><label class="bem-form__label-check-radio" for="input-checkbox"> </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Normal Toggle with label:<br>input with class <b>.bem-form__toggle</b><br>label with classes <b>.bem-form__label-check-radio</b></p><input class="bem-form__toggle" id="input_toggle" type="checkbox" name="toggle" value="on" checked><label class="bem-form__label-check-radio" for="input_toggle">Toggle </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Compact Toggle with label:<br>input with class <b>.bem-form__toggle</b> <b style='color: green'>.bem-form__input_compact</b><br>label with classes <b>.bem-form__label-check-radio</b></p><input class="bem-form__toggle bem-form__input_compact" id="input_toggle1" type="checkbox" name="toggle1" value="on" checked><label class="bem-form__label-check-radio" for="input_toggle1">Toggle </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Small Toggle with label:<br>input with class <b>.bem-form__toggle</b> <b style='color: green'>.bem-form__input_small</b><br>label with classes <b>.bem-form__label-check-radio</b></p><input class="bem-form__toggle bem-form__input_small" id="input_toggle2" type="checkbox" name="toggle2" value="on" checked><label class="bem-form__label-check-radio" for="input_toggle2">Toggle </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Disabled Toggle with label:<br>input with class <b>.bem-form__toggle</b><br>label with classes <b>.bem-form__label-check-radio</b> <b style='color: blue'>.bem-form_disabled or :disabled</b></p><input class="bem-form__toggle bem-form_disabled" id="input_toggle2" type="checkbox" name="toggle" value="on"><label class="bem-form__label-check-radio" for="input_toggle2">Toggle </label>
+        </fieldset>
+      </div>
+    </form>
+    <form class="bem-form" style="margin-left: 50px; min-width: 40%;">
+      <div class="bem-page__column">
+        <fieldset>
+          <legend><b>Input type='radio'</b> </legend>
+          <p style="font-size: 12px; margin-bottom: 4px;">Normal Radio Group with labels:<br>input with class <b>.bem-form__radio</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__radio" id="input-radio1" type="radio" name="radio" value="r1" checked><label class="bem-form__label-check-radio" for="input-radio1">Radio 1</label><input class="bem-form__radio" id="input-radio2" type="radio" name="radio" value="r2"><label class="bem-form__label-check-radio" for="input-radio2">Radio 2</label><input class="bem-form__radio" id="input-radio3" type="radio" name="radio" value="r3"><label class="bem-form__label-check-radio" for="input-radio3">Radio 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px;">Compact Radio Group with labels:<br>input with class <b>.bem-form__radio</b> <b style='color: green'>.bem-form__input_compact</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__radio bem-form__input_compact" id="input-radio11" type="radio" name="radio1" value="r1" checked><label class="bem-form__label-check-radio" for="input-radio11">Radio 1</label><input class="bem-form__radio bem-form__input_compact" id="input-radio21" type="radio" name="radio1" value="r2"><label class="bem-form__label-check-radio" for="input-radio21">Radio 2</label><input class="bem-form__radio bem-form__input_compact" id="input-radio31" type="radio" name="radio1" value="r3"><label class="bem-form__label-check-radio" for="input-radio31">Radio 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px;">Small Radio Group with labels:<br>input with class <b>.bem-form__radio</b> <b style='color: green'>.bem-form__input_small</b><br>label with class <b>.bem-form__label-check-radio</b> </p><input class="bem-form__radio bem-form__input_small" id="input-radio12" type="radio" name="radio2" value="r1" checked><label class="bem-form__label-check-radio" for="input-radio12">Radio 1</label><input class="bem-form__radio bem-form__input_small" id="input-radio22" type="radio" name="radio2" value="r2"><label class="bem-form__label-check-radio" for="input-radio22">Radio 2</label><input class="bem-form__radio bem-form__input_small" id="input-radio32" type="radio" name="radio2" value="r3"><label class="bem-form__label-check-radio" for="input-radio32">Radio 3 </label>
+          <p style="font-size: 12px; margin-bottom: 4px; margin-top: 10px;">Disabled Radio with label:<br>input with class <b>.bem-form__radio</b><br>label with classes <b>.bem-form__label-check-radio</b> <b style='color: blue'>.bem-form_disabled or :disabled</b> </p><input class="bem-form__radio bem-form_disabled" id="input-radio" type="radio" name="radio3" value="r4" checked><label class="bem-form__label-check-radio" for="input-radio">Radio 4 </label>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+  <div class="bem-content" style="display: flex; align-items: flex-start; padding-top: 0;">
+    <form class="bem-form">
+      <fieldset>
+        <legend>Example 1</legend>
+        <div class="bem-page__grid bem-page_margin_bottom">
+          <div class="bem-page__column"><label for="search-input">Поиск</label><input class="bem-form__input bem-form__input_compact" id="search-input" type="text" placeholder="Имя, телефон, email и т.д."></div>
+          <div class="bem-page__column"><label for="search-1">Сферы деятельности</label><select class="bem-select bem-select_compact" id="search-1" name="searchFilter">
+              <option value="none">Не важно</option>
+              <option value="Германия">Германия</option>
+              <option value="Россия">Россия</option>
+              <option value="Франция">Франция</option>
+              <option value="Великобритания">Великобритания</option>
+            </select></div>
+          <div class="bem-page__column"><label for="search-2">Телефоны</label><select class="bem-select bem-select_compact" id="search-2" name="searchFilter2">
+              <option value="none">Не важно</option>
+              <option value="Германия">Германия</option>
+              <option value="Россия">Россия</option>
+              <option value="Франция">Франция</option>
+              <option value="Великобритания">Великобритания</option>
+            </select></div>
+          <div class="bem-page__column"><label for="search-3">Дополнительно</label><select class="bem-select bem-select_compact" id="search-3" name="searchFilter3">
+              <option value="none">---</option>
+              <option value="Германия">Германия</option>
+              <option value="Россия">Россия</option>
+              <option value="Франция">Франция</option>
+              <option value="Великобритания">Великобритания</option>
+            </select></div>
+          <div class="bem-page__column"><input class="bem-button bem-button_compact bem-button_theme_blue" type="submit" value="Показать"></div>
+        </div>
+        <div class="bem-page__grid bem-page_margin_bottom"><input class="bem-form__checkbox" id="input-ch-1" type="checkbox" name="options" value="ch1"><label class="bem-form__label-check-radio" for="input-ch-1">Есть жалобы на телефоны</label><input class="bem-form__checkbox" id="input-ch-2" type="checkbox" name="options" value="ch2" checked><label class="bem-form__label-check-radio" for="input-ch-2">Сначала популярные</label></div>
+      </fieldset>
+      <fieldset>
+        <legend>Example 2</legend>
+        <div class="bem-page__title">Сформировать счёт</div>
+        <div class="bem-page__subtitle bem-page_margin_bottom">РБК-ТВ, АО «РБК-ТВ», 117393, г. Москва, Профсоюзная ул., 78 стр. 1</div>
+        <fieldset>
+          <legend>Юридическое лицо</legend>
+          <div class="bem-page__column bem-page_margin_bottom"><label for="inn">ИНН</label><input class="bem-form__input" id="inn" type="text" placeholder="36645934929">
+            <div class="bem-page__note">Пример: 36645934929</div>
+          </div>
+          <div class="bem-page__row">
+            <div class="bem-page__column bem-page_half"><label for="fio">ФИО подписанта</label><input class="bem-form__input bem-form_bg_gray" id="fio" type="text" placeholder="Фамилия Имя Отчество"></div>
+            <div class="bem-page__column bem-page_half"><label for="prof">Должность</label><input class="bem-form__input bem-form_bg_gray" id="prof" type="text" placeholder="Должность"></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Доступ</legend>
+          <div class="bem-page__row">
+            <div class="bem-page__column bem-page_half"><label for="point">За какой период вы хотите олпатить доступ:</label><select class="bem-select" id="point" name="searchFilter">
+                <option value="400">1 месяц - 400 баллов</option>
+                <option value="Германия">Германия</option>
+                <option value="Россия">Россия</option>
+                <option value="Франция">Франция</option>
+                <option value="Великобритания">Великобритания</option>
+              </select>
+              <div class="bem-page__note">После оплаты доступ будет продлён до 4 августа 2020 года</div>
+            </div>
+            <div class="bem-page__column bem-page_half"><label for="date-start">C какой даты начинать период?</label><input class="bem-form__input bem-form__input_date" id="date-start" type="date" value="2020-01-12"></div>
+          </div>
+        </fieldset>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</html>

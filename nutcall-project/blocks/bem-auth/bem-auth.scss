@@ -1,0 +1,401 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-auth, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-auth {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+    hr {
+        margin: auto 0;
+        width: 100%;
+        height: 1px;
+        background: #E3E5E8;
+        border: none;
+    }
+    .bem-form {
+        margin-top: 24px;
+        fieldset {
+            margin-bottom: 16px;
+        }
+    }
+    /* bem-auth: Элементы */
+    &__content {
+        width: 400px;
+    }
+    &__social {
+        margin: 24px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 48px);
+        grid-gap: 20px;
+    }
+    &__delim {
+        white-space: nowrap;
+        padding: 0 24px;
+        color: #818C9C;
+    }
+    &__social-icon svg{
+        width: 48px;
+        height: 48px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        .bem-header__bem-logo {
+            display: block; 
+        }
+    }
+    &__cancel-link {
+        text-align: center;
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 40px;
+        margin: 0px 0 0;
+        font-weight: 800;
+    }
+    .bem-form legend {
+        padding: 0;
+        border: none;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .bem-form__label-check-radio {
+        margin: 26px 0 0;
+    }
+    .bem-button {
+        width: auto;
+        margin: 0 auto;
+    }
+    .bem-form .bem-page__note {
+        margin-top: 4px;
+    }
+    &__step-check-info {
+        width: 518px;
+    }
+    &__step-phone {
+        width: 580px;
+        .bem-form__phone {
+            margin: 0 auto;
+            .bem-form__phone-number {
+                width: 260px;
+            }    
+        }
+        #code-phone {
+            width: 343px;
+            margin: 0 auto;
+        }
+    }
+    &__step-agent {
+        width: 580px;
+        .bem-auth__agent:first-child {
+            margin-right: 24px;
+            .bem-form__label-check-radio {
+                background-image: url(../img/check-agent.svg);
+                &:checked {
+                    background: #1FCF5F url(../img/check-agent-active.svg) no-repeat center 50px;    
+                }
+            }
+        }
+        .bem-form__label-check-radio {
+            width: 200px;
+            height: 200px;
+            background: #F7F8FA url(../img/close-agent.svg) no-repeat center 50px;
+            border-radius: 8px;
+            margin-top: 8px;
+            font-size: 32px !important;
+            line-height: 40px;
+            color: #818C9C;
+            font-weight: bold;
+            justify-content: center;
+            padding-top: 85px;
+            margin-bottom: 12px;
+            &:before {
+                content: '';
+                display: none !important;
+            }
+            &:hover {
+                background-color: #E3E5E8;
+            }
+            &:checked {
+                background: #FF6366 url(../img/close-agent-active.svg) no-repeat center 50px;
+                color: $white;
+            }
+        }
+        .bem-form__radio:checked + .bem-form__label-check-radio {
+            background: #FF6366 url(../img/close-agent-active.svg) no-repeat center 50px;
+            color: $white;
+        }
+        .bem-auth__agent:first-child {
+            .bem-form__radio:checked + .bem-form__label-check-radio {
+                background: #1FCF5F url(../img/check-agent-active.svg) no-repeat center 50px; 
+            }
+        }
+        p {
+            margin: 0;
+        }
+    }
+    &__step-work {
+        width: 490px;
+        .bem-auth__work-item {
+            margin-right: 8px;
+        }
+        .bem-auth__work-item, .bem-auth__work-position {
+            width: 100%;
+            position: relative;
+        }
+        hr {
+            margin: 40px 0 32px;
+        }
+        .bem-auth__btn {
+            margin-top: 30px;
+        }
+        .bem-search__history-list .bem-link {
+            height: 40px;
+        }
+        .bem-auth__work-item input {
+            padding-right: 40px;
+        }
+        .bem-search__input {
+            margin: 0;
+            border: 1px solid #E3E5E8;
+        }
+    }
+    &__timer {
+        margin-top: 16px;    
+    }
+    &__download {
+        #add-image-btn {
+           opacity: 0;
+           visibility: hidden;
+           width: 0px;
+           height: 0px;
+           float: left; 
+        }
+    }
+    &__download-img {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 8px;
+        margin-right: 24px; 
+    }
+    &__download-btn.bem-button {
+        margin: 0;
+        width: 112px;
+    }
+    &__translate {
+        position: relative;
+        img.bem-auth__translate-icon {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            width: 16px;
+            height: 16px;
+        }    
+    }
+    &__work {
+        position: relative;
+    }
+    &__add-info {
+        margin-top: 8px;
+    }
+    &__add-info-link {
+        font-size: 14px;
+        line-height: 20px;
+        color: #818C9C;
+        background: url(../img/plus-btn.svg) no-repeat 0 center;
+        cursor: pointer;
+        padding-left: 22px;
+        &:first-child {
+            margin-right: 16px;
+        }
+    }
+    &__delete-info {
+        position: absolute;
+        right: -24px;
+        top: 12px;
+        width: 16px;
+        height: 16px;
+        background: url(../img/minus-btn.svg) no-repeat 0 0;
+        cursor: pointer;
+    }
+    &__step-selfie {
+        width: 495px;
+        .bem-auth__download-img, video, canvas {
+            width: 400px;
+            height: 400px;
+            border-radius: 4px;
+            margin: 0 0 16px;
+        }
+        .bem-auth__download-btn.bem-button {
+            width: auto;
+        }
+        .bem-auth__delim {
+            margin: 16px 0 24px;
+        }
+        .bem-auth__btn {
+            margin-top: 30px;
+        }
+        & + .bem-auth__cancel-link {
+            display: none;
+        }
+    }
+}
+
+/*  bem-auth: @media-условия */
+@media screen and (max-width: 768px) {
+    .bem-auth__header .bem-header__bem-logo {
+        display: block;
+        order: 0;
+    }
+    .bem-auth__header .bem-header__bem-logo img{
+        height: 20px;
+        width: auto;
+        margin-right: 20px;
+    }
+    .bem-auth__step-check-info .bem-page__row, .bem-auth__step-agent .bem-page__row,  .bem-auth__step-work .bem-page__row{
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 630px) {
+    .bem-auth__step-phone {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .bem-auth__header .bem-page_font_gray {
+        display: none;
+    }
+    .bem-auth__header .bem-page_font_gray.bem-link, .bem-auth__header .bem-page_font_gray.bem-auth__header-text {
+        display: inline;
+    }
+    .bem-auth__title {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 4px;
+    }
+    .bem-auth .bem-page__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .bem-auth__social {
+        grid-gap: 8px;
+        width: 280px;
+        margin: 16px auto 24px;
+    }
+    .bem-page .bem-auth__social-icon svg{
+        width: 40px;
+        height: 40px;
+    }
+    .bem-auth__social {
+        grid-template-columns: repeat(auto-fill, 40px);
+    }
+    .bem-auth__content .bem-form legend {
+        margin-bottom: 16px;
+    }
+    .bem-auth__content .bem-form__label-check-radio {
+        margin-top: 18px;
+    }
+    .bem-auth__step-check-info fieldset > .bem-page__row {
+        flex-direction: column;
+    }
+    .bem-auth__step-check-info .bem-form_border {
+        border: none;
+        padding: 0;
+    }
+    .bem-auth__download {
+        margin: 0 auto 16px;
+    }
+    .bem-auth__download-btn {
+        display: none;
+    }
+    .bem-auth__download-img {
+        margin: 0;
+    }
+    .bem-auth__step-check-info {
+        width: 400px;
+    }
+    .bem-auth__step-phone {
+        width: 400px;
+    }
+    .bem-auth__step-work {
+        width: 400px;
+    }
+    .bem-auth__step-agent {
+        width: 400px;
+    }
+    .bem-auth__step-agent .bem-form__label-check-radio {
+        width: 140px;
+        height: 150px;
+        font-size: 20px !important;
+        line-height: 24px;
+        background-position: center 39px;
+    }
+    .bem-auth__step-agent .bem-form__radio:checked + .bem-form__label-check-radio, .bem-auth__step-agent .bem-auth__agent:first-child .bem-form__radio:checked + .bem-form__label-check-radio {
+        background-position: center 39px;
+    }
+    .bem-auth__agent p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .bem-auth__content {
+        width: 100%;
+    }
+    .bem-auth .bem-button {
+        width: 100%;
+    }
+    .bem-auth_header .bem-header__bem-logo img{
+        height: 14px;
+        margin-top: 5px;
+        width: 59px;
+    }
+    .bem-auth__header .bem-page_font-size_mid{
+        font-size: 12px;
+    }
+    .bem-auth__title {
+        margin-top: 20px;
+    }
+    .bem-auth__step-work .bem-auth__work {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 420px) {
+    .bem-auth {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .bem-auth__add-info-link {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .bem-auth__step-work .bem-auth__work {
+        flex-direction: column;
+    }
+    .bem-auth__step-agent .bem-auth__agent:first-child {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .bem-auth__step-phone .bem-form__phone {
+        margin: 0;
+    }
+    .bem-auth__step-phone .bem-form__phone .bem-form__phone-number {
+        width: 100%;
+    }
+    .bem-auth__step-phone #code-phone {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .bem-auth__step-agent .bem-form__label-check-radio {
+        width: 130px;
+        height: 140px;
+    }
+    .bem-auth__step-agent .bem-auth__agent:first-child {
+        margin-right: 10px;
+    }
+}

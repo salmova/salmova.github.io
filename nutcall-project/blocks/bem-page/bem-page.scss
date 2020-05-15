@@ -9,21 +9,111 @@
     flex-direction: column;
     min-height: 100vh;
     margin: 0 auto;
-//     padding-top: 56px;
     
-    // Элементы
+    /* bem-page: Элементы */
     &__row {
         display: flex;
-        justify-content: space-between;    
+        justify-content: space-between;  
     }
     &__column {
         display: flex;   
         flex-direction: column;
     }
-    
-    //Модификаторы
+    &__grid {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+        grid-gap: $space-size; 
+        align-items: flex-end;   
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+        font-weight: bold;
+    }
+    &__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        color: #818C9C;
+    }
+    &__note {
+        font-size: $font-size-sm;
+        line-height: 1.2;
+        color: #818C9C;
+        margin-top: 4px;
+    } 
+    &__warning-text {
+        color: #FF6366;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    &__copy-block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .bem-form__input {
+            min-width: 200px;
+        }
+    }
+    &__invite-group {
+        margin-top: 40px;
+    }
+    &__invite-list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 72px;
+        flex-direction: column;
+        &>.bem-page__row {
+            &>:last-child {
+                width: 21%;
+                text-align: right;
+            }
+            &>:first-child {
+                flex-grow: 1;
+                &>:last-child {
+                    width: 32%;
+                }
+                &>:first-child {
+                    flex-grow: 1;
+                }
+            }
+        }
+        .bem-page__title {
+            font-size: $font-size;
+            line-height: 1.4;
+            padding: 8px 10px;
+            border-bottom: 1px solid #E3E5E8;
+            width: auto;
+        }
+        p {
+            padding: 8px;
+            margin: 8px 0 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__invite-text {
+        font-size: 16px;
+        line-height: 24px;
+        color: #818C9C;
+        font-weight: 300;
+        margin: 0 16px;
+    }
+    /* bem-page: Модификаторы */
     &__row_center {
         justify-content: center;
+    }
+    &__row_around {
+        justify-content: space-around;
+    }
+    &__row_start {
+        justify-content: flex-start;
+    }
+    &__row_end {
+        justify-content: flex-end;
     }
     &__column_center {
         align-items: center;
@@ -40,11 +130,156 @@
     &_main-page {
         padding-top: 0;
     }
+    &_half {
+        width: calc(50% - 8px);
+    }
+    &_full {
+        width: 100%;
+    }
+
+    &_margin_bottom {
+        margin-bottom: $space-size !important;
+    }
+    &_margin_top {
+        margin-top: 40px;
+    }
+    &_margin_right {
+        margin-right: $space-size;
+    }
+    &_invite-page {
+        max-width: 944px;
+        margin-left: 0;
+        .bem-page_margin_right {
+            margin-right: 8px;
+        }
+        .bem-page__copy-block {
+            display: none;
+        }
+    }
+    &_font_gray {
+        color: #818C9C; 
+    }
+    &_font-size_mid {
+        font-size: $font-size-mid; 
+    }
 }
 
-// @media-условия
+/*  bem-page: @media-условия */
 @media screen and (max-width: 1200px) {
     .bem-page {
         width: 100vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    fieldset .bem-page__row {
+        flex-direction: column;    
+    }
+    .bem-page_half {
+        width: 100%;
+        margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .bem-page_invite-page {
+        .bem-page__copy-block {
+            display: flex;
+        }
+        .bem-page__invite-group {
+            flex-direction: column;   
+            margin-top: 24px; 
+            .bem-page__title {
+                display: none;
+            }
+        }
+        .bem-page__subtitle {
+            margin-top: 8px;
+        }
+        .bem-form {
+            background: #F7F8FA;
+            border-radius: $border-radius;
+            padding: 0 16px;
+            margin-bottom: 10px;
+            fieldset {
+                margin-bottom: 16px;
+            }
+            legend {
+                border-bottom: none;
+                margin-bottom: 0 !important;
+            }
+            label {
+                display: none;
+            }
+            .bem-form__input {
+                margin-bottom: 16px;
+            }
+            .bem-page__note {
+                display: none;
+            }
+            .bem-button {
+                margin: 0 auto 16px;
+                width: 100%;
+            }
+            .bem-button_copy {
+                width: auto;
+                margin: 0;
+            }
+            .bem-button + .bem-page__note {
+                display: block;
+            }
+        }
+        .bem-form__phone {
+            margin: 16px 0 0;
+            & > :last-child {
+                flex-grow: 1;
+            }
+        }
+        .bem-form__phone-number {
+            max-width: 100%;
+        }
+    }
+    .bem-page__invite-list {
+        margin-top: 18px;
+        margin-bottom: 42px;
+        &>:first-child {
+            display: none;
+        }
+        & > .bem-page__row {
+            margin-bottom: 16px;
+            & > :first-child > :last-child {
+                width: 100%;
+            }
+            & > :last-child {
+                width: 25%;
+            }
+        }
+        & > .bem-page__row > .bem-page__row {
+            flex-direction: column;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            &.bem-page__invite-list_info {
+                font-size: 14px;
+                line-height: 20px;
+                color: #818C9C;
+            }
+        }
+    }
+    .bem-page__invite-group {
+        &>:first-child {
+            order: 1;
+        }
+        &>:last-child {
+            justify-content: flex-start;
+            .bem-page__invite-text {
+                order: 1;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 32px;
+                color: $black;
+            }
+        }
     }
 }

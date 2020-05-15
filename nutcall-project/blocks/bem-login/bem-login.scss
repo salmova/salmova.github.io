@@ -1,0 +1,28 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-login, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-login {
+    height: 100vh;
+    /* bem-login: Элементы */
+    &__content {
+        width: 400px;
+        & > .bem-form {
+            margin-top: 24px;
+        }
+    }
+    &__btn {
+        width: min-content;
+        margin: 0 auto;
+    }
+    //Модификаторы
+}
+
+// @media-условия
+@media screen and (max-width: 768px) {
+    .bem-link_font_sm {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

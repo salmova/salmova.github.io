@@ -27,8 +27,14 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 </script>
 </head>
 
-<body><noscript>У вас отключен JavaScript.</noscript></body>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="dislike"><path d="M11.333 1h1.78a1.54 1.54 0 011.554 1.333V7a1.54 1.54 0 01-1.554 1.333h-1.78M6.667 9.667v2.666a2 2 0 002 2l2.666-6V1h-7.52A1.333 1.333 0 002.48 2.133l-.92 6a1.333 1.333 0 001.333 1.534h3.774z" stroke="#FF6366" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="like"><path d="M4.667 14h-2a1.334 1.334 0 01-1.334-1.333V8a1.333 1.333 0 011.334-1.333h2m4.666-1.334V2.667a2 2 0 00-2-2l-2.666 6V14h7.52a1.334 1.334 0 001.333-1.133l.92-6a1.333 1.333 0 00-1.333-1.534H9.333z" stroke="#1FCF5F" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+<body><noscript>У вас отключен JavaScript.</noscript></body><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="dislike">
+    <path d="M11.333 1h1.78a1.54 1.54 0 011.554 1.333V7a1.54 1.54 0 01-1.554 1.333h-1.78M6.667 9.667v2.666a2 2 0 002 2l2.666-6V1h-7.52A1.333 1.333 0 002.48 2.133l-.92 6a1.333 1.333 0 001.333 1.534h3.774z" stroke="#FF6366" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="like">
+    <path d="M4.667 14h-2a1.334 1.334 0 01-1.334-1.333V8a1.333 1.333 0 011.334-1.333h2m4.666-1.334V2.667a2 2 0 00-2-2l-2.666 6V14h7.52a1.334 1.334 0 001.333-1.133l.92-6a1.333 1.333 0 00-1.333-1.534H9.333z" stroke="#1FCF5F" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+</svg>
 <div class="bem-page">
   <div class="bem-header bem-page_main-page">
     <div>
@@ -67,12 +73,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     <div class="bem-logo bem-content__bem-logo"><a class="bem-link" href=""><img src="img/logo.svg" alt="Nutcall"></a><img class="bem-logo__delim" src="img/right.svg"><a class="bem-link bem-logo__brand" href=""><img src="img/brand.png" alt="Бренд"></a></div>
     <div class="bem-content__bem-search">
       <div class="bem-search">
-        <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-select" name="searchFilter">
+        <form class="bem-search__form bem-page__row" action="" method=""><input class="bem-search__input" placeholder="По имени, тегу, профессии" type="text"><select class="bem-search__select bem-user-select" name="searchFilter">
             <option value="Везде">Везде</option>
             <option value="Беларусь">Беларусь</option>
             <option value="Великобритания">Великобритания</option>
             <option value="Россия">Россия</option>
-          </select><input class="bem-button bem-search__bem-button" type="submit" value="Искать"></form>
+          </select><input class="bem-button bem-button_theme_blue bem-search__bem-button" type="submit" value="Искать"></form>
         <div class="bem-search__history">
           <div class="bem-search__history-caption"><span>Недавний поиск:</span><a class="bem-link" href="">Очистить</a></div>
           <div class="bem-search__history-list"> <a class="bem-icon-block bem-link bem-link_theme_dark bem-search__bem-icon-block" href=""><img class="bem-circle-block bem-circle-block_size_mid" src="img/person3.jpg" alt="Пользователь">
@@ -233,21 +239,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </div>
   </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src='js/svg4everybody.min.js'></script>
-  <script src='js/utils/documentReady.js'></script>
-  <script src='blocks/bem-accord/bem-accord.js'></script>
-  <script src='blocks/bem-content/bem-content.js'></script>
-  <script src='blocks/bem-disabled/bem-disabled.js'></script>
-  <script src='blocks/bem-header/bem-header.js'></script>
-  <script src='blocks/bem-posts/bem-posts.js'></script>
-  <script src='blocks/bem-record/bem-record.js'></script>
-  <script src='blocks/bem-search/bem-search.js'></script>
-  <script src='blocks/bem-select/bem-select.js'></script>
-  <script src='blocks/bem-user-profile/bem-user-profile.js'></script>
-  <script src='blocks/bem-info-block/bem-info-block.js'></script>
-  <script src='js/script.js'></script>
-
-
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="js/utils/documentReady.js"></script><script src="blocks/bem-accord/bem-accord.js"></script><script src="blocks/bem-auth/bem-auth.js"></script><script src="blocks/bem-base/bem-base.js"></script><script src="blocks/bem-button/bem-button.js"></script><script src="blocks/bem-content/bem-content.js"></script><script src="blocks/bem-disabled/bem-disabled.js"></script><script src="blocks/bem-form/bem-form.js"></script><script src="blocks/bem-header/bem-header.js"></script><script src="blocks/bem-info-block/bem-info-block.js"></script><script src="blocks/bem-page/bem-page.js"></script><script src="blocks/bem-posts/bem-posts.js"></script><script src="blocks/bem-modal/bem-modal.js"></script><script src="blocks/bem-popover/bem-popover.js"></script><script src="blocks/bem-record/bem-record.js"></script><script src="blocks/bem-search/bem-search.js"></script><script src="blocks/bem-user-profile/bem-user-profile.js"></script><script src="blocks/bem-user-select/bem-user-select.js"></script><script src="js/script.js"></script>

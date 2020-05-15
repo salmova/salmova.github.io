@@ -1,0 +1,18 @@
+/*
+В этом файле должны быть стили для БЭМ-блока .bem-warning, его элементов,
+модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+*/
+
+.bem-warning {
+    width: 100%;
+    background: #F7F8FA url(../img/warning.svg) no-repeat 16px center;
+    border-radius: $border-radius;
+    color: #000;
+    padding: 12px 20px 12px 56px;
+}
+
+// @media-условия
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 768px) {
+}

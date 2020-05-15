@@ -5,74 +5,45 @@
     display: inline-block;
     vertical-align: top; 
     width: auto;
+    position: relative;
+    border: 1px solid #E3E5E8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: $el;
+    font-size: $font-size;
+    padding: 0px 32px 0px 8px;
+    background: #fff url(../img/down.svg) no-repeat calc(100% - 9px) center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
+    outline: none;
+    user-select: none;
     
-    /* bem-select: Элементы */
-    &__wrap {
-    	max-width: 700px;
-    	width: 100%;
-    	margin: 20px auto;
-    	
-    	select {
-        	margin: 20px;
-        }
-
+    &:active, &:focus, option:active, option:focus {
+        outline: none;
+        user-select: none;
+    }    
+    /* bem-user-select: Элементы */
+    option {
+         line-height: 22px;
+         background: #fff;
+         border: none;
+         outline: none;
+         user-select: none;
     }
-    &__gap {
-    	background: transparent;
-    	color: #818C9C;
-    	font-size: $font-size;
-    	padding: 10px 29px 10px 10px;
-    	cursor: pointer;
-    	position: relative;
-    	user-select: none;
+    &_big {
+        height: $el-big;
+        font-size: 16px;
     }
-    
-    &__list {
-    	background: #fff;
-        border: 1px solid #008DFF;
-    	margin: 0;
-    	position: absolute;
-    	right: 79px;
-    	top: 38px;
-    	z-index: 1;
-    	padding: 0;
+    &_compact {
+        height: $el-comp;
+        font-size: $font-size;
     }
-    
-    &__list.on {
-    	display: block;
+    &_small {
+        height: $el-sm;
+        font-size: 12px;
     }
-    
-    &__item span {
-    	display: block;
-    	padding: 10px 15px;
-    	cursor: pointer;
-        color: #333;
-    }
-    
-    &__item.selected,
-    &__item span:hover {
-    	color: #467797;
-    }
-    
-    &__gap:after {
-    	content: '';
-    	display: block;
-    	width: 16px;
-    	height: 16px;
-    	position: absolute;
-    	right: 9px;
-    	top: calc(50% - 8px);
-    	background: url(../img/down.svg) no-repeat 0 0;
-    
-        transition: all .27s ease-in-out;
-        transform: rotate(0deg);
-    }
-    
-    .on.bem-select__gap:after {
-        transform: rotate(180deg);
-    }
-
-
 }
  
 

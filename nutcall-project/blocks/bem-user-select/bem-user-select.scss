@@ -1,0 +1,113 @@
+/*  В этом файле должны быть стили для БЭМ-блока .bem-user-select, его элементов,
+     модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+ */
+.bem-user-select {
+    display: inline-block;
+    vertical-align: top; 
+    width: auto;
+    position: relative;
+    border: 1px solid #E3E5E8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    /* bem-user-select: Элементы */
+    &__wrap {
+    	max-width: 700px;
+    	width: 100%;
+    	margin: 20px auto;
+    	
+    	select {
+        	margin: 20px;
+        }
+
+    }
+    &__gap {
+    	background: transparent;
+    	color: #000;
+    	font-size: 16px;
+    	padding: 8px 36px 8px 12px;
+    	cursor: pointer;
+    	position: relative;
+    	user-select: none;
+    }
+    &:disabled .bem-user-select__gap, &.bem-form_disabled .bem-user-select__gap{
+        color: #898989;
+    }
+    
+    &__list {
+    	background: #fff;
+        border: none;
+    	margin: 8px 0 0;
+    	position: absolute;
+    	right: 0px;
+    	z-index: 1;
+    	padding: 0;
+    	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.18);
+    	width: 100%;
+    	border-radius: $border-radius;
+        min-width: max-content;
+    }
+    
+    &__list.on {
+    	display: block;
+    }
+    
+    &__item span {
+    	display: block;
+    	padding: 10px 12px;
+    	cursor: pointer;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    &__item.selected,
+    &__item:hover {
+    	background: #F7F8FA;
+    }
+    
+    &__gap:after {
+    	content: '';
+    	display: block;
+    	width: 16px;
+    	height: 16px;
+    	position: absolute;
+    	right: 9px;
+    	top: calc(50% - 8px);
+    	background: url(../img/down.svg) no-repeat 0 0;
+    
+        transition: all .27s ease-in-out;
+        transform: rotate(0deg);
+    }
+    
+    .on.bem-user-select__gap:after {
+        transform: rotate(180deg);
+    }
+    &_big {
+        .bem-user-select__gap {
+            padding: 14px 36px 14px 12px;
+        }
+        .bem-user-select__item span {
+            padding: 14px 12px;
+        }
+    }
+    &_compact {
+        .bem-user-select__gap {
+            padding: 6px 36px 6px 12px;
+        }
+        .bem-user-select__item span {
+            padding: 6px 12px;
+        }
+    }
+    &_small {
+        .bem-user-select__gap {
+            padding: 2px 36px 2px 12px;
+            font-size: $font-size;
+        }
+        .bem-user-select__item span {
+            padding: 2px 12px;
+            font-size: $font-size;
+        }
+    }
+}
+ 
+
